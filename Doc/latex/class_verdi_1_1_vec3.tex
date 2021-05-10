@@ -1,0 +1,226 @@
+\hypertarget{class_verdi_1_1_vec3}{\section{\-Verdi\-:\-:\-Vec3 \-Class \-Reference}
+\label{class_verdi_1_1_vec3}\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Vec3.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_vec3_a8a68d5e80fdaf247615a5021a957908c}{\-Vec3} ()
+\item 
+\hyperlink{class_verdi_1_1_vec3_a0fb780bc670cb3cb1c6862a43f49f6f5}{\-Vec3} (float ix, float iy, float iz)
+\item 
+\hyperlink{class_verdi_1_1_vec3_afaeaf8db3c58065d3e7fe3d479e0abe7}{\-Vec3} (const \hyperlink{class_verdi_1_1_vec4}{\-Vec4} \&v)
+\item 
+\hyperlink{class_verdi_1_1_vec3_a07d80e987af37e1b3bf1b9468eff84c3}{$\sim$\-Vec3} ()
+\item 
+bool \hyperlink{class_verdi_1_1_vec3_a8187146f9e224ea66b12fe70fea14890}{operator==} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&v) const 
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_vec3_a206abc287d8adfad8951be30c4e2bfd9}{operator+} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&v) const 
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_vec3_a7397372267626e858a4f2a8f3949d19e}{operator+} (float a) const 
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_vec3_a69af0802cf97b9be591d6cd770e3ad7d}{operator+=} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&v)
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_vec3_a97da3d2b294a977085f55f055c5715e5}{operator+=} (float a)
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_vec3_a591d78a9f8971c16d4573e6ad7e0b9cf}{operator$\ast$=} (float s)
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_vec3_aa361c55da8a74cb2b55d7dadae76bba8}{operator$\ast$} (float s) const 
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_vec3_aced0b24405adb8f7c75f7387adbd2e91}{operator$\ast$} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&v) const 
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_vec3_a47b6e80a757cdb340b0e646aa9dd4636}{operator$\ast$=} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&v)
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_vec3_a542c813d0357811c9cc78ace1f7754be}{operator-\/} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&v) const 
+\item 
+float \hyperlink{class_verdi_1_1_vec3_a9704f2bf4f05943c9349806a3ef5cb28}{dot} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&v) const 
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_vec3_a65d9be9038a82415adf94d84daea05fa}{inverse} () const 
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_vec3_a043f7130e4c642fc8cb922c49bfa8624}{cross} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&v) const 
+\item 
+\-Radian \hyperlink{class_verdi_1_1_vec3_a95102441017d6df813e631d40951c2d8}{angle\-Between} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&v) const 
+\item 
+float \hyperlink{class_verdi_1_1_vec3_ad0b20602d296ca1b994fb879cc2b0ab8}{length\-Squared} () const 
+\item 
+\hypertarget{class_verdi_1_1_vec3_aa9743884e05808196c05514efe47d888}{float {\bfseries length} () const }\label{class_verdi_1_1_vec3_aa9743884e05808196c05514efe47d888}
+
+\item 
+\hypertarget{class_verdi_1_1_vec3_a211452f879a007854501e095a58018a1}{void {\bfseries normalise} ()}\label{class_verdi_1_1_vec3_a211452f879a007854501e095a58018a1}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_vec3_af8f68cf3b96ce9cc384e0d42812f7ed3}{\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\hypertarget{union_verdi_1_1_vec3_1_1@4_a84eb88cfee5ea769cf24a1e64396ec64}{\>struct \{\\
+\>\>float {\bfseries x}\\
+\>\>float {\bfseries y}\\
+\>\>float {\bfseries z}\\
+\>\} }\label{union_verdi_1_1_vec3_1_1@4_a84eb88cfee5ea769cf24a1e64396ec64}
+\\
+\>float {\bfseries values} \mbox{[}3\mbox{]}\\
+\}; }\label{class_verdi_1_1_vec3_af8f68cf3b96ce9cc384e0d42812f7ed3}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A class for 3d vector operations. \begin{DoxyRemark}{\-Remarks}
+\-This class does not default to (0.\-0,0.\-0,0.\-0) as one would expect. \-It should be set explicitly using the parameterised constructor. 
+\end{DoxyRemark}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_verdi_1_1_vec3_a8a68d5e80fdaf247615a5021a957908c}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!\-Vec3@{\-Vec3}}
+\index{\-Vec3@{\-Vec3}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{\-Vec3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Vec3\-::\-Vec3} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a8a68d5e80fdaf247615a5021a957908c}
+\-Default constructor. \hypertarget{class_verdi_1_1_vec3_a0fb780bc670cb3cb1c6862a43f49f6f5}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!\-Vec3@{\-Vec3}}
+\index{\-Vec3@{\-Vec3}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{\-Vec3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Vec3\-::\-Vec3} (
+\begin{DoxyParamCaption}
+\item[{float}]{ix, }
+\item[{float}]{iy, }
+\item[{float}]{iz}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a0fb780bc670cb3cb1c6862a43f49f6f5}
+\-Parameterised constructor. \hypertarget{class_verdi_1_1_vec3_afaeaf8db3c58065d3e7fe3d479e0abe7}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!\-Vec3@{\-Vec3}}
+\index{\-Vec3@{\-Vec3}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{\-Vec3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Vec3\-::\-Vec3} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec4} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_afaeaf8db3c58065d3e7fe3d479e0abe7}
+\-Copy constructor for 4d vector. \hypertarget{class_verdi_1_1_vec3_a07d80e987af37e1b3bf1b9468eff84c3}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!$\sim$\-Vec3@{$\sim$\-Vec3}}
+\index{$\sim$\-Vec3@{$\sim$\-Vec3}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{$\sim$\-Vec3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Vec3\-::$\sim$\-Vec3} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a07d80e987af37e1b3bf1b9468eff84c3}
+\-Default destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_vec3_a95102441017d6df813e631d40951c2d8}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!angle\-Between@{angle\-Between}}
+\index{angle\-Between@{angle\-Between}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{angle\-Between}]{\setlength{\rightskip}{0pt plus 5cm}\-Radian {\bf \-Verdi\-::\-Vec3\-::angle\-Between} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec3} \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a95102441017d6df813e631d40951c2d8}
+\-Returns the angle between two vectors in radians. \hypertarget{class_verdi_1_1_vec3_a043f7130e4c642fc8cb922c49bfa8624}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!cross@{cross}}
+\index{cross@{cross}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{cross}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} {\bf \-Verdi\-::\-Vec3\-::cross} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec3} \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a043f7130e4c642fc8cb922c49bfa8624}
+\-Performs a cross product. \hypertarget{class_verdi_1_1_vec3_a9704f2bf4f05943c9349806a3ef5cb28}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!dot@{dot}}
+\index{dot@{dot}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{dot}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Verdi\-::\-Vec3\-::dot} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec3} \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a9704f2bf4f05943c9349806a3ef5cb28}
+\-Performs a dot product. \hypertarget{class_verdi_1_1_vec3_a65d9be9038a82415adf94d84daea05fa}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!inverse@{inverse}}
+\index{inverse@{inverse}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{inverse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} {\bf \-Verdi\-::\-Vec3\-::inverse} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a65d9be9038a82415adf94d84daea05fa}
+\-Returns 1 over v. \hypertarget{class_verdi_1_1_vec3_ad0b20602d296ca1b994fb879cc2b0ab8}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!length\-Squared@{length\-Squared}}
+\index{length\-Squared@{length\-Squared}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{length\-Squared}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Verdi\-::\-Vec3\-::length\-Squared} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_ad0b20602d296ca1b994fb879cc2b0ab8}
+\-Get the length of the vector squared. \begin{DoxyRemark}{\-Remarks}
+\-Should be used in cases when the exact value is not required. 
+\end{DoxyRemark}
+\hypertarget{class_verdi_1_1_vec3_aa361c55da8a74cb2b55d7dadae76bba8}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} \-Verdi\-::\-Vec3\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{float}]{s}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_aa361c55da8a74cb2b55d7dadae76bba8}
+\-Multiplication operator. \hypertarget{class_verdi_1_1_vec3_aced0b24405adb8f7c75f7387adbd2e91}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} \-Verdi\-::\-Vec3\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec3} \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_aced0b24405adb8f7c75f7387adbd2e91}
+\-Multiplication operator. \hypertarget{class_verdi_1_1_vec3_a591d78a9f8971c16d4573e6ad7e0b9cf}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} \-Verdi\-::\-Vec3\-::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{float}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a591d78a9f8971c16d4573e6ad7e0b9cf}
+\-Times equals operator. \hypertarget{class_verdi_1_1_vec3_a47b6e80a757cdb340b0e646aa9dd4636}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} \-Verdi\-::\-Vec3\-::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a47b6e80a757cdb340b0e646aa9dd4636}
+\-Times equals operator. \hypertarget{class_verdi_1_1_vec3_a206abc287d8adfad8951be30c4e2bfd9}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!operator+@{operator+}}
+\index{operator+@{operator+}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} \-Verdi\-::\-Vec3\-::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec3} \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a206abc287d8adfad8951be30c4e2bfd9}
+\-Addition operator. \hypertarget{class_verdi_1_1_vec3_a7397372267626e858a4f2a8f3949d19e}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!operator+@{operator+}}
+\index{operator+@{operator+}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} \-Verdi\-::\-Vec3\-::operator+ (
+\begin{DoxyParamCaption}
+\item[{float}]{a}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a7397372267626e858a4f2a8f3949d19e}
+\-Addition with a scalar. \hypertarget{class_verdi_1_1_vec3_a69af0802cf97b9be591d6cd770e3ad7d}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} \-Verdi\-::\-Vec3\-::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a69af0802cf97b9be591d6cd770e3ad7d}
+\-Plus equals operator. \hypertarget{class_verdi_1_1_vec3_a97da3d2b294a977085f55f055c5715e5}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} \-Verdi\-::\-Vec3\-::operator+= (
+\begin{DoxyParamCaption}
+\item[{float}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a97da3d2b294a977085f55f055c5715e5}
+\-Plus equals with a scalar. \hypertarget{class_verdi_1_1_vec3_a542c813d0357811c9cc78ace1f7754be}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} \-Verdi\-::\-Vec3\-::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec3} \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a542c813d0357811c9cc78ace1f7754be}
+\-Subtraction operator. \hypertarget{class_verdi_1_1_vec3_a8187146f9e224ea66b12fe70fea14890}{\index{\-Verdi\-::\-Vec3@{\-Verdi\-::\-Vec3}!operator==@{operator==}}
+\index{operator==@{operator==}!Verdi::Vec3@{\-Verdi\-::\-Vec3}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Verdi\-::\-Vec3\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec3} \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec3_a8187146f9e224ea66b12fe70fea14890}
+\-Equality operator. 
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Vec3.\-h\end{DoxyCompactItemize}

@@ -1,0 +1,67 @@
+\hypertarget{class_verdi_1_1_math}{\section{\-Verdi\-:\-:\-Math \-Class \-Reference}
+\label{class_verdi_1_1_math}\index{\-Verdi\-::\-Math@{\-Verdi\-::\-Math}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Math.\-h$>$}
+
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_math_a060c33cb129e6fa17a20066d82a9db5c}{static float {\bfseries linear\-Interpolate} (float a, float b, float t)}\label{class_verdi_1_1_math_a060c33cb129e6fa17a20066d82a9db5c}
+
+\item 
+\hypertarget{class_verdi_1_1_math_a9d12dda642b713bacf34e768a7cde239}{static \hyperlink{class_verdi_1_1_vec4}{\-Vec4} {\bfseries linear\-Interpolate} (const \hyperlink{class_verdi_1_1_vec4}{\-Vec4} \&a, const \hyperlink{class_verdi_1_1_vec4}{\-Vec4} \&b, float t)}\label{class_verdi_1_1_math_a9d12dda642b713bacf34e768a7cde239}
+
+\item 
+\hypertarget{class_verdi_1_1_math_ab88dbc34dc4c1eb275571b9a5af52160}{static float {\bfseries cosine\-Interpolate} (float a, float b, float t)}\label{class_verdi_1_1_math_ab88dbc34dc4c1eb275571b9a5af52160}
+
+\item 
+\hypertarget{class_verdi_1_1_math_a6efb5bb73f24710d1b4371d176752b2b}{static float {\bfseries quadratic\-Bezier} (float a, float b, float c, float t)}\label{class_verdi_1_1_math_a6efb5bb73f24710d1b4371d176752b2b}
+
+\item 
+\hypertarget{class_verdi_1_1_math_ac2f05239dc1012ec2ea34baefa1f790b}{static float {\bfseries cubic\-Bezier} (float a, float b, float c, float d, float t)}\label{class_verdi_1_1_math_ac2f05239dc1012ec2ea34baefa1f790b}
+
+\item 
+\hypertarget{class_verdi_1_1_math_abea8a299acddbad91136bcd208335c11}{{\footnotesize template$<$class T $>$ }\\static \-T {\bfseries maximum} (const \-T \&a, const \-T \&b)}\label{class_verdi_1_1_math_abea8a299acddbad91136bcd208335c11}
+
+\item 
+\hypertarget{class_verdi_1_1_math_a5498cba43d2c1cffa69ed2dfc62c0f8c}{{\footnotesize template$<$class T $>$ }\\static \-T {\bfseries minimum} (const \-T \&a, const \-T \&b)}\label{class_verdi_1_1_math_a5498cba43d2c1cffa69ed2dfc62c0f8c}
+
+\item 
+\hypertarget{class_verdi_1_1_math_af894a9faca5bb1fd56db22bfe4bac7de}{{\footnotesize template$<$class T $>$ }\\static \-T {\bfseries clamp} (const \-T \&v, const \-T \&a, const \-T \&b)}\label{class_verdi_1_1_math_af894a9faca5bb1fd56db22bfe4bac7de}
+
+\item 
+\hypertarget{class_verdi_1_1_math_a5b23a2a83ed1dc71175543690644748d}{static \hyperlink{class_verdi_1_1_vec3}{\-Vec3} {\bfseries from\-Spherical} (\-Radian yaw, \-Radian pitch)}\label{class_verdi_1_1_math_a5b23a2a83ed1dc71175543690644748d}
+
+\item 
+\hypertarget{class_verdi_1_1_math_a85ecf6cc3073e27420ad1fa3e05edb2b}{static void {\bfseries to\-Spherical} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&direction, \-Radian $\ast$yaw, \-Radian $\ast$pitch)}\label{class_verdi_1_1_math_a85ecf6cc3073e27420ad1fa3e05edb2b}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_math_a34142ef2b6dfe71ea189b6a9a75c48d9}{static const float {\bfseries \-P\-I} = 3.\-14159265f}\label{class_verdi_1_1_math_a34142ef2b6dfe71ea189b6a9a75c48d9}
+
+\item 
+\hypertarget{class_verdi_1_1_math_ab1c94a0addbb0a703f3ed03b98b85829}{static const float {\bfseries \-P\-I2} = 6.\-28318531f}\label{class_verdi_1_1_math_ab1c94a0addbb0a703f3ed03b98b85829}
+
+\item 
+\hypertarget{class_verdi_1_1_math_a319f30ef67cfe6c509e15e71d2cd8f74}{static const float {\bfseries \-I\-N\-F\-I\-N\-I\-T\-Y\-\_\-\-P\-O\-S\-I\-T\-I\-V\-E} = std\-::numeric\-\_\-limits$<$float$>$\-::max()}\label{class_verdi_1_1_math_a319f30ef67cfe6c509e15e71d2cd8f74}
+
+\item 
+\hypertarget{class_verdi_1_1_math_a0efae61deba8df39da8168e53b53afb7}{static const float {\bfseries \-I\-N\-F\-I\-N\-I\-T\-Y\-\_\-\-N\-E\-G\-A\-T\-I\-V\-E} = -\/std\-::numeric\-\_\-limits$<$float$>$\-::max()}\label{class_verdi_1_1_math_a0efae61deba8df39da8168e53b53afb7}
+
+\item 
+\hypertarget{class_verdi_1_1_math_add629ae567dfabf4753c52792e73218c}{static const float {\bfseries \-E\-P\-S\-I\-L\-O\-N} = std\-::numeric\-\_\-limits$<$float$>$\-::min()}\label{class_verdi_1_1_math_add629ae567dfabf4753c52792e73218c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class contains useful math operations and constants that aren't provided with the standard libraries. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Math.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/src/\-Verdi\-Math.\-cpp\end{DoxyCompactItemize}

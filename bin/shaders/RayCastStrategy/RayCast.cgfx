@@ -1,0 +1,207 @@
+/** Ray casting shader implementation.
+	Copyright (c) James Jones 2012
+**/
+
+#include "../Shading.cg"
+
+// Program parameters
+uniform float4x4	modelViewProj	: ModelViewProj;
+uniform float4x4	modelView		: ModelView;
+uniform float		time			: Time;
+
+uniform sampler3D	dataSet				: DataSet;
+uniform float3		dataSetDimensions	: DataSetDimensions;
+uniform sampler2D	transferFunction	: TransferFunction;
+
+uniform float4		ambient				: Ambient;
+uniform	float4		diffuse				: Diffuse;
+uniform float4		specular			: Specular;
+uniform float		specularExponent	: SpecularExponent;
+
+uniform float3		lightPosition	: LightPosition;
+uniform float		lightRadius		: LightRadius;
+
+uniform sampler2D	jitterTex			: JitterTex;
+
+// Ray cast specific
+uniform int			numIterations		: NumIterations;
+uniform sampler2D	frontFaceTex		: FrontFaceTex;
+uniform sampler2D	backFaceTex			: BackFaceTex;
+uniform float4		backgroundColour	: BackgroundColour;
+
+// Input vertex
+struct VertIn {
+	float4 pos   : POSITION;
+	float2 tex	 : TEXCOORD0;
+};
+ 
+ // Output vertex
+struct VertOut {
+    float4 pos   : POSITION;
+	float4 tex   : TEXCOORD0;
+};
+
+VertOut vsMainPos(VertIn IN) 
+{
+	VertOut OUT;
+	OUT.pos = mul(modelViewProj, IN.pos);
+	OUT.tex = 0.5 + IN.pos * 0.5;
+	return OUT;
+}
+
+VertOut vsMainNearPos(VertIn IN)
+{
+	VertOut OUT;
+	OUT.pos = IN.pos;
+
+	// This is the near plane in device coordinates
+	float4 rpos = float4(IN.pos.xy,-1.0f,1.0f);
+
+	// Back project the near plane quad into object space
+	float4 osPos = mul( inverse(modelViewProj), rpos);
+
+	// Use this as the position
+	OUT.tex = 0.5 + (osPos/osPos.w) * 0.5;
+
+	return OUT;
+}
+
+VertOut vsMainCast(VertIn IN)
+{
+	VertOut OUT;
+	OUT.pos = mul(modelViewProj, IN.pos);
+	OUT.tex = OUT.pos;
+	return OUT;
+}
+
+float4 psMainPos(float4 texIn : TEXCOORD0) : COLOR
+{
+	return texIn;
+}
+
+// The ray casting shader
+float4 psMainCast(float4 texIn : TEXCOORD0) : COLOR
+{
+	// Compute texture coordinates
+	texIn.xy /= texIn.w;
+	texIn.xy = 0.5 + 0.5*texIn.xy;
+	
+	// Jitter offset
+	float offset = tex2D(jitterTex,texIn.xy*64).r;
+	
+	// Start and end positions in texture coord space
+	float3 frontPos = tex2D(frontFaceTex,texIn.xy).xyz;
+	float3 backPos = tex2D(backFaceTex,texIn.xy).xyz;
+		
+	// Ray direction
+	float3 rayDir = normalize(backPos - frontPos);
+	
+	// Spacing is root 3 / number of iterations, root 3 because
+	// we're in texture space and the max distance is |(1,1,1) - (0,0,0)|
+	float sampleSpacing = (1.732/(numIterations));
+	float referenceSpacing = 1.732/600.0;
+	
+	// How much to move each iteration
+	float3 rayDelta = rayDir*sampleSpacing; 
+		
+	// Start position somewhere random between frontPos and the first step	
+	float3 startPos = frontPos + offset*rayDelta;
+	float3 samplePos = startPos;
+	float4 destColour = backgroundColour;
+	
+	// Offset used in gradient computation
+	float3 d = 1.0 / dataSetDimensions;
+	
+	// Compute the number of iterations required
+	float distToTravel = length(backPos - startPos);
+	int n = min(numIterations,floor(distToTravel/sampleSpacing));
+
+	// Start casting
+	int i = 0;
+	for( ; i < n; i++)
+	{	
+		// Value
+		float sampleValue = tex3D(dataSet, samplePos).r;
+
+		// Gradient
+		float3 gradient;
+		float gradientMag = 0.5;
+
+		// Modifiable colour
+		float4 sourceColour;
+
+		#ifdef USE_ON_THE_FLY_GRADIENTS
+			gradient = onTheFlyGradient(dataSet, samplePos, d);
+		#endif
+		
+		gradientMag = length(gradient);
+		float lup = gradientMag;
+		sourceColour = tex2D(transferFunction, float2(sampleValue, lup) ).rgba;
+
+		if(sourceColour.a > 0.01) {
+		#ifdef USE_LIGHTING
+			ShadingInfo shadingInfo;
+			
+			float3 norm = gradient;
+
+			#ifndef USE_PRECOMPUTED_GRADIENTS
+				norm = onTheFlyGradientPost(dataSet,
+								transferFunction, samplePos, d);
+			#endif
+
+			shadingInfo.position = samplePos;
+			shadingInfo.normal = normalize(norm);
+			shadingInfo.lightPosition = lightPosition * 0.5 + 0.5;
+			shadingInfo.rayFromEye = rayDir;
+			shadingInfo.ambient = ambient;
+			shadingInfo.diffuse = diffuse * sourceColour;
+			shadingInfo.specular = specular;
+			shadingInfo.specularExp = specularExponent;
+			shadingInfo.lightRange = lightRadius;
+
+			sourceColour = phongShade(shadingInfo);
+		#endif
+
+		// Blending
+		#ifdef USE_LMIP
+			destColour.rgb = max(sourceColour.rgb,destColour.rgb);
+			destColour.a = max(sourceColour.a,destColour.a);
+		#else
+			// Opacity correction
+			sourceColour.a = 1 - pow((1-sourceColour.a),sampleSpacing/referenceSpacing);
+			
+			sourceColour.rgb *= sourceColour.a;
+			destColour = (1.0 - destColour.a) * sourceColour + destColour;
+		#endif
+		}
+
+		// Early ray termination
+		#ifdef USE_ERT
+			if(destColour.a > 0.95)
+				break;
+		#endif
+		
+		// Advance to next position
+		samplePos += rayDelta;
+	}
+
+	return destColour;
+}
+
+technique RayCastGLSL
+{
+	pass DrawFacePositions {
+			VertexProgram = compile glslv vsMainPos();
+			FragmentProgram = compile glslf psMainPos();
+	}
+
+	pass DrawNearPlanePositions {
+			VertexProgram = compile glslv vsMainNearPos();
+			FragmentProgram = compile glslf psMainPos();
+	}
+
+	pass RayCast {
+			VertexProgram = compile glslv vsMainCast();
+			FragmentProgram = compile glslf psMainCast();
+	}
+}

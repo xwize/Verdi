@@ -1,0 +1,312 @@
+\hypertarget{class_verdi_1_1_ray_cast_strategy}{\section{\-Verdi\-:\-:\-Ray\-Cast\-Strategy \-Class \-Reference}
+\label{class_verdi_1_1_ray_cast_strategy}\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Ray\-Cast\-Strategy.\-h$>$}
+
+\-Inheritance diagram for \-Verdi\-:\-:\-Ray\-Cast\-Strategy\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_verdi_1_1_ray_cast_strategy}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_ray_cast_strategy_a44cc830e606b2ec73c1c506994194b95}{\-Ray\-Cast\-Strategy} (const \-String \&shader\-Path=\char`\"{}shaders/\hyperlink{class_verdi_1_1_ray_cast_strategy}{\-Ray\-Cast\-Strategy}/\-Ray\-Cast.\-cgfx\char`\"{})
+\item 
+\hyperlink{class_verdi_1_1_ray_cast_strategy_a28ab5b20bf87df214622495e4dc15363}{$\sim$\-Ray\-Cast\-Strategy} ()
+\item 
+\hyperlink{class_verdi_1_1_ray_cast_strategy_a0ac72ce2617906f2246c42ef058eb2c3}{\-Ray\-Cast\-Strategy} (const \-String \&shader\-File=\char`\"{}shaders/\hyperlink{class_verdi_1_1_ray_cast_strategy}{\-Ray\-Cast\-Strategy}/\-Ray\-Cast.\-cgfx\char`\"{})
+\item 
+\hyperlink{class_verdi_1_1_ray_cast_strategy_a28ab5b20bf87df214622495e4dc15363}{$\sim$\-Ray\-Cast\-Strategy} ()
+\item 
+void \hyperlink{class_verdi_1_1_ray_cast_strategy_a5750edcfc0d873970b13c6fba3978a9d}{initialise} (uint32\-\_\-t width, uint32\-\_\-t height)
+\item 
+void \hyperlink{class_verdi_1_1_ray_cast_strategy_a1ee8ca66c4ebc651c5b23985bea94cf3}{begin\-Frame} (float dt, float time)
+\item 
+void \hyperlink{class_verdi_1_1_ray_cast_strategy_a30c9308caa1f99b7db6993fdb49e12cc}{render} ()
+\item 
+void \hyperlink{class_verdi_1_1_ray_cast_strategy_ac0d9b6cd0962f3d0076c15ab0b0f5a49}{end\-Frame} ()
+\item 
+void \hyperlink{class_verdi_1_1_ray_cast_strategy_aeb9c50d501ec369553637622aed55cbd}{shutdown} ()
+\item 
+void \hyperlink{class_verdi_1_1_ray_cast_strategy_a0eb9af58fef4e974e378062c03eb787b}{context\-Changed} (const \hyperlink{class_verdi_1_1_render_context}{\-Render\-Context} $\ast$new\-Context)
+\item 
+void \hyperlink{class_verdi_1_1_ray_cast_strategy_a23af8b285ef2de2957f397b9674c7a01}{suspend} ()
+\item 
+void \hyperlink{class_verdi_1_1_ray_cast_strategy_a1fc2d8d4067b242934ac6cb4c9800a22}{awake} ()
+\item 
+void \hyperlink{class_verdi_1_1_ray_cast_strategy_a54f194bbd0187871d92fbacbe5fce8f2}{resize} (uint32\-\_\-t width, uint32\-\_\-t height)
+\item 
+bool \hyperlink{class_verdi_1_1_ray_cast_strategy_a384a2f7012b89193c7be6f126f62a4f7}{is\-Initialised} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_afd72128411130b55e9b8ae0b43a2a3dc}{void {\bfseries \-\_\-get\-Effect\-Descriptor\-From\-Parameters} (bool on\-The\-Fly\-Gradients, bool use\-Ert, bool use\-Lighting, bool use\-L\-M\-I\-P, \hyperlink{struct_verdi_1_1_uber_shader_1_1_effect_descriptor}{\-Uber\-Shader\-::\-Effect\-Descriptor} \&effect\-Out) const }\label{class_verdi_1_1_ray_cast_strategy_afd72128411130b55e9b8ae0b43a2a3dc}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a3309edbb01a2fd9cd9f268566e29abfa}{bool {\bfseries \-\_\-recurse\-Min\-Max\-Octree} (\hyperlink{class_verdi_1_1_min_max_octree_1_1_node}{\-Min\-Max\-Octree\-::\-Node} $\ast$parent, bool only\-Half)}\label{class_verdi_1_1_ray_cast_strategy_a3309edbb01a2fd9cd9f268566e29abfa}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a1b1c3936ae2c796786f1680a81964244}{void {\bfseries \-\_\-draw\-Min\-Max\-Octree\-Node} (\hyperlink{class_verdi_1_1_min_max_octree_1_1_node}{\-Min\-Max\-Octree\-::\-Node} $\ast$node)}\label{class_verdi_1_1_ray_cast_strategy_a1b1c3936ae2c796786f1680a81964244}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_acde8a0db750a6f84173a7ba2a99f4cea}{void {\bfseries \-\_\-setup\-Shaders} ()}\label{class_verdi_1_1_ray_cast_strategy_acde8a0db750a6f84173a7ba2a99f4cea}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a8eadd3e2a76686ccb8d30e8865140674}{void {\bfseries \-\_\-setup\-Render\-Textures} (\-G\-Luint w, \-G\-Luint h)}\label{class_verdi_1_1_ray_cast_strategy_a8eadd3e2a76686ccb8d30e8865140674}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a073c5ae78e02a7d01d48008edc2eec24}{void {\bfseries \-\_\-submit\-Proxy\-Geometry} (bool only\-Half=false)}\label{class_verdi_1_1_ray_cast_strategy_a073c5ae78e02a7d01d48008edc2eec24}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a527ca0cd120fecbfd5f5289fbc3bfc44}{void {\bfseries \-\_\-submit\-Near\-Plane} ()}\label{class_verdi_1_1_ray_cast_strategy_a527ca0cd120fecbfd5f5289fbc3bfc44}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a2dd5ae69abee90140d21f7446b6d0a64}{void {\bfseries \-\_\-begin\-Frame\-Impl} (float dt, float time)}\label{class_verdi_1_1_ray_cast_strategy_a2dd5ae69abee90140d21f7446b6d0a64}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a35873ac8b5be63739744bd23eeeaceac}{void {\bfseries \-\_\-render\-Impl} ()}\label{class_verdi_1_1_ray_cast_strategy_a35873ac8b5be63739744bd23eeeaceac}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_ae0d8b3acca3a1de0804f3544b744c3a1}{void {\bfseries \-\_\-end\-Frame\-Impl} ()}\label{class_verdi_1_1_ray_cast_strategy_ae0d8b3acca3a1de0804f3544b744c3a1}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a59c9051f6b006206c2cb109619f35d27}{void {\bfseries \-\_\-initialise\-Impl} (uint32\-\_\-t w, uint32\-\_\-t h)}\label{class_verdi_1_1_ray_cast_strategy_a59c9051f6b006206c2cb109619f35d27}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_acba12a8f4de9b6ceef427f736af016b5}{void {\bfseries \-\_\-shutdown\-Impl} ()}\label{class_verdi_1_1_ray_cast_strategy_acba12a8f4de9b6ceef427f736af016b5}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a5031464575a3d3e6db2c633e46071105}{void {\bfseries \-\_\-resize\-Impl} (uint32\-\_\-t width, uint32\-\_\-t height)}\label{class_verdi_1_1_ray_cast_strategy_a5031464575a3d3e6db2c633e46071105}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_ab2b748958293f621814327bab9b8fc64}{\-G\-Luint {\bfseries m\-Render\-Texture\-Width}}\label{class_verdi_1_1_ray_cast_strategy_ab2b748958293f621814327bab9b8fc64}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a00d7774f1162725e67c986f6174f8e77}{\-G\-Luint {\bfseries m\-Render\-Texture\-Height}}\label{class_verdi_1_1_ray_cast_strategy_a00d7774f1162725e67c986f6174f8e77}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_ad4e81128d342e928a2a6768fa3869415}{\-G\-Luint {\bfseries m\-Frame\-Buffer\-Object}}\label{class_verdi_1_1_ray_cast_strategy_ad4e81128d342e928a2a6768fa3869415}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_ad6118c13e19459f1117f81ccd7303ddf}{\-G\-Luint {\bfseries m\-Final\-Render\-Texture}}\label{class_verdi_1_1_ray_cast_strategy_ad6118c13e19459f1117f81ccd7303ddf}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a3424377a0a57ecb02f78ee887ab6f106}{\-G\-Luint {\bfseries m\-Face\-Render\-Buffer\-Object} \mbox{[}2\mbox{]}}\label{class_verdi_1_1_ray_cast_strategy_a3424377a0a57ecb02f78ee887ab6f106}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_aa89c947ca24bb3519f01890879069274}{\-G\-Luint {\bfseries m\-Face\-Render\-Texture} \mbox{[}2\mbox{]}}\label{class_verdi_1_1_ray_cast_strategy_aa89c947ca24bb3519f01890879069274}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_aa2fe2ee54e85d10e135527a222326bbc}{\-Ray\-Cast\-Strategy\-Impl $\ast$ {\bfseries mp\-Impl}}\label{class_verdi_1_1_ray_cast_strategy_aa2fe2ee54e85d10e135527a222326bbc}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a200e9bf5cd456e9f0d29470de0b787e4}{static const int {\bfseries \-B\-A\-C\-K\-\_\-\-F\-A\-C\-E\-\_\-\-T\-E\-X\-T\-U\-R\-E} = 0}\label{class_verdi_1_1_ray_cast_strategy_a200e9bf5cd456e9f0d29470de0b787e4}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a8228044fb182692db928ad2fef96379c}{static const int {\bfseries \-F\-R\-O\-N\-T\-\_\-\-F\-A\-C\-E\-\_\-\-T\-E\-X\-T\-U\-R\-E} = 1}\label{class_verdi_1_1_ray_cast_strategy_a8228044fb182692db928ad2fef96379c}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_ad0336043eb38d83b6d0f049c93ec47bb}{static const int {\bfseries \-P\-O\-S\-I\-T\-I\-O\-N\-\_\-\-P\-A\-S\-S} = 0}\label{class_verdi_1_1_ray_cast_strategy_ad0336043eb38d83b6d0f049c93ec47bb}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a0302885a52c30d994faa0b1330a35526}{static const int {\bfseries \-N\-E\-A\-R\-\_\-\-P\-L\-A\-N\-E\-\_\-\-P\-A\-S\-S} = 1}\label{class_verdi_1_1_ray_cast_strategy_a0302885a52c30d994faa0b1330a35526}
+
+\item 
+\hypertarget{class_verdi_1_1_ray_cast_strategy_af01611315064806d46e3513a247e7c71}{static const int {\bfseries \-R\-A\-Y\-\_\-\-C\-A\-S\-T\-I\-N\-G\-\_\-\-P\-A\-S\-S} = 2}\label{class_verdi_1_1_ray_cast_strategy_af01611315064806d46e3513a247e7c71}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{class_verdi_1_1_ray_cast_strategy}{\-Ray\-Cast\-Strategy} implementation.
+
+\-Class that wraps the implementation strategy. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a44cc830e606b2ec73c1c506994194b95}{\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}!\-Ray\-Cast\-Strategy@{\-Ray\-Cast\-Strategy}}
+\index{\-Ray\-Cast\-Strategy@{\-Ray\-Cast\-Strategy}!Verdi::RayCastStrategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+\subsubsection[{\-Ray\-Cast\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-::\-Ray\-Cast\-Strategy} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{shader\-Path = {\ttfamily \char`\"{}shaders/{\bf \-Ray\-Cast\-Strategy}/\-Ray\-Cast.cgfx\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_ray_cast_strategy_a44cc830e606b2ec73c1c506994194b95}
+\-Default constructor. \hypertarget{class_verdi_1_1_ray_cast_strategy_a28ab5b20bf87df214622495e4dc15363}{\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}!$\sim$\-Ray\-Cast\-Strategy@{$\sim$\-Ray\-Cast\-Strategy}}
+\index{$\sim$\-Ray\-Cast\-Strategy@{$\sim$\-Ray\-Cast\-Strategy}!Verdi::RayCastStrategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+\subsubsection[{$\sim$\-Ray\-Cast\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-::$\sim$\-Ray\-Cast\-Strategy} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_ray_cast_strategy_a28ab5b20bf87df214622495e4dc15363}
+\-Default destructor. \hypertarget{class_verdi_1_1_ray_cast_strategy_a0ac72ce2617906f2246c42ef058eb2c3}{\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}!\-Ray\-Cast\-Strategy@{\-Ray\-Cast\-Strategy}}
+\index{\-Ray\-Cast\-Strategy@{\-Ray\-Cast\-Strategy}!Verdi::RayCastStrategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+\subsubsection[{\-Ray\-Cast\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-::\-Ray\-Cast\-Strategy} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{shader\-File = {\ttfamily \char`\"{}shaders/{\bf \-Ray\-Cast\-Strategy}/\-Ray\-Cast.cgfx\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_ray_cast_strategy_a0ac72ce2617906f2246c42ef058eb2c3}
+\-Default constructor. \hypertarget{class_verdi_1_1_ray_cast_strategy_a28ab5b20bf87df214622495e4dc15363}{\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}!$\sim$\-Ray\-Cast\-Strategy@{$\sim$\-Ray\-Cast\-Strategy}}
+\index{$\sim$\-Ray\-Cast\-Strategy@{$\sim$\-Ray\-Cast\-Strategy}!Verdi::RayCastStrategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+\subsubsection[{$\sim$\-Ray\-Cast\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-::$\sim$\-Ray\-Cast\-Strategy} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_ray_cast_strategy_a28ab5b20bf87df214622495e4dc15363}
+\-Default destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a1fc2d8d4067b242934ac6cb4c9800a22}{\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}!awake@{awake}}
+\index{awake@{awake}!Verdi::RayCastStrategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+\subsubsection[{awake}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-::awake} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_ray_cast_strategy_a1fc2d8d4067b242934ac6cb4c9800a22}
+\-Notify when a render strategy has changed (to this). \begin{DoxyRemark}{\-Remarks}
+\-When a render strategy is switched to this strategy it is notified through this method. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_a34797cbcea846c22a23937226281922b}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a1ee8ca66c4ebc651c5b23985bea94cf3}{\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}!begin\-Frame@{begin\-Frame}}
+\index{begin\-Frame@{begin\-Frame}!Verdi::RayCastStrategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+\subsubsection[{begin\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-::begin\-Frame} (
+\begin{DoxyParamCaption}
+\item[{float}]{dt, }
+\item[{float}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_ray_cast_strategy_a1ee8ca66c4ebc651c5b23985bea94cf3}
+\-Start a frame. \begin{DoxyRemark}{\-Remarks}
+\-This is called prior to rendering operations for a render strategy to set up any per-\/frame parameters. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_a7b968d3bcbc2b791e5593f639b0af527}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a0eb9af58fef4e974e378062c03eb787b}{\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}!context\-Changed@{context\-Changed}}
+\index{context\-Changed@{context\-Changed}!Verdi::RayCastStrategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+\subsubsection[{context\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-::context\-Changed} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Render\-Context} $\ast$}]{new\-Context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_ray_cast_strategy_a0eb9af58fef4e974e378062c03eb787b}
+\-Notify of a context change. \begin{DoxyRemark}{\-Remarks}
+\-When the user decides to switch to another context a render strategy may need to recreate some objects or perform some computation. \-This method provides an opportunity for implementations to do this. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_abdd27f6e043ad468307bcc6b5e85356f}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_ray_cast_strategy_ac0d9b6cd0962f3d0076c15ab0b0f5a49}{\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}!end\-Frame@{end\-Frame}}
+\index{end\-Frame@{end\-Frame}!Verdi::RayCastStrategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+\subsubsection[{end\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-::end\-Frame} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_ray_cast_strategy_ac0d9b6cd0962f3d0076c15ab0b0f5a49}
+\-End a frame. \begin{DoxyRemark}{\-Remarks}
+\-This is called at the end of a frame to notify a render strategy to end-\/rendering and display its results to the screen. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_a944fdbb328fd38f40f227ce1ecc9fd7f}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a5750edcfc0d873970b13c6fba3978a9d}{\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}!initialise@{initialise}}
+\index{initialise@{initialise}!Verdi::RayCastStrategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+\subsubsection[{initialise}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-::initialise} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{width, }
+\item[{uint32\-\_\-t}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_ray_cast_strategy_a5750edcfc0d873970b13c6fba3978a9d}
+\-Initialise the render strategy. \begin{DoxyRemark}{\-Remarks}
+\-This is called when the user initiates \hyperlink{class_verdi_1_1_render_system_a63ada7c106625cbf3601ee23300fb8af}{\-Render\-System\-::initialise}. \-All one-\/time initialisation must be performed within this method. \-The initial width and height are provided, but implementations should also account for modification through the resize method. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_a300417f6a6cc08f1bb6e609475dbf638}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a384a2f7012b89193c7be6f126f62a4f7}{\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}!is\-Initialised@{is\-Initialised}}
+\index{is\-Initialised@{is\-Initialised}!Verdi::RayCastStrategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+\subsubsection[{is\-Initialised}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-::is\-Initialised} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_ray_cast_strategy_a384a2f7012b89193c7be6f126f62a4f7}
+\-Must return true after initialisation. 
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_afe668a16ada4c12b7c58b0952cb3dffa}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a30c9308caa1f99b7db6993fdb49e12cc}{\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}!render@{render}}
+\index{render@{render}!Verdi::RayCastStrategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-::render} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_ray_cast_strategy_a30c9308caa1f99b7db6993fdb49e12cc}
+\-Perform the actual rendering. \begin{DoxyRemark}{\-Remarks}
+\-This begin frame,render,and end frame methods have been written to be flexible. \-In future, this method may take in a block size, to render blocks of data at a time. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_a722068356fab14b78f8104614b6bb39a}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a54f194bbd0187871d92fbacbe5fce8f2}{\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}!resize@{resize}}
+\index{resize@{resize}!Verdi::RayCastStrategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-::resize} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{width, }
+\item[{uint32\-\_\-t}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_ray_cast_strategy_a54f194bbd0187871d92fbacbe5fce8f2}
+\-Notify the render strategy of a resize. 
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_aa6290274c5e5e914c2a50347b125dff5}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_ray_cast_strategy_aeb9c50d501ec369553637622aed55cbd}{\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!Verdi::RayCastStrategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+\subsubsection[{shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-::shutdown} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_ray_cast_strategy_aeb9c50d501ec369553637622aed55cbd}
+\-Shutdown the strategy. \begin{DoxyRemark}{\-Remarks}
+\-This gives the strategy an opportunity to clean-\/up any data allocated during execution. \-It is called when the user initiates \hyperlink{class_verdi_1_1_render_system_acc054feb7d679cee2a52e52c1ac319a0}{\-Render\-System\-::shutdown}. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_ab4b85d09886b1adc6a32f638522684cc}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_ray_cast_strategy_a23af8b285ef2de2957f397b9674c7a01}{\index{\-Verdi\-::\-Ray\-Cast\-Strategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}!suspend@{suspend}}
+\index{suspend@{suspend}!Verdi::RayCastStrategy@{\-Verdi\-::\-Ray\-Cast\-Strategy}}
+\subsubsection[{suspend}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-::suspend} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_ray_cast_strategy_a23af8b285ef2de2957f397b9674c7a01}
+\-Notify when a render strategy has changed (from this). \begin{DoxyRemark}{\-Remarks}
+\-When the user decides to switch render strategy, the previous render strategy is notified through this method. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_a0e46a0f8434b471bf8b0c1c9b243e6d5}{\-Verdi\-::\-Render\-Strategy}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/include/\-Verdi\-Ray\-Cast\-Strategy.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/\-Verdi\-Ray\-Cast\-Strategy.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/src/\-Verdi\-Ray\-Cast\-Strategy.\-cpp\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/\-Verdi\-Ray\-Cast\-Strategy.\-cpp\end{DoxyCompactItemize}

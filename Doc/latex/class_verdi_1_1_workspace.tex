@@ -1,0 +1,164 @@
+\hypertarget{class_verdi_1_1_workspace}{\section{\-Verdi\-:\-:\-Workspace \-Class \-Reference}
+\label{class_verdi_1_1_workspace}\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Workspace.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_workspace_ab699a787f796ccd00d2a234b987b2b64}{\-Workspace} ()
+\item 
+\hyperlink{class_verdi_1_1_workspace_adb1d687a4bb84d18f11e2cc18cb1273d}{$\sim$\-Workspace} ()
+\item 
+void \hyperlink{class_verdi_1_1_workspace_a2de55a2e24fd01526903c3e96d7cd09d}{clear} ()
+\item 
+\-String \hyperlink{class_verdi_1_1_workspace_a856fdf3ab72955ca2d5e27f9d1b50915}{execute\-Command} (const \hyperlink{class_verdi_1_1_workspace_command}{\-Workspace\-Command} \&cmd)
+\item 
+\hyperlink{class_verdi_1_1_workspace_variable}{\-Workspace\-Variable} $\ast$ \hyperlink{class_verdi_1_1_workspace_a75953d13025383a53843b851a3d77d80}{get\-Variable} (const \-String \&name) const 
+\item 
+\hyperlink{class_verdi_1_1_workspace_variable}{\-Workspace\-Variable} $\ast$ \hyperlink{class_verdi_1_1_workspace_abd7c14c8cefab29bb18f747451d65576}{get\-Variable} (const \-String \&name, const \-String \&type) const 
+\item 
+\hyperlink{class_verdi_1_1_workspace_command_descriptor}{\-Workspace\-Command\-Descriptor} $\ast$ \hyperlink{class_verdi_1_1_workspace_ac87cf047dd8d1aebbcb15f969481ada8}{get\-Command\-Descriptor} (const \-String \&name) const 
+\item 
+void \hyperlink{class_verdi_1_1_workspace_a3cc4c4b05c2bdf298da3593f8fe923aa}{register\-Variable} (const \-String \&name, \hyperlink{class_verdi_1_1_workspace_variable}{\-Workspace\-Variable} $\ast$var)
+\item 
+void \hyperlink{class_verdi_1_1_workspace_aea72e93c5efd0527affe91ed1d1fd04f}{register\-Command\-Descriptor} (const \-String \&name, \hyperlink{class_verdi_1_1_workspace_command_descriptor}{\-Workspace\-Command\-Descriptor} $\ast$d)
+\item 
+void \hyperlink{class_verdi_1_1_workspace_a5e52d6519fc42eab43ac4165bf089ff7}{destroy\-Variable} (const \-String \&name)
+\item 
+void \hyperlink{class_verdi_1_1_workspace_a0cf5e6e0131c6155137bc6bf1f271d91}{destroy\-All\-Variables} ()
+\item 
+void \hyperlink{class_verdi_1_1_workspace_a93742c3c059fcd22fdc1bc8b94bd2aa4}{destroy\-All\-Command\-Descriptors} ()
+\item 
+const \-Workspace\-Variable\-Name\-Map \& \hyperlink{class_verdi_1_1_workspace_ae332be19fc1b0cb959a2f78c50d25a71}{get\-Variables} () const 
+\item 
+const \*
+\-Workspace\-Command\-Descriptor\-Name\-Map \& \hyperlink{class_verdi_1_1_workspace_a64826e428fee004aced6f784b366562a}{get\-Command\-Descriptors} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_workspace_a10a811134ebe19d6bc28e4aea3b886da}{\-Workspace\-Variable\-Name\-Map {\bfseries m\-Variables}}\label{class_verdi_1_1_workspace_a10a811134ebe19d6bc28e4aea3b886da}
+
+\item 
+\hypertarget{class_verdi_1_1_workspace_a07c609715e5cbc70e28132acd87364c6}{\-Workspace\-Command\-Descriptor\-Name\-Map {\bfseries m\-Command\-Descriptors}}\label{class_verdi_1_1_workspace_a07c609715e5cbc70e28132acd87364c6}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-The workspace acts as a console into which variables and commands affecting those variables can be registered and executed. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_verdi_1_1_workspace_ab699a787f796ccd00d2a234b987b2b64}{\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}!\-Workspace@{\-Workspace}}
+\index{\-Workspace@{\-Workspace}!Verdi::Workspace@{\-Verdi\-::\-Workspace}}
+\subsubsection[{\-Workspace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Workspace\-::\-Workspace} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_workspace_ab699a787f796ccd00d2a234b987b2b64}
+\-Default constructor. \hypertarget{class_verdi_1_1_workspace_adb1d687a4bb84d18f11e2cc18cb1273d}{\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}!$\sim$\-Workspace@{$\sim$\-Workspace}}
+\index{$\sim$\-Workspace@{$\sim$\-Workspace}!Verdi::Workspace@{\-Verdi\-::\-Workspace}}
+\subsubsection[{$\sim$\-Workspace}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Workspace\-::$\sim$\-Workspace} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_workspace_adb1d687a4bb84d18f11e2cc18cb1273d}
+\-Default destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_workspace_a2de55a2e24fd01526903c3e96d7cd09d}{\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}!clear@{clear}}
+\index{clear@{clear}!Verdi::Workspace@{\-Verdi\-::\-Workspace}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Workspace\-::clear} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_workspace_a2de55a2e24fd01526903c3e96d7cd09d}
+\-Clear the workspace to an empty state. \hypertarget{class_verdi_1_1_workspace_a93742c3c059fcd22fdc1bc8b94bd2aa4}{\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}!destroy\-All\-Command\-Descriptors@{destroy\-All\-Command\-Descriptors}}
+\index{destroy\-All\-Command\-Descriptors@{destroy\-All\-Command\-Descriptors}!Verdi::Workspace@{\-Verdi\-::\-Workspace}}
+\subsubsection[{destroy\-All\-Command\-Descriptors}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Workspace\-::destroy\-All\-Command\-Descriptors} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_workspace_a93742c3c059fcd22fdc1bc8b94bd2aa4}
+\-Destroy all commands. \hypertarget{class_verdi_1_1_workspace_a0cf5e6e0131c6155137bc6bf1f271d91}{\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}!destroy\-All\-Variables@{destroy\-All\-Variables}}
+\index{destroy\-All\-Variables@{destroy\-All\-Variables}!Verdi::Workspace@{\-Verdi\-::\-Workspace}}
+\subsubsection[{destroy\-All\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Workspace\-::destroy\-All\-Variables} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_workspace_a0cf5e6e0131c6155137bc6bf1f271d91}
+\-Destroy all variables. \hypertarget{class_verdi_1_1_workspace_a5e52d6519fc42eab43ac4165bf089ff7}{\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}!destroy\-Variable@{destroy\-Variable}}
+\index{destroy\-Variable@{destroy\-Variable}!Verdi::Workspace@{\-Verdi\-::\-Workspace}}
+\subsubsection[{destroy\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Workspace\-::destroy\-Variable} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_workspace_a5e52d6519fc42eab43ac4165bf089ff7}
+\-Destroy a single variable. \hypertarget{class_verdi_1_1_workspace_a856fdf3ab72955ca2d5e27f9d1b50915}{\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}!execute\-Command@{execute\-Command}}
+\index{execute\-Command@{execute\-Command}!Verdi::Workspace@{\-Verdi\-::\-Workspace}}
+\subsubsection[{execute\-Command}]{\setlength{\rightskip}{0pt plus 5cm}\-Verdi\-::\-String {\bf \-Verdi\-::\-Workspace\-::execute\-Command} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Workspace\-Command} \&}]{cmd}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_workspace_a856fdf3ab72955ca2d5e27f9d1b50915}
+\-Execute a command. \hypertarget{class_verdi_1_1_workspace_ac87cf047dd8d1aebbcb15f969481ada8}{\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}!get\-Command\-Descriptor@{get\-Command\-Descriptor}}
+\index{get\-Command\-Descriptor@{get\-Command\-Descriptor}!Verdi::Workspace@{\-Verdi\-::\-Workspace}}
+\subsubsection[{get\-Command\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Workspace\-Command\-Descriptor} $\ast$ {\bf \-Verdi\-::\-Workspace\-::get\-Command\-Descriptor} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{name}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_workspace_ac87cf047dd8d1aebbcb15f969481ada8}
+\-Get a command descriptor by name. \hypertarget{class_verdi_1_1_workspace_a64826e428fee004aced6f784b366562a}{\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}!get\-Command\-Descriptors@{get\-Command\-Descriptors}}
+\index{get\-Command\-Descriptors@{get\-Command\-Descriptors}!Verdi::Workspace@{\-Verdi\-::\-Workspace}}
+\subsubsection[{get\-Command\-Descriptors}]{\setlength{\rightskip}{0pt plus 5cm}const \-Workspace\-Command\-Descriptor\-Name\-Map\& {\bf \-Verdi\-::\-Workspace\-::get\-Command\-Descriptors} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_workspace_a64826e428fee004aced6f784b366562a}
+\-Retrieve the command descriptors. \hypertarget{class_verdi_1_1_workspace_a75953d13025383a53843b851a3d77d80}{\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}!get\-Variable@{get\-Variable}}
+\index{get\-Variable@{get\-Variable}!Verdi::Workspace@{\-Verdi\-::\-Workspace}}
+\subsubsection[{get\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Workspace\-Variable} $\ast$ {\bf \-Verdi\-::\-Workspace\-::get\-Variable} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{name}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_workspace_a75953d13025383a53843b851a3d77d80}
+\-Get a variable by name. \hypertarget{class_verdi_1_1_workspace_abd7c14c8cefab29bb18f747451d65576}{\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}!get\-Variable@{get\-Variable}}
+\index{get\-Variable@{get\-Variable}!Verdi::Workspace@{\-Verdi\-::\-Workspace}}
+\subsubsection[{get\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Workspace\-Variable} $\ast$ {\bf \-Verdi\-::\-Workspace\-::get\-Variable} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{name, }
+\item[{const \-String \&}]{type}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_workspace_abd7c14c8cefab29bb18f747451d65576}
+\-Get a variable by name and enforce a type. \hypertarget{class_verdi_1_1_workspace_ae332be19fc1b0cb959a2f78c50d25a71}{\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}!get\-Variables@{get\-Variables}}
+\index{get\-Variables@{get\-Variables}!Verdi::Workspace@{\-Verdi\-::\-Workspace}}
+\subsubsection[{get\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}const \-Workspace\-Variable\-Name\-Map\& {\bf \-Verdi\-::\-Workspace\-::get\-Variables} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_workspace_ae332be19fc1b0cb959a2f78c50d25a71}
+\-Retrieve the variables. \hypertarget{class_verdi_1_1_workspace_aea72e93c5efd0527affe91ed1d1fd04f}{\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}!register\-Command\-Descriptor@{register\-Command\-Descriptor}}
+\index{register\-Command\-Descriptor@{register\-Command\-Descriptor}!Verdi::Workspace@{\-Verdi\-::\-Workspace}}
+\subsubsection[{register\-Command\-Descriptor}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Workspace\-::register\-Command\-Descriptor} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{name, }
+\item[{{\bf \-Workspace\-Command\-Descriptor} $\ast$}]{d}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_workspace_aea72e93c5efd0527affe91ed1d1fd04f}
+\-Register a command to this workspace. \hypertarget{class_verdi_1_1_workspace_a3cc4c4b05c2bdf298da3593f8fe923aa}{\index{\-Verdi\-::\-Workspace@{\-Verdi\-::\-Workspace}!register\-Variable@{register\-Variable}}
+\index{register\-Variable@{register\-Variable}!Verdi::Workspace@{\-Verdi\-::\-Workspace}}
+\subsubsection[{register\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Workspace\-::register\-Variable} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{name, }
+\item[{{\bf \-Workspace\-Variable} $\ast$}]{var}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_workspace_a3cc4c4b05c2bdf298da3593f8fe923aa}
+\-Register a variable to this workspace. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Workspace/include/\-Verdi\-Workspace.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Workspace/src/\-Verdi\-Workspace.\-cpp\end{DoxyCompactItemize}

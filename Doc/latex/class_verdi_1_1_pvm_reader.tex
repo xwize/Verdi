@@ -1,0 +1,52 @@
+\hypertarget{class_verdi_1_1_pvm_reader}{\section{\-Verdi\-:\-:\-Pvm\-Reader \-Class \-Reference}
+\label{class_verdi_1_1_pvm_reader}\index{\-Verdi\-::\-Pvm\-Reader@{\-Verdi\-::\-Pvm\-Reader}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Pvm\-Reader.\-h$>$}
+
+\-Inheritance diagram for \-Verdi\-:\-:\-Pvm\-Reader\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_verdi_1_1_pvm_reader}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$ \hyperlink{class_verdi_1_1_pvm_reader_a52a3436351a1af75cb05dc563aafa3f0}{read\-From\-File} (const \-String \&filename, const \-String\-Map $\ast$args)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Concrete implementation of a \hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} reader for loading pvm voxel files. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_pvm_reader_a52a3436351a1af75cb05dc563aafa3f0}{\index{\-Verdi\-::\-Pvm\-Reader@{\-Verdi\-::\-Pvm\-Reader}!read\-From\-File@{read\-From\-File}}
+\index{read\-From\-File@{read\-From\-File}!Verdi::PvmReader@{\-Verdi\-::\-Pvm\-Reader}}
+\subsubsection[{read\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Data\-Set} $\ast$ {\bf \-Verdi\-::\-Pvm\-Reader\-::read\-From\-File} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{filename, }
+\item[{const \-String\-Map $\ast$}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_pvm_reader_a52a3436351a1af75cb05dc563aafa3f0}
+\-Read a data set from a file. 
+\begin{DoxyParams}{\-Parameters}
+{\em filename} & \-The filename of the file to load. \\
+\hline
+{\em args} & \-Optional arguments encoded as a string map. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns a pointer to the loaded data set. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_verdi_1_1_data_set_reader_a46bc06b41075b8d1d38276e816227994}{\-Verdi\-::\-Data\-Set\-Reader}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Pvm\-Reader.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/src/\-Verdi\-Pvm\-Reader.\-cpp\end{DoxyCompactItemize}

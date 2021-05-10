@@ -1,0 +1,17 @@
+Please see test folder.
+Or, alternatively, visit the following sites:
+
+    Volume Dataset Repository at the WSI/GRIS, University of Tübingen, Germany:
+    http://www.volvis.org/
+
+    Volume Dataset Repository maintained by Stephan Röttger at the Computer Graphics Group, University of 		Erlangen-Nuremberg, Germany
+    http://www9.cs.fau.de/Persons/Roettger/library/
+
+    Volume Dataset Repository at the Dept. of Radiology, University of Iowa, USA
+    http://radiology.uiowa.edu/downloads/
+
+    Volume Dataset Repository at the Vienna University of Technology, Austria
+    http://www.cg.tuwien.ac.at/research/vis/datasets/
+
+    Digital Morphology Project at the University of Texas at Austin, USA
+    http://digimorph.org/ 

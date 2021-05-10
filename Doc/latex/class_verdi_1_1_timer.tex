@@ -1,0 +1,85 @@
+\hypertarget{class_verdi_1_1_timer}{\section{\-Verdi\-:\-:\-Timer \-Class \-Reference}
+\label{class_verdi_1_1_timer}\index{\-Verdi\-::\-Timer@{\-Verdi\-::\-Timer}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Timer.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_timer_ae433ded73fd360dda5b9d4128e898acf}{\-Timer} ()
+\item 
+\hyperlink{class_verdi_1_1_timer_ad6c3f8ed231031b9484d40fb0bfd09bb}{$\sim$\-Timer} ()
+\item 
+void \hyperlink{class_verdi_1_1_timer_af1ab73370631c144379a6c1d07fa6525}{reset} ()
+\item 
+double \hyperlink{class_verdi_1_1_timer_a335af3d4af032dfad1ecaa75f13befdd}{get\-Seconds} () const 
+\item 
+uint64\-\_\-t \hyperlink{class_verdi_1_1_timer_a2bd1c8b39fd3610f7fe020895f118ca2}{get\-Milliseconds} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_timer_a96a89472eb984fc75893a26138191a36}{static uint64\-\_\-t {\bfseries get\-Tick\-Count} ()}\label{class_verdi_1_1_timer_a96a89472eb984fc75893a26138191a36}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_timer_ae84da85660b235a696ce264e3f605b77}{uint64\-\_\-t {\bfseries m\-Reset\-Time}}\label{class_verdi_1_1_timer_ae84da85660b235a696ce264e3f605b77}
+
+\item 
+\hypertarget{class_verdi_1_1_timer_acb2d3f45eebcade0e618c6ae31c6ec6b}{double {\bfseries m\-Frequency}}\label{class_verdi_1_1_timer_acb2d3f45eebcade0e618c6ae31c6ec6b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{class_verdi_1_1_timer}{\-Timer} implementation, used for measuring frame times and frame rate amongst other things. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_verdi_1_1_timer_ae433ded73fd360dda5b9d4128e898acf}{\index{\-Verdi\-::\-Timer@{\-Verdi\-::\-Timer}!\-Timer@{\-Timer}}
+\index{\-Timer@{\-Timer}!Verdi::Timer@{\-Verdi\-::\-Timer}}
+\subsubsection[{\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Timer\-::\-Timer} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_timer_ae433ded73fd360dda5b9d4128e898acf}
+\-Default constructor. \hypertarget{class_verdi_1_1_timer_ad6c3f8ed231031b9484d40fb0bfd09bb}{\index{\-Verdi\-::\-Timer@{\-Verdi\-::\-Timer}!$\sim$\-Timer@{$\sim$\-Timer}}
+\index{$\sim$\-Timer@{$\sim$\-Timer}!Verdi::Timer@{\-Verdi\-::\-Timer}}
+\subsubsection[{$\sim$\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Timer\-::$\sim$\-Timer} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_timer_ad6c3f8ed231031b9484d40fb0bfd09bb}
+\-Default destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_timer_a2bd1c8b39fd3610f7fe020895f118ca2}{\index{\-Verdi\-::\-Timer@{\-Verdi\-::\-Timer}!get\-Milliseconds@{get\-Milliseconds}}
+\index{get\-Milliseconds@{get\-Milliseconds}!Verdi::Timer@{\-Verdi\-::\-Timer}}
+\subsubsection[{get\-Milliseconds}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t {\bf \-Verdi\-::\-Timer\-::get\-Milliseconds} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_timer_a2bd1c8b39fd3610f7fe020895f118ca2}
+\-Get the number of milliseconds since last reset. \hypertarget{class_verdi_1_1_timer_a335af3d4af032dfad1ecaa75f13befdd}{\index{\-Verdi\-::\-Timer@{\-Verdi\-::\-Timer}!get\-Seconds@{get\-Seconds}}
+\index{get\-Seconds@{get\-Seconds}!Verdi::Timer@{\-Verdi\-::\-Timer}}
+\subsubsection[{get\-Seconds}]{\setlength{\rightskip}{0pt plus 5cm}double {\bf \-Verdi\-::\-Timer\-::get\-Seconds} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_timer_a335af3d4af032dfad1ecaa75f13befdd}
+\-Get the number of seconds since last reset. \hypertarget{class_verdi_1_1_timer_af1ab73370631c144379a6c1d07fa6525}{\index{\-Verdi\-::\-Timer@{\-Verdi\-::\-Timer}!reset@{reset}}
+\index{reset@{reset}!Verdi::Timer@{\-Verdi\-::\-Timer}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Timer\-::reset} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_timer_af1ab73370631c144379a6c1d07fa6525}
+\-Reset the timer. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Timer.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/src/\-Verdi\-Timer.\-cpp\end{DoxyCompactItemize}

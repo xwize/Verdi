@@ -1,0 +1,93 @@
+\section{\-Verdi\-:\-:\-Tex\-Slice\-Strategy\-Impl \-Class \-Reference}
+\label{class_verdi_1_1_tex_slice_strategy_impl}\index{\-Verdi\-::\-Tex\-Slice\-Strategy\-Impl@{\-Verdi\-::\-Tex\-Slice\-Strategy\-Impl}}
+
+
+{\ttfamily \#include $<$\-Verdi\-Tex\-Slice\-Strategy\-Impl.\-h$>$}
+
+\-Inheritance diagram for \-Verdi\-:\-:\-Tex\-Slice\-Strategy\-Impl\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_verdi_1_1_tex_slice_strategy_impl}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Tex\-Slice\-Strategy\-Impl} (const \-String \&shader\-Path)
+\item 
+{\bf $\sim$\-Tex\-Slice\-Strategy\-Impl} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries \-\_\-submit\-Block\-Slice} (const {\bf \-Vec3} \&offset, const {\bf \-Vec3} \&scale, int plane\-Index)\label{class_verdi_1_1_tex_slice_strategy_impl_a99c80b0705d026195b0beec03957f0ff}
+
+\item 
+void {\bfseries \-\_\-setup\-Shaders} ()\label{class_verdi_1_1_tex_slice_strategy_impl_a206b490c1819d81fc70eeee1b798a9a2}
+
+\item 
+void {\bfseries \-\_\-setup\-Render\-Textures} (\-G\-Luint w, \-G\-Luint h)\label{class_verdi_1_1_tex_slice_strategy_impl_a02d7168a74427867577732049de187c7}
+
+\item 
+void {\bfseries \-\_\-submit\-Polygon\-Slice} (int plane\-Index)\label{class_verdi_1_1_tex_slice_strategy_impl_ae2821cd98cad12dc42ad10c81741d571}
+
+\item 
+int {\bfseries \-\_\-compute\-Front\-Index} ()\label{class_verdi_1_1_tex_slice_strategy_impl_af486f52db2133993ee55cf33cf7d00bd}
+
+\item 
+void {\bfseries \-\_\-render\-Frame\-Impl} (float dt, float time)\label{class_verdi_1_1_tex_slice_strategy_impl_a0e82966d7b86df8ac96051b5b6d2a1c1}
+
+\item 
+void {\bfseries \-\_\-initialise\-Impl} (uint32\-\_\-t w, uint32\-\_\-t h)\label{class_verdi_1_1_tex_slice_strategy_impl_a06e90475d829391014047221fd370cdf}
+
+\item 
+void {\bfseries \-\_\-shutdown\-Impl} ()\label{class_verdi_1_1_tex_slice_strategy_impl_ae1ccf8960e46e013a417ce36f2f9f627}
+
+\item 
+void {\bfseries \-\_\-resize\-Impl} (uint32\-\_\-t width, uint32\-\_\-t height)\label{class_verdi_1_1_tex_slice_strategy_impl_ad86a226fa1627fdab61df6fc1ee256c8}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-G\-Luint {\bfseries m\-Render\-Texture\-Width}\label{class_verdi_1_1_tex_slice_strategy_impl_aa9dd9228066c5be344e80fc60c4e1ad3}
+
+\item 
+\-G\-Luint {\bfseries m\-Render\-Texture\-Height}\label{class_verdi_1_1_tex_slice_strategy_impl_abf8a250a3505018bb1d915e4cb750c3e}
+
+\item 
+\-G\-Luint {\bfseries m\-Frame\-Buffer\-Object} [2]\label{class_verdi_1_1_tex_slice_strategy_impl_a8ba1b6acf71f5d9c34bf05b4aee7ed01}
+
+\item 
+\-G\-Luint {\bfseries m\-Frame\-Render\-Buffer\-Object} [2]\label{class_verdi_1_1_tex_slice_strategy_impl_a784db9599fc55d407fb188550d29137b}
+
+\item 
+\-G\-Luint {\bfseries m\-Final\-Render\-Texture} [2]\label{class_verdi_1_1_tex_slice_strategy_impl_a24a83ce7d3100a5076cb422f93361e1d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\doxyref{\-Tex\-Slice\-Strategy}{p.}{class_verdi_1_1_tex_slice_strategy} implementation. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Verdi\-::\-Tex\-Slice\-Strategy\-Impl@{\-Verdi\-::\-Tex\-Slice\-Strategy\-Impl}!\-Tex\-Slice\-Strategy\-Impl@{\-Tex\-Slice\-Strategy\-Impl}}
+\index{\-Tex\-Slice\-Strategy\-Impl@{\-Tex\-Slice\-Strategy\-Impl}!Verdi::TexSliceStrategyImpl@{\-Verdi\-::\-Tex\-Slice\-Strategy\-Impl}}
+\subsubsection[{\-Tex\-Slice\-Strategy\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-Impl\-::\-Tex\-Slice\-Strategy\-Impl} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{shader\-Path}
+\end{DoxyParamCaption}
+)}\label{class_verdi_1_1_tex_slice_strategy_impl_a37f0d2fb2bb9b47d4ecb4512078607af}
+\-Default constructor. \index{\-Verdi\-::\-Tex\-Slice\-Strategy\-Impl@{\-Verdi\-::\-Tex\-Slice\-Strategy\-Impl}!$\sim$\-Tex\-Slice\-Strategy\-Impl@{$\sim$\-Tex\-Slice\-Strategy\-Impl}}
+\index{$\sim$\-Tex\-Slice\-Strategy\-Impl@{$\sim$\-Tex\-Slice\-Strategy\-Impl}!Verdi::TexSliceStrategyImpl@{\-Verdi\-::\-Tex\-Slice\-Strategy\-Impl}}
+\subsubsection[{$\sim$\-Tex\-Slice\-Strategy\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-Impl\-::$\sim$\-Tex\-Slice\-Strategy\-Impl} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_verdi_1_1_tex_slice_strategy_impl_a779e52a896c86dfe07574f65c5767c6f}
+\-Default destructor. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/include/\-Verdi\-Tex\-Slice\-Strategy\-Impl.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/src/\-Verdi\-Tex\-Slice\-Strategy\-Impl.\-cpp\end{DoxyCompactItemize}

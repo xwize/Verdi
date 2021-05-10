@@ -1,0 +1,273 @@
+\hypertarget{class_verdi_1_1_cg_uber_shader}{\section{\-Verdi\-:\-:\-Cg\-Uber\-Shader \-Class \-Reference}
+\label{class_verdi_1_1_cg_uber_shader}\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Cg\-Uber\-Shader.\-h$>$}
+
+\-Inheritance diagram for \-Verdi\-:\-:\-Cg\-Uber\-Shader\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_verdi_1_1_cg_uber_shader}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_cg_uber_shader_adea16558f151a8ca4a62623ced1af8b8}{typedef std\-::map$<$ uint32\-\_\-t, \*
+\-C\-Geffect $>$ {\bfseries \-Effect\-Identifier\-Map}}\label{class_verdi_1_1_cg_uber_shader_adea16558f151a8ca4a62623ced1af8b8}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_cg_uber_shader_a5e966004208914c321d13682dbf46e7f}{\-Cg\-Uber\-Shader} (const \-String \&source\-File, const \-Effect\-Descriptor\-Vector \&effects)
+\item 
+\hyperlink{class_verdi_1_1_cg_uber_shader_a5a017eafea523d5d8a9d367590eca6c9}{$\sim$\-Cg\-Uber\-Shader} ()
+\item 
+void \hyperlink{class_verdi_1_1_cg_uber_shader_a6b645a552cac4f146317e952e63a6983}{load} ()
+\item 
+void \hyperlink{class_verdi_1_1_cg_uber_shader_a7c9cb2b6be590a8ba8403966c18c0224}{unload} ()
+\item 
+void \hyperlink{class_verdi_1_1_cg_uber_shader_a6d6ce6cfd0ac5184d3080d28e6acee5a}{use\-Effect} (uint32\-\_\-t id)
+\item 
+void \hyperlink{class_verdi_1_1_cg_uber_shader_a0fcb4b251642e47d9cddf8b953077ca9}{bind} (int pass\-Number)
+\item 
+void \hyperlink{class_verdi_1_1_cg_uber_shader_a59c11b258e21b727b1f9c1f97a82d92d}{unbind} ()
+\item 
+\-C\-Geffect \hyperlink{class_verdi_1_1_cg_uber_shader_a00bc3ed3a3a2487e98d2ed4a870c71d1}{get\-Effect} (uint32\-\_\-t id) const 
+\item 
+\-Parameter \hyperlink{class_verdi_1_1_cg_uber_shader_acb88799a32d8ffb579394672ca5476e9}{get\-Semantic\-Parameter} (const \-String \&name)
+\item 
+void \hyperlink{class_verdi_1_1_cg_uber_shader_a5f26603c60f105b32b29c459fbded251}{set\-Vector\-Parameter} (\-Parameter p, const \hyperlink{class_verdi_1_1_vec4}{\-Vec4} \&v)
+\item 
+void \hyperlink{class_verdi_1_1_cg_uber_shader_acb5142e56a6cc919560bcd847f3fceb9}{set\-Vector\-Parameter} (\-Parameter p, const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&v)
+\item 
+void \hyperlink{class_verdi_1_1_cg_uber_shader_ab039ed93cb6a6aac6cda3dbb9287f46b}{set\-Scalar\-Parameter} (\-Parameter p, float s)
+\item 
+void \hyperlink{class_verdi_1_1_cg_uber_shader_a210df3e0d883476cbe421a310182e6d5}{set\-Scalar\-Parameter} (\-Parameter p, int s)
+\item 
+void \hyperlink{class_verdi_1_1_cg_uber_shader_aefa6e362c935963373c5561f41374d87}{set\-Texture\-Parameter} (\-Parameter p, int s)
+\item 
+void \hyperlink{class_verdi_1_1_cg_uber_shader_a2eaaa9111fe8cf0408100de8663f2be0}{set\-Model\-View\-Parameter} (\-Parameter p)
+\item 
+void \hyperlink{class_verdi_1_1_cg_uber_shader_a60da289f550216f9d8c228b48e946d42}{set\-Model\-View\-Projection\-Parameter} (\-Parameter p)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_cg_uber_shader_a9c40444242b5de5dcc86a41b6b9aa93c}{void {\bfseries \-\_\-check\-For\-Cg\-Error} (const \-String \&error\-Message)}\label{class_verdi_1_1_cg_uber_shader_a9c40444242b5de5dcc86a41b6b9aa93c}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_cg_uber_shader_a3b9f26dd6f54b1e4e0277a198defbeaa}{\-String {\bfseries m\-Source\-File}}\label{class_verdi_1_1_cg_uber_shader_a3b9f26dd6f54b1e4e0277a198defbeaa}
+
+\item 
+\hypertarget{class_verdi_1_1_cg_uber_shader_a5b908bce123439f4231fbad259886ade}{uint32\-\_\-t {\bfseries m\-Current\-Effect\-Identifier}}\label{class_verdi_1_1_cg_uber_shader_a5b908bce123439f4231fbad259886ade}
+
+\item 
+\hypertarget{class_verdi_1_1_cg_uber_shader_aca7e3e4f1cc0559bc700ab1c76021520}{\-C\-Gpass {\bfseries m\-Current\-Pass}}\label{class_verdi_1_1_cg_uber_shader_aca7e3e4f1cc0559bc700ab1c76021520}
+
+\item 
+\hypertarget{class_verdi_1_1_cg_uber_shader_a2c92f1bd2c7fa697042ec71d72a905a7}{\-Effect\-Identifier\-Map {\bfseries m\-Effects}}\label{class_verdi_1_1_cg_uber_shader_a2c92f1bd2c7fa697042ec71d72a905a7}
+
+\item 
+\hypertarget{class_verdi_1_1_cg_uber_shader_adce7bb6257961af3578bb4360b6fd43d}{\-Effect\-Descriptor\-Vector {\bfseries m\-Effect\-Descriptors}}\label{class_verdi_1_1_cg_uber_shader_adce7bb6257961af3578bb4360b6fd43d}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_cg_uber_shader_a70cc73fc4d25128d50c28118339a621a}{static \-C\-Gcontext {\bfseries m\-Context} = \-N\-U\-L\-L}\label{class_verdi_1_1_cg_uber_shader_a70cc73fc4d25128d50c28118339a621a}
+
+\item 
+\hypertarget{class_verdi_1_1_cg_uber_shader_a5c1fe8f3d1be4e23881e1bc759868d10}{static int {\bfseries m\-Reference\-Count} = 0}\label{class_verdi_1_1_cg_uber_shader_a5c1fe8f3d1be4e23881e1bc759868d10}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A wrapper around a \-Cg effect that enables \char`\"{}uber shader\char`\"{} functionality. \-An uber shader is commonly a shader that contains preprocessor statements to create multiple shaders from a single file. \-This comes in handy, when shaders that all use the same algorithm but have subtle variations (e.\-g. 2 lights vs 3 lights) need to be managed effectively. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_verdi_1_1_cg_uber_shader_a5e966004208914c321d13682dbf46e7f}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!\-Cg\-Uber\-Shader@{\-Cg\-Uber\-Shader}}
+\index{\-Cg\-Uber\-Shader@{\-Cg\-Uber\-Shader}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{\-Cg\-Uber\-Shader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::\-Cg\-Uber\-Shader} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{source\-File, }
+\item[{const \-Effect\-Descriptor\-Vector \&}]{effects}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_cg_uber_shader_a5e966004208914c321d13682dbf46e7f}
+\-Parameterised constructor. \hypertarget{class_verdi_1_1_cg_uber_shader_a5a017eafea523d5d8a9d367590eca6c9}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!$\sim$\-Cg\-Uber\-Shader@{$\sim$\-Cg\-Uber\-Shader}}
+\index{$\sim$\-Cg\-Uber\-Shader@{$\sim$\-Cg\-Uber\-Shader}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{$\sim$\-Cg\-Uber\-Shader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::$\sim$\-Cg\-Uber\-Shader} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_cg_uber_shader_a5a017eafea523d5d8a9d367590eca6c9}
+\-Default destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_cg_uber_shader_a0fcb4b251642e47d9cddf8b953077ca9}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!bind@{bind}}
+\index{bind@{bind}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{bind}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::bind} (
+\begin{DoxyParamCaption}
+\item[{int}]{pass\-Number}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_cg_uber_shader_a0fcb4b251642e47d9cddf8b953077ca9}
+\-Bind a particular pass. 
+
+\-Implements \hyperlink{class_verdi_1_1_uber_shader_aa39fec5a6c32f8493a8c9dc1146d7687}{\-Verdi\-::\-Uber\-Shader}.
+
+\hypertarget{class_verdi_1_1_cg_uber_shader_a00bc3ed3a3a2487e98d2ed4a870c71d1}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!get\-Effect@{get\-Effect}}
+\index{get\-Effect@{get\-Effect}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{get\-Effect}]{\setlength{\rightskip}{0pt plus 5cm}\-C\-Geffect {\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::get\-Effect} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{id}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_cg_uber_shader_a00bc3ed3a3a2487e98d2ed4a870c71d1}
+\-Gets the effect assigned to the given name. \hypertarget{class_verdi_1_1_cg_uber_shader_acb88799a32d8ffb579394672ca5476e9}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!get\-Semantic\-Parameter@{get\-Semantic\-Parameter}}
+\index{get\-Semantic\-Parameter@{get\-Semantic\-Parameter}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{get\-Semantic\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}\-Verdi\-::\-Uber\-Shader\-::\-Parameter {\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::get\-Semantic\-Parameter} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_cg_uber_shader_acb88799a32d8ffb579394672ca5476e9}
+\-Gets shader semantic for the currently bound effect. 
+
+\-Implements \hyperlink{class_verdi_1_1_uber_shader_a386eee0f6894c403fe03aa166f215125}{\-Verdi\-::\-Uber\-Shader}.
+
+\hypertarget{class_verdi_1_1_cg_uber_shader_a6b645a552cac4f146317e952e63a6983}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!load@{load}}
+\index{load@{load}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::load} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_cg_uber_shader_a6b645a552cac4f146317e952e63a6983}
+\-Perform loading. 
+
+\-Implements \hyperlink{class_verdi_1_1_uber_shader_a5b607971ae77e79792178a79546a262f}{\-Verdi\-::\-Uber\-Shader}.
+
+\hypertarget{class_verdi_1_1_cg_uber_shader_a2eaaa9111fe8cf0408100de8663f2be0}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!set\-Model\-View\-Parameter@{set\-Model\-View\-Parameter}}
+\index{set\-Model\-View\-Parameter@{set\-Model\-View\-Parameter}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{set\-Model\-View\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::set\-Model\-View\-Parameter} (
+\begin{DoxyParamCaption}
+\item[{\-Parameter}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_cg_uber_shader_a2eaaa9111fe8cf0408100de8663f2be0}
+\-Set the a matrix parameter from \-Open\-G\-L. 
+
+\-Implements \hyperlink{class_verdi_1_1_uber_shader_a741a7d751e9e69990581a307dc08418e}{\-Verdi\-::\-Uber\-Shader}.
+
+\hypertarget{class_verdi_1_1_cg_uber_shader_a60da289f550216f9d8c228b48e946d42}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!set\-Model\-View\-Projection\-Parameter@{set\-Model\-View\-Projection\-Parameter}}
+\index{set\-Model\-View\-Projection\-Parameter@{set\-Model\-View\-Projection\-Parameter}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{set\-Model\-View\-Projection\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::set\-Model\-View\-Projection\-Parameter} (
+\begin{DoxyParamCaption}
+\item[{\-Parameter}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_cg_uber_shader_a60da289f550216f9d8c228b48e946d42}
+\-Set the a matrix parameter from \-Open\-G\-L. 
+
+\-Implements \hyperlink{class_verdi_1_1_uber_shader_aa4931fbc9df28049d84c0b85d5ec7a6b}{\-Verdi\-::\-Uber\-Shader}.
+
+\hypertarget{class_verdi_1_1_cg_uber_shader_ab039ed93cb6a6aac6cda3dbb9287f46b}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!set\-Scalar\-Parameter@{set\-Scalar\-Parameter}}
+\index{set\-Scalar\-Parameter@{set\-Scalar\-Parameter}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{set\-Scalar\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::set\-Scalar\-Parameter} (
+\begin{DoxyParamCaption}
+\item[{\-Parameter}]{p, }
+\item[{float}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_cg_uber_shader_ab039ed93cb6a6aac6cda3dbb9287f46b}
+\-Set a scalar parameter. 
+
+\-Implements \hyperlink{class_verdi_1_1_uber_shader_a294b7279b9f76df4f589433c453ae054}{\-Verdi\-::\-Uber\-Shader}.
+
+\hypertarget{class_verdi_1_1_cg_uber_shader_a210df3e0d883476cbe421a310182e6d5}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!set\-Scalar\-Parameter@{set\-Scalar\-Parameter}}
+\index{set\-Scalar\-Parameter@{set\-Scalar\-Parameter}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{set\-Scalar\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::set\-Scalar\-Parameter} (
+\begin{DoxyParamCaption}
+\item[{\-Parameter}]{p, }
+\item[{int}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_cg_uber_shader_a210df3e0d883476cbe421a310182e6d5}
+\-Set a scalar parameter. 
+
+\-Implements \hyperlink{class_verdi_1_1_uber_shader_ab3de9868736b87203cda53b5aff7699a}{\-Verdi\-::\-Uber\-Shader}.
+
+\hypertarget{class_verdi_1_1_cg_uber_shader_aefa6e362c935963373c5561f41374d87}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!set\-Texture\-Parameter@{set\-Texture\-Parameter}}
+\index{set\-Texture\-Parameter@{set\-Texture\-Parameter}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{set\-Texture\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::set\-Texture\-Parameter} (
+\begin{DoxyParamCaption}
+\item[{\-Parameter}]{p, }
+\item[{int}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_cg_uber_shader_aefa6e362c935963373c5561f41374d87}
+\-Set a texture parameter. 
+
+\-Implements \hyperlink{class_verdi_1_1_uber_shader_a97ca53336545f11e1a6e5d04c94452fc}{\-Verdi\-::\-Uber\-Shader}.
+
+\hypertarget{class_verdi_1_1_cg_uber_shader_a5f26603c60f105b32b29c459fbded251}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!set\-Vector\-Parameter@{set\-Vector\-Parameter}}
+\index{set\-Vector\-Parameter@{set\-Vector\-Parameter}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{set\-Vector\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::set\-Vector\-Parameter} (
+\begin{DoxyParamCaption}
+\item[{\-Parameter}]{p, }
+\item[{const {\bf \-Vec4} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_cg_uber_shader_a5f26603c60f105b32b29c459fbded251}
+\-Set a parameter from a 4d vector. 
+
+\-Implements \hyperlink{class_verdi_1_1_uber_shader_a9d769a929108812346b7859626ca4106}{\-Verdi\-::\-Uber\-Shader}.
+
+\hypertarget{class_verdi_1_1_cg_uber_shader_acb5142e56a6cc919560bcd847f3fceb9}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!set\-Vector\-Parameter@{set\-Vector\-Parameter}}
+\index{set\-Vector\-Parameter@{set\-Vector\-Parameter}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{set\-Vector\-Parameter}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::set\-Vector\-Parameter} (
+\begin{DoxyParamCaption}
+\item[{\-Parameter}]{p, }
+\item[{const {\bf \-Vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_cg_uber_shader_acb5142e56a6cc919560bcd847f3fceb9}
+\-Set a parameter from a 3d vector. 
+
+\-Implements \hyperlink{class_verdi_1_1_uber_shader_aca9c0a6cfa866683063904e022c63365}{\-Verdi\-::\-Uber\-Shader}.
+
+\hypertarget{class_verdi_1_1_cg_uber_shader_a59c11b258e21b727b1f9c1f97a82d92d}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!unbind@{unbind}}
+\index{unbind@{unbind}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{unbind}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::unbind} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_cg_uber_shader_a59c11b258e21b727b1f9c1f97a82d92d}
+\-Unbind. 
+
+\-Implements \hyperlink{class_verdi_1_1_uber_shader_a3f188c2079bdae35d5eb07f41f11272e}{\-Verdi\-::\-Uber\-Shader}.
+
+\hypertarget{class_verdi_1_1_cg_uber_shader_a7c9cb2b6be590a8ba8403966c18c0224}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!unload@{unload}}
+\index{unload@{unload}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{unload}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::unload} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_cg_uber_shader_a7c9cb2b6be590a8ba8403966c18c0224}
+\-Cleanup. 
+
+\-Implements \hyperlink{class_verdi_1_1_uber_shader_a27fde535b204e6c55bdffb2baeead8f7}{\-Verdi\-::\-Uber\-Shader}.
+
+\hypertarget{class_verdi_1_1_cg_uber_shader_a6d6ce6cfd0ac5184d3080d28e6acee5a}{\index{\-Verdi\-::\-Cg\-Uber\-Shader@{\-Verdi\-::\-Cg\-Uber\-Shader}!use\-Effect@{use\-Effect}}
+\index{use\-Effect@{use\-Effect}!Verdi::CgUberShader@{\-Verdi\-::\-Cg\-Uber\-Shader}}
+\subsubsection[{use\-Effect}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Cg\-Uber\-Shader\-::use\-Effect} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_cg_uber_shader_a6d6ce6cfd0ac5184d3080d28e6acee5a}
+\-Use a particular effect. 
+
+\-Implements \hyperlink{class_verdi_1_1_uber_shader_a70834be00678a9bb03ed7bf038d8a7c1}{\-Verdi\-::\-Uber\-Shader}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/include/\-Verdi\-Cg\-Uber\-Shader.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/src/\-Verdi\-Cg\-Uber\-Shader.\-cpp\end{DoxyCompactItemize}

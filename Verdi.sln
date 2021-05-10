@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VerdiMain", "VerdiMain\VerdiMain.vcxproj", "{B3955468-E522-45E6-8B96-CB04FC354C96}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VerdiRenderStrategies", "VerdiRenderStrategies\VerdiRenderStrategies.vcxproj", "{8033C472-F1AE-4B69-808A-4D2306AFEC36}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B3955468-E522-45E6-8B96-CB04FC354C96} = {B3955468-E522-45E6-8B96-CB04FC354C96}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VerdiSimple", "VerdiSimple\VerdiSimple.vcxproj", "{AB5505A4-D1EB-4C14-A146-E6534F40B784}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B3955468-E522-45E6-8B96-CB04FC354C96} = {B3955468-E522-45E6-8B96-CB04FC354C96}
+		{8033C472-F1AE-4B69-808A-4D2306AFEC36} = {8033C472-F1AE-4B69-808A-4D2306AFEC36}
+		{FE014EAB-2FF9-44B0-B6BD-E5D98831F793} = {FE014EAB-2FF9-44B0-B6BD-E5D98831F793}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VerdiWorkspace", "VerdiWorkspace\VerdiWorkspace.vcxproj", "{FE014EAB-2FF9-44B0-B6BD-E5D98831F793}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B3955468-E522-45E6-8B96-CB04FC354C96} = {B3955468-E522-45E6-8B96-CB04FC354C96}
+		{8033C472-F1AE-4B69-808A-4D2306AFEC36} = {8033C472-F1AE-4B69-808A-4D2306AFEC36}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3955468-E522-45E6-8B96-CB04FC354C96}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B3955468-E522-45E6-8B96-CB04FC354C96}.Debug|Win32.Build.0 = Debug|Win32
+		{B3955468-E522-45E6-8B96-CB04FC354C96}.Release|Win32.ActiveCfg = Release|Win32
+		{B3955468-E522-45E6-8B96-CB04FC354C96}.Release|Win32.Build.0 = Release|Win32
+		{8033C472-F1AE-4B69-808A-4D2306AFEC36}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8033C472-F1AE-4B69-808A-4D2306AFEC36}.Debug|Win32.Build.0 = Debug|Win32
+		{8033C472-F1AE-4B69-808A-4D2306AFEC36}.Release|Win32.ActiveCfg = Release|Win32
+		{8033C472-F1AE-4B69-808A-4D2306AFEC36}.Release|Win32.Build.0 = Release|Win32
+		{AB5505A4-D1EB-4C14-A146-E6534F40B784}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AB5505A4-D1EB-4C14-A146-E6534F40B784}.Debug|Win32.Build.0 = Debug|Win32
+		{AB5505A4-D1EB-4C14-A146-E6534F40B784}.Release|Win32.ActiveCfg = Release|Win32
+		{AB5505A4-D1EB-4C14-A146-E6534F40B784}.Release|Win32.Build.0 = Release|Win32
+		{FE014EAB-2FF9-44B0-B6BD-E5D98831F793}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FE014EAB-2FF9-44B0-B6BD-E5D98831F793}.Debug|Win32.Build.0 = Debug|Win32
+		{FE014EAB-2FF9-44B0-B6BD-E5D98831F793}.Release|Win32.ActiveCfg = Release|Win32
+		{FE014EAB-2FF9-44B0-B6BD-E5D98831F793}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

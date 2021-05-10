@@ -1,0 +1,231 @@
+/** Texture slicing shader implementation.
+**/
+
+#include "../Shading.cg"
+
+// Program parameters
+uniform float4x4	modelViewProj	: ModelViewProj;
+uniform float4x4	modelView		: ModelView;
+uniform float		time			: Time;
+
+uniform sampler3D	dataSet				: DataSet;
+uniform float3		dataSetDimensions	: DataSetDimensions;
+uniform sampler2D	transferFunction	: TransferFunction;
+
+uniform float4		ambient				: Ambient;
+uniform	float4		diffuse				: Diffuse;
+uniform float4		specular			: Specular;
+uniform float		specularExponent	: SpecularExponent;
+
+uniform float3		lightPosition	: LightPosition;
+uniform float		lightRadius		: LightRadius;
+
+uniform sampler2D	jitterTex			: JitterTex;
+
+// Texture slice specific
+uniform int			numIterations		: NumIterations;
+uniform float3		translation			: Translation;
+uniform float3		scale				: Scale;
+uniform float3		viewVector			: ViewVector;
+uniform float		planeStartDist		: PlaneStartDist;
+uniform float		planeStepDist		: PlaneStepDist;
+uniform int			frontIndex			: FrontIndex;
+uniform float3		cameraPosition		: CameraPosition;
+
+
+// First coord of edge intersection LUT
+// Constructed from original paper
+int ev1[24] = {
+			 0, 1, 4, 1,
+			 1, 0, 1, 4,
+			 0, 2, 5, 2,
+			 2, 0, 2, 5,
+			 0, 3, 6, 3,
+			 3, 0, 3, 6};
+
+// Second coord of edge intersection LUT
+// Constructed from original paper
+int ev2[24] = {
+			 1, 4, 7, 5,
+			 5, 1, 4, 7,
+			 2, 5, 7, 6,
+			 6, 2, 5, 7,
+			 3, 6, 7, 4,
+			 4, 3, 6, 7};
+
+// Sequence table
+// Generated
+int seq[64] = {
+   0, 1, 3, 7, 6, 2, 4, 5,
+   1, 6, 2, 0, 7, 5, 3, 4,
+   2, 3, 1, 5, 4, 0, 6, 7,
+   3, 4, 0, 2, 5, 7, 1, 6,
+   4, 5, 7, 3, 2, 6, 0, 1,
+   5, 2, 6, 4, 3, 1, 7, 0,
+   6, 7, 5, 1, 0, 4, 2, 3,
+   7, 0, 4, 6, 1, 3, 5, 2
+};
+
+// Cube vertices
+// Generated
+float3 cubeVerts[8] = {
+   float3(-1,-1,-1),
+   float3(1,-1,-1),
+   float3(1,1,-1),
+   float3(-1,1,-1),
+   float3(-1,1,1),
+   float3(1,1,1),
+   float3(1,-1,1),
+   float3(-1,-1,1)
+};
+
+ // Input vertex
+ struct VertIn
+ {
+    float4 pos   : POSITION;
+    float4 color : COLOR0;
+ };
+ 
+ // Output vertex
+ struct VertOut
+ {
+    float4 pos : POSITION;
+    float3 tex : TEXCOORD0;
+	float3 viewVec : TEXCOORD1;
+	float4 posScreen : TEXCOORD2;
+ };
+
+VertOut vsMainSlice(VertIn IN) 
+{
+	// Implements the algorithm in the original paper
+	float planeDist = planeStartDist + IN.pos.y * planeStepDist;
+	float3 viewVecNorm = normalize(viewVector);
+	float3 computedPosition;
+
+	// Loop over all the edges in the edge table
+	for(int i = 0; i < 4; ++i) {
+
+		// Get the edge vertex indices and immediately map with
+		// the sequence table using the front index
+		int vertexIndex1 = seq[ int(frontIndex * 8 + ev1[IN.pos.x * 4 + i]) ];
+		int vertexIndex2 = seq[ int(frontIndex * 8 + ev2[IN.pos.x * 4 + i]) ];
+		
+		// Retrieve the actual coordinates from the indices
+		float3 v1 = cubeVerts[vertexIndex1];
+		float3 v2 = cubeVerts[vertexIndex2];
+		
+		// Start to apply the intersection formula
+		float3 edgeStart = v1;
+		float3 edgeDirection = v2 - v1;
+		
+		float denom = dot(edgeDirection, viewVecNorm);
+
+		// We cant divide by infinity if the edge is perpendicular to the plane normal
+		// so set lambda to -1.0 to skip the intersection
+		float lambda = (denom != 0.0) ? (planeDist - dot(edgeStart,viewVecNorm))/denom : -1.0;
+		
+		// If we have an intersection
+		if( (lambda >= 0.0) && (lambda <= 1.0) ) {
+			computedPosition = edgeStart + lambda * edgeDirection;
+			break;
+		}
+	}
+	
+    VertOut OUT;
+    OUT.pos = mul(modelViewProj, float4(computedPosition,1.0) );
+	OUT.tex = 0.5 * computedPosition + 0.5;
+
+	float3 camPos =  0.5 + cameraPosition*0.5;
+	OUT.viewVec = (OUT.tex.xyz - camPos);
+	OUT.posScreen = OUT.pos;
+
+    return OUT;
+}
+
+// The tex slicing shader
+float4 psMainSlice(float4 texIn : TEXCOORD0, float3 rayDir : TEXCOORD1, float4 posScreen : TEXCOORD2) : COLOR
+{
+	rayDir = normalize(rayDir);
+
+	// Spacing is root 3 / number of iterations, root 3 because
+	// we're in texture space and the max distance is |(1,1,1) - (0,0,0)|
+	float sampleSpacing = (1.732/(numIterations));
+	float referenceSpacing = 1.732/600.0;
+	
+	float3 samplePos = texIn.xyz;
+	float4 destColour = float4(0.0f,0.0f,0.0f,0.0f);
+	
+	// Offset used in gradient computation
+	float3 d = 1.0 / dataSetDimensions;
+	
+	// Sample the jitter texture
+	posScreen.xy /= posScreen.w;
+	posScreen.xy = 0.5 + 0.5*posScreen.xy;
+
+	// Jitter offset
+	float offset = tex2D(jitterTex,posScreen.xy*64).r;
+
+	// Apply offset
+	samplePos = samplePos + offset * rayDir * sampleSpacing;
+
+	// Value
+	float sampleValue = tex3D(dataSet, samplePos).r;
+
+	// Gradient
+	float3 gradient;
+	float3 gradientMag = 0.5;
+
+	// Modifiable colour
+	float4 sourceColour;
+
+	#ifdef USE_ON_THE_FLY_GRADIENTS
+		gradient = onTheFlyGradient(dataSet, samplePos, d);
+	#endif
+
+	gradientMag = length(gradient);
+	float lup = gradientMag;
+	sourceColour = tex2D(transferFunction, float2(sampleValue, lup) ).rgba;
+
+	#ifdef USE_LIGHTING
+		ShadingInfo shadingInfo;
+		if(sourceColour.a > 0.01) {
+			ShadingInfo shadingInfo;
+			
+			float3 norm = gradient;
+
+			#ifndef USE_PRECOMPUTED_GRADIENTS
+				norm = onTheFlyGradientPost(dataSet,
+								transferFunction, samplePos, d);
+			#endif
+
+			shadingInfo.position = samplePos;
+			shadingInfo.normal = normalize(norm);
+			shadingInfo.lightPosition = lightPosition * 0.5 + 0.5;
+			shadingInfo.rayFromEye = rayDir;
+			shadingInfo.ambient = ambient;
+			shadingInfo.diffuse = diffuse * sourceColour;
+			shadingInfo.specular = specular;
+			shadingInfo.specularExp = specularExponent;
+			shadingInfo.lightRange = lightRadius;
+
+			sourceColour = phongShade(shadingInfo);
+		}
+	#endif
+
+	#ifndef USE_LMIP
+		// Opacity correction
+		sourceColour.a = 1 - pow((1-sourceColour.a),sampleSpacing/referenceSpacing);
+		sourceColour.rgb *= sourceColour.a;
+	#endif
+
+	return sourceColour.rgba;
+}
+
+technique TexSliceGLSL
+{
+	pass TexSlice {
+			VertexProgram = compile glslv vsMainSlice();
+			FragmentProgram = compile glslf psMainSlice();
+	}
+
+}

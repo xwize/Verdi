@@ -1,0 +1,155 @@
+\hypertarget{class_verdi_1_1_min_max_octree}{\section{\-Verdi\-:\-:\-Min\-Max\-Octree \-Class \-Reference}
+\label{class_verdi_1_1_min_max_octree}\index{\-Verdi\-::\-Min\-Max\-Octree@{\-Verdi\-::\-Min\-Max\-Octree}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Min\-Max\-Octree.\-h$>$}
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_verdi_1_1_min_max_octree_1_1_node}{\-Node}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_min_max_octree_a59c139cbb1b7b287a94f0b4442b2fbda}{typedef std\-::vector$<$ \hyperlink{class_verdi_1_1_min_max_octree_1_1_node}{\-Node} $\ast$ $>$ {\bfseries \-Node\-List}}\label{class_verdi_1_1_min_max_octree_a59c139cbb1b7b287a94f0b4442b2fbda}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_min_max_octree_a4f35364642eae968b40d45dab3a45847}{\-Min\-Max\-Octree} ()
+\item 
+\hyperlink{class_verdi_1_1_min_max_octree_af5ff8bee7aa713ac1df1002a046d31e9}{$\sim$\-Min\-Max\-Octree} ()
+\item 
+void \hyperlink{class_verdi_1_1_min_max_octree_a077f66fafa92226035a35a65087a56cd}{clear} ()
+\item 
+void \hyperlink{class_verdi_1_1_min_max_octree_a939114366e7c2d07c31fb9df50943273}{create} (const \hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$value\-Data\-Set, uint32\-\_\-t value\-Index, uint32\-\_\-t depth)
+\item 
+void \hyperlink{class_verdi_1_1_min_max_octree_a11bfb801dbe29ff9aa292ad79b8ec3f0}{create} (const \hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$value\-Data\-Set, uint32\-\_\-t value\-Index, const \hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$grad\-Mag\-Data\-Set, uint32\-\_\-t grad\-Mag\-Index, const \hyperlink{class_verdi_1_1_transfer_function}{\-Transfer\-Function} $\ast$transfer\-Function, uint32\-\_\-t depth)
+\item 
+bool \hyperlink{class_verdi_1_1_min_max_octree_a9ba1bcc4cc5640a7063ee0387a8e0e15}{sample\-Mapping\-Table} (float minv, float maxv) const 
+\item 
+void \hyperlink{class_verdi_1_1_min_max_octree_a919a1f37fe483f62bc4f998fe77c221b}{update\-Mapping\-Table} (const \hyperlink{class_verdi_1_1_transfer_function}{\-Transfer\-Function} $\ast$func)
+\item 
+bool \hyperlink{class_verdi_1_1_min_max_octree_a1c89f597df644f03aeb780914a1570d6}{is\-Visible} (const \hyperlink{class_verdi_1_1_min_max_octree_1_1_node}{\-Node} $\ast$node) const 
+\item 
+\hyperlink{class_verdi_1_1_min_max_octree_1_1_node}{\-Node} $\ast$ \hyperlink{class_verdi_1_1_min_max_octree_ab1f77097e425d06168c22ed0105b6ff6}{get\-Root\-Node} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_min_max_octree_ab3d01fd03e28cbb9b16deacdafb16175}{void {\bfseries \-\_\-build\-Tree} (\hyperlink{class_verdi_1_1_min_max_octree_1_1_node}{\-Node} $\ast$parent, int depth)}\label{class_verdi_1_1_min_max_octree_ab3d01fd03e28cbb9b16deacdafb16175}
+
+\item 
+\hypertarget{class_verdi_1_1_min_max_octree_a988d243c72a8bd249d26e1444fb3ac34}{void {\bfseries \-\_\-propagate\-Min\-Max\-Values} (\hyperlink{class_verdi_1_1_min_max_octree_1_1_node}{\-Node} $\ast$parent)}\label{class_verdi_1_1_min_max_octree_a988d243c72a8bd249d26e1444fb3ac34}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_min_max_octree_acc576d7e7142cff41ec896960fc8e938}{uint8\-\_\-t {\bfseries m\-Mapping\-Table} \mbox{[}\-M\-A\-P\-P\-I\-N\-G\-\_\-\-T\-A\-B\-L\-E\-\_\-\-D\-I\-M\mbox{]}\mbox{[}\-M\-A\-P\-P\-I\-N\-G\-\_\-\-T\-A\-B\-L\-E\-\_\-\-D\-I\-M\mbox{]}}\label{class_verdi_1_1_min_max_octree_acc576d7e7142cff41ec896960fc8e938}
+
+\item 
+\hypertarget{class_verdi_1_1_min_max_octree_ac6d6a97f45fe4af07948c7b5f5eca674}{\-Node\-List {\bfseries m\-Nodes}}\label{class_verdi_1_1_min_max_octree_ac6d6a97f45fe4af07948c7b5f5eca674}
+
+\item 
+\hypertarget{class_verdi_1_1_min_max_octree_aae3816cb5486e18fae99440a9603c929}{\-Node\-List {\bfseries m\-Leaf\-Nodes}}\label{class_verdi_1_1_min_max_octree_aae3816cb5486e18fae99440a9603c929}
+
+\item 
+\hypertarget{class_verdi_1_1_min_max_octree_aa49717179d4ae4069a29473f6634d2d5}{\hyperlink{class_verdi_1_1_min_max_octree_1_1_node}{\-Node} $\ast$ {\bfseries mp\-Root\-Node}}\label{class_verdi_1_1_min_max_octree_aa49717179d4ae4069a29473f6634d2d5}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_min_max_octree_ad48fa6e43b5caa4443b20aff33acf078}{static const int {\bfseries \-M\-A\-P\-P\-I\-N\-G\-\_\-\-T\-A\-B\-L\-E\-\_\-\-D\-I\-M} = 128}\label{class_verdi_1_1_min_max_octree_ad48fa6e43b5caa4443b20aff33acf078}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This class is an octree implementation that stores the min and max values of a pre-\/classified data set to a particular octree depth. \-This is can be used in an empty space leaping algorithm to improve rendering performance. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_verdi_1_1_min_max_octree_a4f35364642eae968b40d45dab3a45847}{\index{\-Verdi\-::\-Min\-Max\-Octree@{\-Verdi\-::\-Min\-Max\-Octree}!\-Min\-Max\-Octree@{\-Min\-Max\-Octree}}
+\index{\-Min\-Max\-Octree@{\-Min\-Max\-Octree}!Verdi::MinMaxOctree@{\-Verdi\-::\-Min\-Max\-Octree}}
+\subsubsection[{\-Min\-Max\-Octree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Min\-Max\-Octree\-::\-Min\-Max\-Octree} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_min_max_octree_a4f35364642eae968b40d45dab3a45847}
+\-Default constructor. \hypertarget{class_verdi_1_1_min_max_octree_af5ff8bee7aa713ac1df1002a046d31e9}{\index{\-Verdi\-::\-Min\-Max\-Octree@{\-Verdi\-::\-Min\-Max\-Octree}!$\sim$\-Min\-Max\-Octree@{$\sim$\-Min\-Max\-Octree}}
+\index{$\sim$\-Min\-Max\-Octree@{$\sim$\-Min\-Max\-Octree}!Verdi::MinMaxOctree@{\-Verdi\-::\-Min\-Max\-Octree}}
+\subsubsection[{$\sim$\-Min\-Max\-Octree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Min\-Max\-Octree\-::$\sim$\-Min\-Max\-Octree} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_min_max_octree_af5ff8bee7aa713ac1df1002a046d31e9}
+\-Default destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_min_max_octree_a077f66fafa92226035a35a65087a56cd}{\index{\-Verdi\-::\-Min\-Max\-Octree@{\-Verdi\-::\-Min\-Max\-Octree}!clear@{clear}}
+\index{clear@{clear}!Verdi::MinMaxOctree@{\-Verdi\-::\-Min\-Max\-Octree}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Min\-Max\-Octree\-::clear} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_min_max_octree_a077f66fafa92226035a35a65087a56cd}
+\-Clear the tree to just an empty root node. \hypertarget{class_verdi_1_1_min_max_octree_a939114366e7c2d07c31fb9df50943273}{\index{\-Verdi\-::\-Min\-Max\-Octree@{\-Verdi\-::\-Min\-Max\-Octree}!create@{create}}
+\index{create@{create}!Verdi::MinMaxOctree@{\-Verdi\-::\-Min\-Max\-Octree}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Min\-Max\-Octree\-::create} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Data\-Set} $\ast$}]{value\-Data\-Set, }
+\item[{uint32\-\_\-t}]{value\-Index, }
+\item[{uint32\-\_\-t}]{depth}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_min_max_octree_a939114366e7c2d07c31fb9df50943273}
+\-Create the tree from the data set alone. \hypertarget{class_verdi_1_1_min_max_octree_a11bfb801dbe29ff9aa292ad79b8ec3f0}{\index{\-Verdi\-::\-Min\-Max\-Octree@{\-Verdi\-::\-Min\-Max\-Octree}!create@{create}}
+\index{create@{create}!Verdi::MinMaxOctree@{\-Verdi\-::\-Min\-Max\-Octree}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Min\-Max\-Octree\-::create} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Data\-Set} $\ast$}]{value\-Data\-Set, }
+\item[{uint32\-\_\-t}]{value\-Index, }
+\item[{const {\bf \-Data\-Set} $\ast$}]{grad\-Mag\-Data\-Set, }
+\item[{uint32\-\_\-t}]{grad\-Mag\-Index, }
+\item[{const {\bf \-Transfer\-Function} $\ast$}]{transfer\-Function, }
+\item[{uint32\-\_\-t}]{depth}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_min_max_octree_a11bfb801dbe29ff9aa292ad79b8ec3f0}
+\-Create the tree for a specific data set and transfer function. \hypertarget{class_verdi_1_1_min_max_octree_ab1f77097e425d06168c22ed0105b6ff6}{\index{\-Verdi\-::\-Min\-Max\-Octree@{\-Verdi\-::\-Min\-Max\-Octree}!get\-Root\-Node@{get\-Root\-Node}}
+\index{get\-Root\-Node@{get\-Root\-Node}!Verdi::MinMaxOctree@{\-Verdi\-::\-Min\-Max\-Octree}}
+\subsubsection[{get\-Root\-Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Node}$\ast$ {\bf \-Verdi\-::\-Min\-Max\-Octree\-::get\-Root\-Node} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_min_max_octree_ab1f77097e425d06168c22ed0105b6ff6}
+\-Get the root node. \hypertarget{class_verdi_1_1_min_max_octree_a1c89f597df644f03aeb780914a1570d6}{\index{\-Verdi\-::\-Min\-Max\-Octree@{\-Verdi\-::\-Min\-Max\-Octree}!is\-Visible@{is\-Visible}}
+\index{is\-Visible@{is\-Visible}!Verdi::MinMaxOctree@{\-Verdi\-::\-Min\-Max\-Octree}}
+\subsubsection[{is\-Visible}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Verdi\-::\-Min\-Max\-Octree\-::is\-Visible} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_min_max_octree_a1c89f597df644f03aeb780914a1570d6}
+\-Returns true if a node is visible. \hypertarget{class_verdi_1_1_min_max_octree_a9ba1bcc4cc5640a7063ee0387a8e0e15}{\index{\-Verdi\-::\-Min\-Max\-Octree@{\-Verdi\-::\-Min\-Max\-Octree}!sample\-Mapping\-Table@{sample\-Mapping\-Table}}
+\index{sample\-Mapping\-Table@{sample\-Mapping\-Table}!Verdi::MinMaxOctree@{\-Verdi\-::\-Min\-Max\-Octree}}
+\subsubsection[{sample\-Mapping\-Table}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Verdi\-::\-Min\-Max\-Octree\-::sample\-Mapping\-Table} (
+\begin{DoxyParamCaption}
+\item[{float}]{minv, }
+\item[{float}]{maxv}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_min_max_octree_a9ba1bcc4cc5640a7063ee0387a8e0e15}
+\-Sample the mapping table at the specified coordinates. \hypertarget{class_verdi_1_1_min_max_octree_a919a1f37fe483f62bc4f998fe77c221b}{\index{\-Verdi\-::\-Min\-Max\-Octree@{\-Verdi\-::\-Min\-Max\-Octree}!update\-Mapping\-Table@{update\-Mapping\-Table}}
+\index{update\-Mapping\-Table@{update\-Mapping\-Table}!Verdi::MinMaxOctree@{\-Verdi\-::\-Min\-Max\-Octree}}
+\subsubsection[{update\-Mapping\-Table}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Min\-Max\-Octree\-::update\-Mapping\-Table} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Transfer\-Function} $\ast$}]{func}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_min_max_octree_a919a1f37fe483f62bc4f998fe77c221b}
+\-Updates the internal mapping table from a transfer function. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Min\-Max\-Octree.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/src/\-Verdi\-Min\-Max\-Octree.\-cpp\end{DoxyCompactItemize}

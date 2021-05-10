@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::PreventContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Verdi Lab 1.22.03.13</string>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowNestedDocks</set>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="geometry">
+     <rect>
+      <x>339</x>
+      <y>99</y>
+      <width>143</width>
+      <height>125</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuOpen">
+     <property name="geometry">
+      <rect>
+       <x>477</x>
+       <y>124</y>
+       <width>169</width>
+       <height>94</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Open</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resedit.qrc">
+       <normaloff>:/res/icons/folder.ico</normaloff>:/res/icons/folder.ico</iconset>
+     </property>
+     <addaction name="actionData_Set"/>
+     <addaction name="actionTransfer_Function"/>
+    </widget>
+    <widget class="QMenu" name="menuNew">
+     <property name="title">
+      <string>New</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resedit.qrc">
+       <normaloff>:/res/icons/document.ico</normaloff>:/res/icons/document.ico</iconset>
+     </property>
+     <addaction name="actionNew_Transfer_Function"/>
+    </widget>
+    <addaction name="menuNew"/>
+    <addaction name="menuOpen"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuRenderer">
+    <property name="minimumSize">
+     <size>
+      <width>150</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="title">
+     <string>Renderer</string>
+    </property>
+    <widget class="QMenu" name="menuInternal_size">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Render Size</string>
+     </property>
+     <addaction name="action256_x_256"/>
+     <addaction name="action512_x_512"/>
+     <addaction name="action768_x_768"/>
+     <addaction name="action1024_x_1024"/>
+    </widget>
+    <addaction name="actionReset"/>
+    <addaction name="separator"/>
+    <addaction name="menuInternal_size"/>
+   </widget>
+   <widget class="QMenu" name="menuTest">
+    <property name="title">
+     <string>Test</string>
+    </property>
+    <addaction name="actionStart_Testing"/>
+    <addaction name="actionStop_Testing"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTest"/>
+   <addaction name="menuRenderer"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew_Transfer_Function"/>
+   <addaction name="separator"/>
+   <addaction name="actionTransfer_Function"/>
+   <addaction name="actionData_Set"/>
+   <addaction name="separator"/>
+   <addaction name="actionStart_Testing"/>
+   <addaction name="actionStop_Testing"/>
+   <addaction name="separator"/>
+   <addaction name="actionReset"/>
+   <addaction name="separator"/>
+   <addaction name="actionAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <action name="actionConsole">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Console</string>
+   </property>
+  </action>
+  <action name="actionWorkspace">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Workspace</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="resedit.qrc">
+     <normaloff>:/res/icons/info.ico</normaloff>:/res/icons/info.ico</iconset>
+   </property>
+   <property name="text">
+    <string>About Verdi Lab...</string>
+   </property>
+   <property name="toolTip">
+    <string>About Verdi</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="resedit.qrc">
+     <normaloff>:/res/icons/delete.ico</normaloff>:/res/icons/delete.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::QuitRole</enum>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionTransfer_Function">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resedit.qrc">
+     <normaloff>:/res/icons/folder.ico</normaloff>:/res/icons/folder.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Transfer Function...</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionData_Set">
+   <property name="icon">
+    <iconset resource="resedit.qrc">
+     <normaloff>:/res/icons/folder.ico</normaloff>:/res/icons/folder.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Data Set...</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="icon">
+    <iconset resource="resedit.qrc">
+     <normaloff>:/res/icons/reload.ico</normaloff>:/res/icons/reload.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+  <action name="action768_x_768">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>768 x 768</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::TextHeuristicRole</enum>
+   </property>
+  </action>
+  <action name="action256_x_256">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>256 x 256</string>
+   </property>
+  </action>
+  <action name="action512_x_512">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>512 x 512</string>
+   </property>
+  </action>
+  <action name="action1024_x_1024">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>1024 x 1024</string>
+   </property>
+  </action>
+  <action name="actionStart_Testing">
+   <property name="icon">
+    <iconset resource="resedit.qrc">
+     <normaloff>:/res/icons/diagram.ico</normaloff>:/res/icons/diagram.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Start Performance Testing...</string>
+   </property>
+  </action>
+  <action name="actionStop_Testing">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resedit.qrc">
+     <normaloff>:/res/icons/stop.ico</normaloff>:/res/icons/stop.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Stop Performance Testing</string>
+   </property>
+  </action>
+  <action name="actionTransfer_Function_2">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Transfer Function</string>
+   </property>
+  </action>
+  <action name="actionDisplay">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Display</string>
+   </property>
+  </action>
+  <action name="actionScene">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Scene</string>
+   </property>
+  </action>
+  <action name="actionNew_Transfer_Function">
+   <property name="icon">
+    <iconset resource="resedit.qrc">
+     <normaloff>:/res/icons/document.ico</normaloff>:/res/icons/document.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Transfer Function</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>false</bool>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resedit.qrc"/>
+ </resources>
+ <connections/>
+</ui>

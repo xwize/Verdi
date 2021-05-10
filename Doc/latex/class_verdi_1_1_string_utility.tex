@@ -1,0 +1,116 @@
+\hypertarget{class_verdi_1_1_string_utility}{\section{\-Verdi\-:\-:\-String\-Utility \-Class \-Reference}
+\label{class_verdi_1_1_string_utility}\index{\-Verdi\-::\-String\-Utility@{\-Verdi\-::\-String\-Utility}}
+}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \-String \hyperlink{class_verdi_1_1_string_utility_a05f721fe8285c9cffcbf016b67571504}{to\-String} (const \hyperlink{class_verdi_1_1_exception}{\-Exception} \&e)
+\item 
+static \-String \hyperlink{class_verdi_1_1_string_utility_ad0ff47e98ea87cfa80293c64ca9a467e}{to\-String} (int a)
+\item 
+static \-String \hyperlink{class_verdi_1_1_string_utility_aed03f126ee802fc9eb44d24ac5a6b1cb}{to\-String} (uint32\-\_\-t a)
+\item 
+static \-String \hyperlink{class_verdi_1_1_string_utility_a2e36f17819e6f5aabe298cf48fedab0f}{to\-String} (float a)
+\item 
+static \-String \hyperlink{class_verdi_1_1_string_utility_ad83ef6e181c9282a41341cd15692bdb0}{to\-String} (const \hyperlink{class_verdi_1_1_vec4}{\-Vec4} \&v)
+\item 
+static \-String \hyperlink{class_verdi_1_1_string_utility_a6b4417360686e73e5ce7d1454a01ce1f}{to\-String} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&v)
+\item 
+static \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_string_utility_a88860de728053bb99e168095e1d20acc}{to\-Vec3} (const \-String \&str)
+\item 
+static \hyperlink{class_verdi_1_1_vec4}{\-Vec4} \hyperlink{class_verdi_1_1_string_utility_a865b5a97bcde0bc119984642b15e2fff}{to\-Vec4} (const \-String \&str)
+\item 
+static int \hyperlink{class_verdi_1_1_string_utility_a4ab357f749ea078b9c7c782839c5d850}{to\-Int} (const \-String \&str)
+\item 
+static float \hyperlink{class_verdi_1_1_string_utility_ab87e0bb657aed2b0227b5a2999c5229b}{to\-Float} (const \-String \&str)
+\item 
+static void \hyperlink{class_verdi_1_1_string_utility_a4c000a02048d1fdbf09ff2339f4ccaab}{split} (const \-String \&str, const char delim, \-String\-Vector \&sub)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_string_utility_a4c000a02048d1fdbf09ff2339f4ccaab}{\index{\-Verdi\-::\-String\-Utility@{\-Verdi\-::\-String\-Utility}!split@{split}}
+\index{split@{split}!Verdi::StringUtility@{\-Verdi\-::\-String\-Utility}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-String\-Utility\-::split} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{str, }
+\item[{const char}]{delim, }
+\item[{\-String\-Vector \&}]{sub}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_string_utility_a4c000a02048d1fdbf09ff2339f4ccaab}
+\-Split the string based on a delimiter into a list of strings. \-Delimiter is kept at the end of the string. \hypertarget{class_verdi_1_1_string_utility_ab87e0bb657aed2b0227b5a2999c5229b}{\index{\-Verdi\-::\-String\-Utility@{\-Verdi\-::\-String\-Utility}!to\-Float@{to\-Float}}
+\index{to\-Float@{to\-Float}!Verdi::StringUtility@{\-Verdi\-::\-String\-Utility}}
+\subsubsection[{to\-Float}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Verdi\-::\-String\-Utility\-::to\-Float} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_string_utility_ab87e0bb657aed2b0227b5a2999c5229b}
+\-Convert a string to a float. \hypertarget{class_verdi_1_1_string_utility_a4ab357f749ea078b9c7c782839c5d850}{\index{\-Verdi\-::\-String\-Utility@{\-Verdi\-::\-String\-Utility}!to\-Int@{to\-Int}}
+\index{to\-Int@{to\-Int}!Verdi::StringUtility@{\-Verdi\-::\-String\-Utility}}
+\subsubsection[{to\-Int}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Verdi\-::\-String\-Utility\-::to\-Int} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_string_utility_a4ab357f749ea078b9c7c782839c5d850}
+\-Convert a string to an integer. \hypertarget{class_verdi_1_1_string_utility_a05f721fe8285c9cffcbf016b67571504}{\index{\-Verdi\-::\-String\-Utility@{\-Verdi\-::\-String\-Utility}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!Verdi::StringUtility@{\-Verdi\-::\-String\-Utility}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}\-String {\bf \-Verdi\-::\-String\-Utility\-::to\-String} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Exception} \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_string_utility_a05f721fe8285c9cffcbf016b67571504}
+\-Convert an exception to a string. \hypertarget{class_verdi_1_1_string_utility_ad0ff47e98ea87cfa80293c64ca9a467e}{\index{\-Verdi\-::\-String\-Utility@{\-Verdi\-::\-String\-Utility}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!Verdi::StringUtility@{\-Verdi\-::\-String\-Utility}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}\-String {\bf \-Verdi\-::\-String\-Utility\-::to\-String} (
+\begin{DoxyParamCaption}
+\item[{int}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_string_utility_ad0ff47e98ea87cfa80293c64ca9a467e}
+\-Convert an integer to a string. \hypertarget{class_verdi_1_1_string_utility_aed03f126ee802fc9eb44d24ac5a6b1cb}{\index{\-Verdi\-::\-String\-Utility@{\-Verdi\-::\-String\-Utility}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!Verdi::StringUtility@{\-Verdi\-::\-String\-Utility}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}\-String {\bf \-Verdi\-::\-String\-Utility\-::to\-String} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_string_utility_aed03f126ee802fc9eb44d24ac5a6b1cb}
+\-Convert an unsigned integer to a string. \hypertarget{class_verdi_1_1_string_utility_a2e36f17819e6f5aabe298cf48fedab0f}{\index{\-Verdi\-::\-String\-Utility@{\-Verdi\-::\-String\-Utility}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!Verdi::StringUtility@{\-Verdi\-::\-String\-Utility}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}\-String {\bf \-Verdi\-::\-String\-Utility\-::to\-String} (
+\begin{DoxyParamCaption}
+\item[{float}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_string_utility_a2e36f17819e6f5aabe298cf48fedab0f}
+\-Convert a float to a string. \hypertarget{class_verdi_1_1_string_utility_ad83ef6e181c9282a41341cd15692bdb0}{\index{\-Verdi\-::\-String\-Utility@{\-Verdi\-::\-String\-Utility}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!Verdi::StringUtility@{\-Verdi\-::\-String\-Utility}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}\-String {\bf \-Verdi\-::\-String\-Utility\-::to\-String} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec4} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_string_utility_ad83ef6e181c9282a41341cd15692bdb0}
+\-Convert a 4d vector to a string. \hypertarget{class_verdi_1_1_string_utility_a6b4417360686e73e5ce7d1454a01ce1f}{\index{\-Verdi\-::\-String\-Utility@{\-Verdi\-::\-String\-Utility}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!Verdi::StringUtility@{\-Verdi\-::\-String\-Utility}}
+\subsubsection[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}\-String {\bf \-Verdi\-::\-String\-Utility\-::to\-String} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_string_utility_a6b4417360686e73e5ce7d1454a01ce1f}
+\-Convert a 3d vector to a string. \hypertarget{class_verdi_1_1_string_utility_a88860de728053bb99e168095e1d20acc}{\index{\-Verdi\-::\-String\-Utility@{\-Verdi\-::\-String\-Utility}!to\-Vec3@{to\-Vec3}}
+\index{to\-Vec3@{to\-Vec3}!Verdi::StringUtility@{\-Verdi\-::\-String\-Utility}}
+\subsubsection[{to\-Vec3}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} {\bf \-Verdi\-::\-String\-Utility\-::to\-Vec3} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_string_utility_a88860de728053bb99e168095e1d20acc}
+\-Convert a string to 3d vector. \hypertarget{class_verdi_1_1_string_utility_a865b5a97bcde0bc119984642b15e2fff}{\index{\-Verdi\-::\-String\-Utility@{\-Verdi\-::\-String\-Utility}!to\-Vec4@{to\-Vec4}}
+\index{to\-Vec4@{to\-Vec4}!Verdi::StringUtility@{\-Verdi\-::\-String\-Utility}}
+\subsubsection[{to\-Vec4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec4} {\bf \-Verdi\-::\-String\-Utility\-::to\-Vec4} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_string_utility_a865b5a97bcde0bc119984642b15e2fff}
+\-Convert a string to 4d vector. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-String\-Utility.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/src/\-Verdi\-String\-Utility.\-cpp\end{DoxyCompactItemize}

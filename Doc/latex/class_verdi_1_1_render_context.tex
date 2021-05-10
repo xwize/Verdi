@@ -1,0 +1,393 @@
+\hypertarget{class_verdi_1_1_render_context}{\section{\-Verdi\-:\-:\-Render\-Context \-Class \-Reference}
+\label{class_verdi_1_1_render_context}\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Render\-Context.\-h$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_verdi_1_1_render_context_a57f01ede0284c624c24fc1660075fecc}{\-Draw\-Mode} \{ {\bfseries \-R\-C\-D\-M\-\_\-\-S\-T\-A\-T\-I\-C}, 
+{\bfseries \-R\-C\-D\-M\-\_\-\-S\-T\-R\-E\-A\-M\-I\-N\-G}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_render_context_a872285d5096b45c4747fe900b7aff0f8}{\-Render\-Context} (\hyperlink{class_verdi_1_1_hardware_data_set}{\-Hardware\-Data\-Set} $\ast$data\-Set=\-N\-U\-L\-L, \hyperlink{class_verdi_1_1_camera}{\-Camera} $\ast$camera=\-N\-U\-L\-L)
+\item 
+\hyperlink{class_verdi_1_1_render_context_a903382a9ac3a49276c5b095157422354}{$\sim$\-Render\-Context} ()
+\item 
+\hyperlink{class_verdi_1_1_light}{\-Light} \hyperlink{class_verdi_1_1_render_context_a737ff845664e998a4d769afefba62462}{get\-Light} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_context_a9471c76500f63355d71bb30c96813150}{set\-Light} (const \hyperlink{class_verdi_1_1_light}{\-Light} \&m)
+\item 
+\hyperlink{class_verdi_1_1_material}{\-Material} \hyperlink{class_verdi_1_1_render_context_a6e079408d1d02905ee55a0d4c70e0f79}{get\-Material} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_context_a8f8f5efb828947b1ecb8b34a0b6ceeea}{set\-Material} (const \hyperlink{class_verdi_1_1_material}{\-Material} \&m)
+\item 
+void \hyperlink{class_verdi_1_1_render_context_a8bf4f79e3aa8ecc8c04ad6ae935a3030}{set\-Lighting\-Enabled} (bool enabled)
+\item 
+bool \hyperlink{class_verdi_1_1_render_context_aee7f8d02cdc092fb5b8702960825fa3c}{get\-Lighting\-Enabled} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_context_a988a7e59f871cf8aa08db301fe2855e5}{set\-Early\-Ray\-Termination\-Enabled} (bool enabled)
+\item 
+bool \hyperlink{class_verdi_1_1_render_context_a6a39da47ac05aef6eeee5c793bd4a9e6}{get\-Early\-Ray\-Termination\-Enabled} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_context_a6fe6226c139d9934da858634912284aa}{set\-Compositor} (const \hyperlink{class_verdi_1_1_compositor}{\-Compositor} \&compositor)
+\item 
+\hyperlink{class_verdi_1_1_compositor}{\-Compositor} \hyperlink{class_verdi_1_1_render_context_a51445423cc67a8c6d0ad6e5ab3e28cf4}{get\-Compositor} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_context_ad8043e240458d13ed097bb325a37f0db}{set\-Draw\-Mode} (\hyperlink{class_verdi_1_1_render_context_a57f01ede0284c624c24fc1660075fecc}{\-Draw\-Mode} mode)
+\item 
+\hyperlink{class_verdi_1_1_render_context_a57f01ede0284c624c24fc1660075fecc}{\-Draw\-Mode} \hyperlink{class_verdi_1_1_render_context_ab1d25c67e4eaffe79a0588b61ce7f775}{get\-Draw\-Mode} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_context_a0eb3dba4ce5a67eaae20bd35978b204a}{set\-Min\-Max\-Octree} (\hyperlink{class_verdi_1_1_min_max_octree}{\-Min\-Max\-Octree} $\ast$tree)
+\item 
+\hyperlink{class_verdi_1_1_min_max_octree}{\-Min\-Max\-Octree} $\ast$ \hyperlink{class_verdi_1_1_render_context_ab3eb7b60dbe3a3d311559630d153e790}{get\-Min\-Max\-Octree} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_context_a0c1b975894b8e2fd6bf06ac04acbb9b0}{set\-Transfer\-Function} (\hyperlink{class_verdi_1_1_transfer_function}{\-Transfer\-Function} $\ast$func)
+\item 
+\hyperlink{class_verdi_1_1_transfer_function}{\-Transfer\-Function} $\ast$ \hyperlink{class_verdi_1_1_render_context_a7ba0eaedeca81347c1dc29b42c4e9cb2}{get\-Transfer\-Function} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_context_ab17d510bffc88c9ecba3116ab9de08a9}{set\-Hardware\-Transfer\-Function} (\hyperlink{class_verdi_1_1_hardware_transfer_function}{\-Hardware\-Transfer\-Function} $\ast$func)
+\item 
+\hyperlink{class_verdi_1_1_hardware_transfer_function}{\-Hardware\-Transfer\-Function} $\ast$ \hyperlink{class_verdi_1_1_render_context_ac9dfb284d6228fe9f12bad8844300568}{get\-Hardware\-Transfer\-Function} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_context_a123de8573a694eef5a20640f1caf3c0a}{set\-Dimension\-Ratio} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&ratio)
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_render_context_a6df0d36be0a8a104f3669806b45b7e21}{get\-Dimension\-Ratio} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_context_a4f7e365a9c9fe65dd0c2b65542c8b1ac}{set\-Data\-Set} (\hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$data\-Set)
+\item 
+\hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$ \hyperlink{class_verdi_1_1_render_context_a3020b7cbe79d8457907b3246bc5e167d}{get\-Data\-Set} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_context_af1a012acf0b910d79e2f47c878a40b72}{set\-Hardware\-Data\-Set} (\hyperlink{class_verdi_1_1_hardware_data_set}{\-Hardware\-Data\-Set} $\ast$data\-Set)
+\item 
+\hyperlink{class_verdi_1_1_hardware_data_set}{\-Hardware\-Data\-Set} $\ast$ \hyperlink{class_verdi_1_1_render_context_a19709f354c8f96eaf69d60973438208b}{get\-Hardware\-Data\-Set} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_context_a0f4d257a1fad9639e7671d648998a31c}{set\-Background\-Colour} (\hyperlink{class_verdi_1_1_vec4}{\-Vec4} colour)
+\item 
+void \hyperlink{class_verdi_1_1_render_context_a0d72a696ab4ee4b92fbd068ce9227e7f}{set\-Num\-Iterations} (uint32\-\_\-t i)
+\item 
+\hyperlink{class_verdi_1_1_vec4}{\-Vec4} \hyperlink{class_verdi_1_1_render_context_a1ff4ce5ce8be631c86a60ddf34583b50}{get\-Background\-Colour} () const 
+\item 
+uint32\-\_\-t \hyperlink{class_verdi_1_1_render_context_a9b7f6a08655360cc32aba0161606c205}{get\-Num\-Iterations} () const 
+\item 
+\hyperlink{class_verdi_1_1_camera}{\-Camera} $\ast$ \hyperlink{class_verdi_1_1_render_context_aebb25a1bc261cc9afcf47ca3476b48fb}{get\-Camera} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_context_a6bf1b420991fc629c1f67d555d90cfb6}{set\-Camera} (\hyperlink{class_verdi_1_1_camera}{\-Camera} $\ast$camera)
+\item 
+bool \hyperlink{class_verdi_1_1_render_context_aa40c3e684f24c4866caf9b75c85df8b7}{is\-Valid} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_render_context_a2719fea1a051d867fe61118dd70441b5}{\hyperlink{class_verdi_1_1_camera}{\-Camera} $\ast$ {\bfseries mp\-Camera}}\label{class_verdi_1_1_render_context_a2719fea1a051d867fe61118dd70441b5}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_aa158b3c9cb3089fffb438683c590b50f}{\hyperlink{class_verdi_1_1_compositor}{\-Compositor} {\bfseries m\-Compositor}}\label{class_verdi_1_1_render_context_aa158b3c9cb3089fffb438683c590b50f}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_a067e56855738dc237c6fa39347e631dc}{uint32\-\_\-t {\bfseries m\-Num\-Iterations}}\label{class_verdi_1_1_render_context_a067e56855738dc237c6fa39347e631dc}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_a9e8147905a5bc4cfa9e1183433214c9b}{\hyperlink{class_verdi_1_1_vec4}{\-Vec4} {\bfseries m\-Background\-Colour}}\label{class_verdi_1_1_render_context_a9e8147905a5bc4cfa9e1183433214c9b}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_a9f9879be11719c3d7d053eb8cf952491}{\hyperlink{class_verdi_1_1_vec3}{\-Vec3} {\bfseries m\-Dimension\-Ratio}}\label{class_verdi_1_1_render_context_a9f9879be11719c3d7d053eb8cf952491}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_ad913b136249e5c1d03e76ab2f12338ab}{\hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$ {\bfseries mp\-Data\-Set}}\label{class_verdi_1_1_render_context_ad913b136249e5c1d03e76ab2f12338ab}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_ab9ee8386af1aea1c4314fbf2fcc6584c}{\hyperlink{class_verdi_1_1_render_context_a57f01ede0284c624c24fc1660075fecc}{\-Draw\-Mode} {\bfseries m\-Draw\-Mode}}\label{class_verdi_1_1_render_context_ab9ee8386af1aea1c4314fbf2fcc6584c}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_a62599dd000c8753e8a13a6685ef17f20}{\hyperlink{class_verdi_1_1_hardware_data_set}{\-Hardware\-Data\-Set} $\ast$ {\bfseries mp\-Hardware\-Data\-Set}}\label{class_verdi_1_1_render_context_a62599dd000c8753e8a13a6685ef17f20}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_afacb8071476723f0e2e8181ef28cf237}{\hyperlink{class_verdi_1_1_transfer_function}{\-Transfer\-Function} $\ast$ {\bfseries mp\-Transfer\-Function}}\label{class_verdi_1_1_render_context_afacb8071476723f0e2e8181ef28cf237}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_a14de3623dad8d736261e8e6495cca88f}{\hyperlink{class_verdi_1_1_hardware_transfer_function}{\-Hardware\-Transfer\-Function} $\ast$ {\bfseries mp\-Hardware\-Transfer\-Function}}\label{class_verdi_1_1_render_context_a14de3623dad8d736261e8e6495cca88f}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_a2d8c95c89fa225e456e10c486fada455}{\hyperlink{class_verdi_1_1_min_max_octree}{\-Min\-Max\-Octree} $\ast$ {\bfseries mp\-Min\-Max\-Octree}}\label{class_verdi_1_1_render_context_a2d8c95c89fa225e456e10c486fada455}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_a695e8f4fa48e481b5b479de4622096b5}{\hyperlink{class_verdi_1_1_material}{\-Material} {\bfseries m\-Material}}\label{class_verdi_1_1_render_context_a695e8f4fa48e481b5b479de4622096b5}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_aa7fb30a9901110677ef543b34591f18b}{\hyperlink{class_verdi_1_1_light}{\-Light} {\bfseries m\-Light}}\label{class_verdi_1_1_render_context_aa7fb30a9901110677ef543b34591f18b}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_a1fe62611bd86dca38b744e759870884a}{\hyperlink{class_verdi_1_1_vec3}{\-Vec3} {\bfseries m\-Plane\-Normal}}\label{class_verdi_1_1_render_context_a1fe62611bd86dca38b744e759870884a}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_a9419ee42e6a52a86a5e1629aa309f310}{float {\bfseries m\-Plane\-Distance}}\label{class_verdi_1_1_render_context_a9419ee42e6a52a86a5e1629aa309f310}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_aa27808bbf65932211e25b721d46e86d4}{bool {\bfseries m\-Use\-Lighting}}\label{class_verdi_1_1_render_context_aa27808bbf65932211e25b721d46e86d4}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_aab880c24e2f4c5515e703907c44339e2}{bool {\bfseries m\-Use\-E\-R\-T}}\label{class_verdi_1_1_render_context_aab880c24e2f4c5515e703907c44339e2}
+
+\item 
+\hypertarget{class_verdi_1_1_render_context_a2b4a96cf21388258c8411e093143544f}{bool {\bfseries m\-Use\-Plane\-Cut}}\label{class_verdi_1_1_render_context_a2b4a96cf21388258c8411e093143544f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class representing a particular configuration of a scene. \-Only the information used during rendering is encapsulated in this class. 
+
+\subsection{\-Member \-Enumeration \-Documentation}
+\hypertarget{class_verdi_1_1_render_context_a57f01ede0284c624c24fc1660075fecc}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!\-Draw\-Mode@{\-Draw\-Mode}}
+\index{\-Draw\-Mode@{\-Draw\-Mode}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{\-Draw\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Verdi\-::\-Render\-Context\-::\-Draw\-Mode}}}\label{class_verdi_1_1_render_context_a57f01ede0284c624c24fc1660075fecc}
+\-Enumeration of possible rendering modes. \-Static modes should be selected when the user has uploaded the data set to \-G\-P\-U memory. \-Streaming mode should be selected if the user would rather upload the data in \char`\"{}bricks\char`\"{}. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_verdi_1_1_render_context_a872285d5096b45c4747fe900b7aff0f8}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!\-Render\-Context@{\-Render\-Context}}
+\index{\-Render\-Context@{\-Render\-Context}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{\-Render\-Context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Render\-Context\-::\-Render\-Context} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Hardware\-Data\-Set} $\ast$}]{data\-Set = {\ttfamily \-N\-U\-L\-L}, }
+\item[{{\bf \-Camera} $\ast$}]{camera = {\ttfamily \-N\-U\-L\-L}}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_context_a872285d5096b45c4747fe900b7aff0f8}
+\-Parameterised constructor. \hypertarget{class_verdi_1_1_render_context_a903382a9ac3a49276c5b095157422354}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!$\sim$\-Render\-Context@{$\sim$\-Render\-Context}}
+\index{$\sim$\-Render\-Context@{$\sim$\-Render\-Context}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{$\sim$\-Render\-Context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Render\-Context\-::$\sim$\-Render\-Context} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_context_a903382a9ac3a49276c5b095157422354}
+\-Default destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_render_context_a1ff4ce5ce8be631c86a60ddf34583b50}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Background\-Colour@{get\-Background\-Colour}}
+\index{get\-Background\-Colour@{get\-Background\-Colour}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Background\-Colour}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec4} {\bf \-Verdi\-::\-Render\-Context\-::get\-Background\-Colour} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a1ff4ce5ce8be631c86a60ddf34583b50}
+\-Get the background colour. \hypertarget{class_verdi_1_1_render_context_aebb25a1bc261cc9afcf47ca3476b48fb}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Camera@{get\-Camera}}
+\index{get\-Camera@{get\-Camera}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Camera}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Camera}$\ast$ {\bf \-Verdi\-::\-Render\-Context\-::get\-Camera} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_aebb25a1bc261cc9afcf47ca3476b48fb}
+\-Get the camera. \hypertarget{class_verdi_1_1_render_context_a51445423cc67a8c6d0ad6e5ab3e28cf4}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Compositor@{get\-Compositor}}
+\index{get\-Compositor@{get\-Compositor}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Compositor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Compositor} {\bf \-Verdi\-::\-Render\-Context\-::get\-Compositor} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a51445423cc67a8c6d0ad6e5ab3e28cf4}
+\-Get the compositor. \hypertarget{class_verdi_1_1_render_context_a3020b7cbe79d8457907b3246bc5e167d}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Data\-Set@{get\-Data\-Set}}
+\index{get\-Data\-Set@{get\-Data\-Set}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Data\-Set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Data\-Set}$\ast$ {\bf \-Verdi\-::\-Render\-Context\-::get\-Data\-Set} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a3020b7cbe79d8457907b3246bc5e167d}
+\-Get the data set. \hypertarget{class_verdi_1_1_render_context_a6df0d36be0a8a104f3669806b45b7e21}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Dimension\-Ratio@{get\-Dimension\-Ratio}}
+\index{get\-Dimension\-Ratio@{get\-Dimension\-Ratio}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Dimension\-Ratio}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} {\bf \-Verdi\-::\-Render\-Context\-::get\-Dimension\-Ratio} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a6df0d36be0a8a104f3669806b45b7e21}
+\-Get the dimension ratio. \hypertarget{class_verdi_1_1_render_context_ab1d25c67e4eaffe79a0588b61ce7f775}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Draw\-Mode@{get\-Draw\-Mode}}
+\index{get\-Draw\-Mode@{get\-Draw\-Mode}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Draw\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Draw\-Mode} {\bf \-Verdi\-::\-Render\-Context\-::get\-Draw\-Mode} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_ab1d25c67e4eaffe79a0588b61ce7f775}
+\-Get the draw mode. \hypertarget{class_verdi_1_1_render_context_a6a39da47ac05aef6eeee5c793bd4a9e6}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Early\-Ray\-Termination\-Enabled@{get\-Early\-Ray\-Termination\-Enabled}}
+\index{get\-Early\-Ray\-Termination\-Enabled@{get\-Early\-Ray\-Termination\-Enabled}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Early\-Ray\-Termination\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Verdi\-::\-Render\-Context\-::get\-Early\-Ray\-Termination\-Enabled} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a6a39da47ac05aef6eeee5c793bd4a9e6}
+\-Get the early ray termination flag. \hypertarget{class_verdi_1_1_render_context_a19709f354c8f96eaf69d60973438208b}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Hardware\-Data\-Set@{get\-Hardware\-Data\-Set}}
+\index{get\-Hardware\-Data\-Set@{get\-Hardware\-Data\-Set}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Hardware\-Data\-Set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Hardware\-Data\-Set}$\ast$ {\bf \-Verdi\-::\-Render\-Context\-::get\-Hardware\-Data\-Set} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a19709f354c8f96eaf69d60973438208b}
+\-Get the hardware data set. \hypertarget{class_verdi_1_1_render_context_ac9dfb284d6228fe9f12bad8844300568}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Hardware\-Transfer\-Function@{get\-Hardware\-Transfer\-Function}}
+\index{get\-Hardware\-Transfer\-Function@{get\-Hardware\-Transfer\-Function}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Hardware\-Transfer\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Hardware\-Transfer\-Function}$\ast$ {\bf \-Verdi\-::\-Render\-Context\-::get\-Hardware\-Transfer\-Function} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_ac9dfb284d6228fe9f12bad8844300568}
+\-Get the hardware transfer function. \hypertarget{class_verdi_1_1_render_context_a737ff845664e998a4d769afefba62462}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Light@{get\-Light}}
+\index{get\-Light@{get\-Light}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Light}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Light} {\bf \-Verdi\-::\-Render\-Context\-::get\-Light} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a737ff845664e998a4d769afefba62462}
+\-Get the material. \hypertarget{class_verdi_1_1_render_context_aee7f8d02cdc092fb5b8702960825fa3c}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Lighting\-Enabled@{get\-Lighting\-Enabled}}
+\index{get\-Lighting\-Enabled@{get\-Lighting\-Enabled}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Lighting\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Verdi\-::\-Render\-Context\-::get\-Lighting\-Enabled} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_aee7f8d02cdc092fb5b8702960825fa3c}
+\-Get the lighting flag. \hypertarget{class_verdi_1_1_render_context_a6e079408d1d02905ee55a0d4c70e0f79}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Material@{get\-Material}}
+\index{get\-Material@{get\-Material}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Material}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Material} {\bf \-Verdi\-::\-Render\-Context\-::get\-Material} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a6e079408d1d02905ee55a0d4c70e0f79}
+\-Get the material. \hypertarget{class_verdi_1_1_render_context_ab3eb7b60dbe3a3d311559630d153e790}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Min\-Max\-Octree@{get\-Min\-Max\-Octree}}
+\index{get\-Min\-Max\-Octree@{get\-Min\-Max\-Octree}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Min\-Max\-Octree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Min\-Max\-Octree}$\ast$ {\bf \-Verdi\-::\-Render\-Context\-::get\-Min\-Max\-Octree} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_ab3eb7b60dbe3a3d311559630d153e790}
+\-Get the empty space tree. \hypertarget{class_verdi_1_1_render_context_a9b7f6a08655360cc32aba0161606c205}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Num\-Iterations@{get\-Num\-Iterations}}
+\index{get\-Num\-Iterations@{get\-Num\-Iterations}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Num\-Iterations}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-Verdi\-::\-Render\-Context\-::get\-Num\-Iterations} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a9b7f6a08655360cc32aba0161606c205}
+\-Get the number of selected iterations. \hypertarget{class_verdi_1_1_render_context_a7ba0eaedeca81347c1dc29b42c4e9cb2}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!get\-Transfer\-Function@{get\-Transfer\-Function}}
+\index{get\-Transfer\-Function@{get\-Transfer\-Function}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{get\-Transfer\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Transfer\-Function}$\ast$ {\bf \-Verdi\-::\-Render\-Context\-::get\-Transfer\-Function} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a7ba0eaedeca81347c1dc29b42c4e9cb2}
+\-Get the transfer function. \hypertarget{class_verdi_1_1_render_context_aa40c3e684f24c4866caf9b75c85df8b7}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!is\-Valid@{is\-Valid}}
+\index{is\-Valid@{is\-Valid}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{is\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Verdi\-::\-Render\-Context\-::is\-Valid} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_render_context_aa40c3e684f24c4866caf9b75c85df8b7}
+\-Checks to see if the current state of the context is a valid context. \hypertarget{class_verdi_1_1_render_context_a0f4d257a1fad9639e7671d648998a31c}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Background\-Colour@{set\-Background\-Colour}}
+\index{set\-Background\-Colour@{set\-Background\-Colour}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Background\-Colour}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Background\-Colour} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Vec4}}]{colour}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a0f4d257a1fad9639e7671d648998a31c}
+\-Set the background colour. \hypertarget{class_verdi_1_1_render_context_a6bf1b420991fc629c1f67d555d90cfb6}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Camera@{set\-Camera}}
+\index{set\-Camera@{set\-Camera}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Camera}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Camera} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Camera} $\ast$}]{camera}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a6bf1b420991fc629c1f67d555d90cfb6}
+\-Attach the camera. \hypertarget{class_verdi_1_1_render_context_a6fe6226c139d9934da858634912284aa}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Compositor@{set\-Compositor}}
+\index{set\-Compositor@{set\-Compositor}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Compositor}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Compositor} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Compositor} \&}]{compositor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a6fe6226c139d9934da858634912284aa}
+\-Set the compositor. \hypertarget{class_verdi_1_1_render_context_a4f7e365a9c9fe65dd0c2b65542c8b1ac}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Data\-Set@{set\-Data\-Set}}
+\index{set\-Data\-Set@{set\-Data\-Set}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Data\-Set}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Data\-Set} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Data\-Set} $\ast$}]{data\-Set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a4f7e365a9c9fe65dd0c2b65542c8b1ac}
+\-Set the data set. \hypertarget{class_verdi_1_1_render_context_a123de8573a694eef5a20640f1caf3c0a}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Dimension\-Ratio@{set\-Dimension\-Ratio}}
+\index{set\-Dimension\-Ratio@{set\-Dimension\-Ratio}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Dimension\-Ratio}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Dimension\-Ratio} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec3} \&}]{ratio}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a123de8573a694eef5a20640f1caf3c0a}
+\-Set the dimension ratio. \hypertarget{class_verdi_1_1_render_context_ad8043e240458d13ed097bb325a37f0db}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Draw\-Mode@{set\-Draw\-Mode}}
+\index{set\-Draw\-Mode@{set\-Draw\-Mode}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Draw\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Draw\-Mode} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Draw\-Mode}}]{mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_ad8043e240458d13ed097bb325a37f0db}
+\-Set the draw mode. \hypertarget{class_verdi_1_1_render_context_a988a7e59f871cf8aa08db301fe2855e5}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Early\-Ray\-Termination\-Enabled@{set\-Early\-Ray\-Termination\-Enabled}}
+\index{set\-Early\-Ray\-Termination\-Enabled@{set\-Early\-Ray\-Termination\-Enabled}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Early\-Ray\-Termination\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Early\-Ray\-Termination\-Enabled} (
+\begin{DoxyParamCaption}
+\item[{bool}]{enabled}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a988a7e59f871cf8aa08db301fe2855e5}
+\-Set the early ray termination. \hypertarget{class_verdi_1_1_render_context_af1a012acf0b910d79e2f47c878a40b72}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Hardware\-Data\-Set@{set\-Hardware\-Data\-Set}}
+\index{set\-Hardware\-Data\-Set@{set\-Hardware\-Data\-Set}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Hardware\-Data\-Set}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Hardware\-Data\-Set} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Hardware\-Data\-Set} $\ast$}]{data\-Set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_af1a012acf0b910d79e2f47c878a40b72}
+\-Set the hardware data set. \hypertarget{class_verdi_1_1_render_context_ab17d510bffc88c9ecba3116ab9de08a9}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Hardware\-Transfer\-Function@{set\-Hardware\-Transfer\-Function}}
+\index{set\-Hardware\-Transfer\-Function@{set\-Hardware\-Transfer\-Function}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Hardware\-Transfer\-Function}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Hardware\-Transfer\-Function} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Hardware\-Transfer\-Function} $\ast$}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_ab17d510bffc88c9ecba3116ab9de08a9}
+\-Set the hardware transfer function. \hypertarget{class_verdi_1_1_render_context_a9471c76500f63355d71bb30c96813150}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Light@{set\-Light}}
+\index{set\-Light@{set\-Light}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Light}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Light} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Light} \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a9471c76500f63355d71bb30c96813150}
+\-Set the material. \hypertarget{class_verdi_1_1_render_context_a8bf4f79e3aa8ecc8c04ad6ae935a3030}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Lighting\-Enabled@{set\-Lighting\-Enabled}}
+\index{set\-Lighting\-Enabled@{set\-Lighting\-Enabled}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Lighting\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Lighting\-Enabled} (
+\begin{DoxyParamCaption}
+\item[{bool}]{enabled}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a8bf4f79e3aa8ecc8c04ad6ae935a3030}
+\-Set the lighting flag. \hypertarget{class_verdi_1_1_render_context_a8f8f5efb828947b1ecb8b34a0b6ceeea}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Material@{set\-Material}}
+\index{set\-Material@{set\-Material}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Material}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Material} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Material} \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a8f8f5efb828947b1ecb8b34a0b6ceeea}
+\-Set the material. \hypertarget{class_verdi_1_1_render_context_a0eb3dba4ce5a67eaae20bd35978b204a}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Min\-Max\-Octree@{set\-Min\-Max\-Octree}}
+\index{set\-Min\-Max\-Octree@{set\-Min\-Max\-Octree}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Min\-Max\-Octree}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Min\-Max\-Octree} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Min\-Max\-Octree} $\ast$}]{tree}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a0eb3dba4ce5a67eaae20bd35978b204a}
+\-Set the empty space tree. \hypertarget{class_verdi_1_1_render_context_a0d72a696ab4ee4b92fbd068ce9227e7f}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Num\-Iterations@{set\-Num\-Iterations}}
+\index{set\-Num\-Iterations@{set\-Num\-Iterations}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Num\-Iterations}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Num\-Iterations} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a0d72a696ab4ee4b92fbd068ce9227e7f}
+\-Set the number of iterations. \hypertarget{class_verdi_1_1_render_context_a0c1b975894b8e2fd6bf06ac04acbb9b0}{\index{\-Verdi\-::\-Render\-Context@{\-Verdi\-::\-Render\-Context}!set\-Transfer\-Function@{set\-Transfer\-Function}}
+\index{set\-Transfer\-Function@{set\-Transfer\-Function}!Verdi::RenderContext@{\-Verdi\-::\-Render\-Context}}
+\subsubsection[{set\-Transfer\-Function}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-Context\-::set\-Transfer\-Function} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Transfer\-Function} $\ast$}]{func}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_context_a0c1b975894b8e2fd6bf06ac04acbb9b0}
+\-Set the transfer function. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Render\-Context.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/src/\-Verdi\-Render\-Context.\-cpp\end{DoxyCompactItemize}

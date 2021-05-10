@@ -1,0 +1,216 @@
+\section{\-Verdi\-:\-:\-Default\-Strategy \-Class \-Reference}
+\label{class_verdi_1_1_default_strategy}\index{\-Verdi\-::\-Default\-Strategy@{\-Verdi\-::\-Default\-Strategy}}
+
+
+{\ttfamily \#include $<$\-Verdi\-Default\-Strategy.\-h$>$}
+
+\-Inheritance diagram for \-Verdi\-:\-:\-Default\-Strategy\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_verdi_1_1_default_strategy}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Default\-Strategy} (const \-String \&shader\-File, const \-String \&user\-Defines=\char`\"{}\char`\"{})
+\item 
+virtual void {\bf initialise} (uint32\-\_\-t width, uint32\-\_\-t height)
+\item 
+virtual void {\bf render\-Frame} (float dt, float time)
+\item 
+virtual void {\bf shutdown} ()
+\item 
+virtual void {\bf context\-Changed} (const {\bf \-Render\-Context} $\ast$new\-Context)
+\item 
+virtual void {\bf suspend} ()
+\item 
+virtual void {\bf awake} ()
+\item 
+virtual void {\bf resize} (uint32\-\_\-t width, uint32\-\_\-t height)
+\item 
+virtual bool {\bf is\-Initialised} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries submit\-Ortho\-Quad} (float left, float right, float top, float bottom, float d=0.\-0f) const \label{class_verdi_1_1_default_strategy_a818e8c6bae3e7214f3dd551b47bc149c}
+
+\item 
+void {\bfseries submit\-Cube} (const {\bf \-Vec3} \&pos, const {\bf \-Vec3} \&dim) const \label{class_verdi_1_1_default_strategy_a27cfd9c1e090e087c27eeae91bbf28ae}
+
+\item 
+void {\bfseries bind\-Target} (\-G\-Luint fbo, \-G\-Luint rbo, \-G\-Luint ctex)\label{class_verdi_1_1_default_strategy_a720e86c3ecbb4ee5186acb55bb38a2bd}
+
+\item 
+void {\bfseries unbind\-Target} ()\label{class_verdi_1_1_default_strategy_ad7b39be46dfa8edcf907c23e92c5f8af}
+
+\item 
+virtual void {\bfseries \-\_\-initialise\-Impl} (uint32\-\_\-t w, uint32\-\_\-t h)=0\label{class_verdi_1_1_default_strategy_afda8354c9ab60aee7ec50978a9767484}
+
+\item 
+virtual void {\bfseries \-\_\-render\-Frame\-Impl} (float dt, float time)=0\label{class_verdi_1_1_default_strategy_a48ce838f17a6d9db75ce6616051cbb51}
+
+\item 
+virtual void {\bfseries \-\_\-shutdown\-Impl} ()=0\label{class_verdi_1_1_default_strategy_a4a30face204c9bcd615320a32c033dc5}
+
+\item 
+virtual void {\bfseries \-\_\-resize\-Impl} (uint32\-\_\-t width, uint32\-\_\-t height)=0\label{class_verdi_1_1_default_strategy_a9248e9e2f214d2af57fe588b93792968}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Cg\-Uber\-Shader} $\ast$ {\bfseries mp\-Shader}\label{class_verdi_1_1_default_strategy_a730def3911a51b2c8bc8a9fa904eef51}
+
+\item 
+const {\bf \-Render\-Context} $\ast$ {\bfseries mp\-Render\-Context}\label{class_verdi_1_1_default_strategy_ad32025d99f53e1dc9e4e8dd34672ac06}
+
+\item 
+\-String {\bfseries m\-Shader\-File}\label{class_verdi_1_1_default_strategy_a0c1be90b631f8ae61ee76041836cdd2c}
+
+\item 
+\-String {\bfseries m\-User\-Shader\-Defines}\label{class_verdi_1_1_default_strategy_a3ee415c418e0676dc89f925ac2968104}
+
+\item 
+uint32\-\_\-t {\bfseries m\-Width}\label{class_verdi_1_1_default_strategy_ae5c7df6605ed0283c2556ba00ecaac2d}
+
+\item 
+uint32\-\_\-t {\bfseries m\-Height}\label{class_verdi_1_1_default_strategy_ab7ee035f57780641eb5abf207aaa5daf}
+
+\item 
+bool {\bfseries m\-Is\-Initialised}\label{class_verdi_1_1_default_strategy_a9a1899efa7deede1e3706e7a93b7bcce}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A base class for the two default render strategies. \-Seeing as both strategies use \-C\-G for shaders and share some code, it makes sense to write it once and put it here. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Verdi\-::\-Default\-Strategy@{\-Verdi\-::\-Default\-Strategy}!\-Default\-Strategy@{\-Default\-Strategy}}
+\index{\-Default\-Strategy@{\-Default\-Strategy}!Verdi::DefaultStrategy@{\-Verdi\-::\-Default\-Strategy}}
+\subsubsection[{\-Default\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}\-Verdi\-::\-Default\-Strategy\-::\-Default\-Strategy (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{shader\-File, }
+\item[{const \-String \&}]{user\-Defines = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_verdi_1_1_default_strategy_a099a35f01a1724d628198bd6f99a1261}
+\-Parameterised constructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\index{\-Verdi\-::\-Default\-Strategy@{\-Verdi\-::\-Default\-Strategy}!awake@{awake}}
+\index{awake@{awake}!Verdi::DefaultStrategy@{\-Verdi\-::\-Default\-Strategy}}
+\subsubsection[{awake}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Default\-Strategy\-::awake} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{class_verdi_1_1_default_strategy_a0cc09aa6cd3c4ff00b95aa8526345765}
+\-Notify when a render strategy has changed (to this). \begin{DoxyRemark}{\-Remarks}
+\-When a render strategy is switched to this strategy it is notified through this method. 
+\end{DoxyRemark}
+
+
+\-Implements {\bf \-Verdi\-::\-Render\-Strategy} \doxyref{}{p.}{class_verdi_1_1_render_strategy_a34797cbcea846c22a23937226281922b}.
+
+\index{\-Verdi\-::\-Default\-Strategy@{\-Verdi\-::\-Default\-Strategy}!context\-Changed@{context\-Changed}}
+\index{context\-Changed@{context\-Changed}!Verdi::DefaultStrategy@{\-Verdi\-::\-Default\-Strategy}}
+\subsubsection[{context\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Default\-Strategy\-::context\-Changed} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Render\-Context} $\ast$}]{new\-Context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{class_verdi_1_1_default_strategy_a71acc778a890c57c852e453e786de24e}
+\-Notify of a context change. \begin{DoxyRemark}{\-Remarks}
+\-When the user decides to switch to another context a render strategy may need to recreate some objects or perform some computation. \-This method provides an opportunity for implementations to do this. 
+\end{DoxyRemark}
+
+
+\-Implements {\bf \-Verdi\-::\-Render\-Strategy} \doxyref{}{p.}{class_verdi_1_1_render_strategy_abdd27f6e043ad468307bcc6b5e85356f}.
+
+\index{\-Verdi\-::\-Default\-Strategy@{\-Verdi\-::\-Default\-Strategy}!initialise@{initialise}}
+\index{initialise@{initialise}!Verdi::DefaultStrategy@{\-Verdi\-::\-Default\-Strategy}}
+\subsubsection[{initialise}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Default\-Strategy\-::initialise} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{width, }
+\item[{uint32\-\_\-t}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{class_verdi_1_1_default_strategy_acf570eca0f4576d846acd1543965d294}
+\-Initialise the render strategy. \begin{DoxyRemark}{\-Remarks}
+\-This is called when the user initiates \doxyref{\-Render\-System\-::initialise}{p.}{class_verdi_1_1_render_system_a63ada7c106625cbf3601ee23300fb8af}. \-All one-\/time initialisation must be performed within this method. \-The initial width and height are provided, but implementations should also account for modification through the resize method. 
+\end{DoxyRemark}
+
+
+\-Implements {\bf \-Verdi\-::\-Render\-Strategy} \doxyref{}{p.}{class_verdi_1_1_render_strategy_a300417f6a6cc08f1bb6e609475dbf638}.
+
+\index{\-Verdi\-::\-Default\-Strategy@{\-Verdi\-::\-Default\-Strategy}!is\-Initialised@{is\-Initialised}}
+\index{is\-Initialised@{is\-Initialised}!Verdi::DefaultStrategy@{\-Verdi\-::\-Default\-Strategy}}
+\subsubsection[{is\-Initialised}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-Verdi\-::\-Default\-Strategy\-::is\-Initialised} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  [inline, virtual]}}\label{class_verdi_1_1_default_strategy_a8e764b8325401cb953159cd749d4ebfe}
+\-Must return true after initialisation. 
+
+\-Implements {\bf \-Verdi\-::\-Render\-Strategy} \doxyref{}{p.}{class_verdi_1_1_render_strategy_afe668a16ada4c12b7c58b0952cb3dffa}.
+
+\index{\-Verdi\-::\-Default\-Strategy@{\-Verdi\-::\-Default\-Strategy}!render\-Frame@{render\-Frame}}
+\index{render\-Frame@{render\-Frame}!Verdi::DefaultStrategy@{\-Verdi\-::\-Default\-Strategy}}
+\subsubsection[{render\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Default\-Strategy\-::render\-Frame} (
+\begin{DoxyParamCaption}
+\item[{float}]{dt, }
+\item[{float}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{class_verdi_1_1_default_strategy_adff10d1d15146f0eb9090a4aa87b96d0}
+\-Update the display. \begin{DoxyRemark}{\-Remarks}
+\-This is called when the user initiates \doxyref{\-Render\-System\-::render\-Frame}{p.}{class_verdi_1_1_render_system_aab53e7b9d9caf9b8e0cf08c1757e6ff9}. \-All the drawing code should go in this method. 
+\end{DoxyRemark}
+
+
+\-Implements {\bf \-Verdi\-::\-Render\-Strategy} \doxyref{}{p.}{class_verdi_1_1_render_strategy_a6a50cad90f1f815019d240de39e9cd95}.
+
+\index{\-Verdi\-::\-Default\-Strategy@{\-Verdi\-::\-Default\-Strategy}!resize@{resize}}
+\index{resize@{resize}!Verdi::DefaultStrategy@{\-Verdi\-::\-Default\-Strategy}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Default\-Strategy\-::resize} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{width, }
+\item[{uint32\-\_\-t}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{class_verdi_1_1_default_strategy_a113f7e609a4a00918437456f97281012}
+\-Notify the render strategy of a resize. 
+
+\-Implements {\bf \-Verdi\-::\-Render\-Strategy} \doxyref{}{p.}{class_verdi_1_1_render_strategy_aa6290274c5e5e914c2a50347b125dff5}.
+
+\index{\-Verdi\-::\-Default\-Strategy@{\-Verdi\-::\-Default\-Strategy}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!Verdi::DefaultStrategy@{\-Verdi\-::\-Default\-Strategy}}
+\subsubsection[{shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Default\-Strategy\-::shutdown} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{class_verdi_1_1_default_strategy_a1e700d540d22b7de8230dc67e7ecda2b}
+\-Shutdown the strategy. \begin{DoxyRemark}{\-Remarks}
+\-This gives the strategy an opportunity to clean-\/up any data allocated during execution. \-It is called when the user initiates \doxyref{\-Render\-System\-::shutdown}{p.}{class_verdi_1_1_render_system_acc054feb7d679cee2a52e52c1ac319a0}. 
+\end{DoxyRemark}
+
+
+\-Implements {\bf \-Verdi\-::\-Render\-Strategy} \doxyref{}{p.}{class_verdi_1_1_render_strategy_ab4b85d09886b1adc6a32f638522684cc}.
+
+\index{\-Verdi\-::\-Default\-Strategy@{\-Verdi\-::\-Default\-Strategy}!suspend@{suspend}}
+\index{suspend@{suspend}!Verdi::DefaultStrategy@{\-Verdi\-::\-Default\-Strategy}}
+\subsubsection[{suspend}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Default\-Strategy\-::suspend} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  [virtual]}}\label{class_verdi_1_1_default_strategy_a9fb5b067d0df55eb5ee25c807387a253}
+\-Notify when a render strategy has changed (from this). \begin{DoxyRemark}{\-Remarks}
+\-When the user decides to switch render strategy, the previous render strategy is notified through this method. 
+\end{DoxyRemark}
+
+
+\-Implements {\bf \-Verdi\-::\-Render\-Strategy} \doxyref{}{p.}{class_verdi_1_1_render_strategy_a0e46a0f8434b471bf8b0c1c9b243e6d5}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/include/\-Verdi\-Default\-Strategy.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/src/\-Verdi\-Default\-Strategy.\-cpp\end{DoxyCompactItemize}

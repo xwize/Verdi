@@ -1,0 +1,288 @@
+\hypertarget{class_verdi_1_1_tex_slice_strategy}{\section{\-Verdi\-:\-:\-Tex\-Slice\-Strategy \-Class \-Reference}
+\label{class_verdi_1_1_tex_slice_strategy}\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Tex\-Slice\-Strategy.\-h$>$}
+
+\-Inheritance diagram for \-Verdi\-:\-:\-Tex\-Slice\-Strategy\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_verdi_1_1_tex_slice_strategy}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_tex_slice_strategy_a966a67551420f96176c0734f79122c17}{\-Tex\-Slice\-Strategy} (const \-String \&shader\-Path=\char`\"{}shaders/\hyperlink{class_verdi_1_1_ray_cast_strategy}{\-Ray\-Cast\-Strategy}/\-Tex\-Slice.\-cgfx\char`\"{})
+\item 
+\hyperlink{class_verdi_1_1_tex_slice_strategy_a02727746e1ced6475b61033f6eb472da}{$\sim$\-Tex\-Slice\-Strategy} ()
+\item 
+\hyperlink{class_verdi_1_1_tex_slice_strategy_a7b925a79f5fab91a850a2d4ac89205ac}{\-Tex\-Slice\-Strategy} (const \-String \&shader\-Path=\char`\"{}shaders/\hyperlink{class_verdi_1_1_tex_slice_strategy}{\-Tex\-Slice\-Strategy}/\-Tex\-Slice.\-cgfx\char`\"{})
+\item 
+\hyperlink{class_verdi_1_1_tex_slice_strategy_a02727746e1ced6475b61033f6eb472da}{$\sim$\-Tex\-Slice\-Strategy} ()
+\item 
+void \hyperlink{class_verdi_1_1_tex_slice_strategy_abdbda056eafb1a428119ec5404a11204}{initialise} (uint32\-\_\-t width, uint32\-\_\-t height)
+\item 
+void \hyperlink{class_verdi_1_1_tex_slice_strategy_ad7ac71fe824de3ab082c66201b79a3bc}{begin\-Frame} (float dt, float time)
+\item 
+void \hyperlink{class_verdi_1_1_tex_slice_strategy_a6be673870c04b15179592e16d2ebbf60}{render} ()
+\item 
+void \hyperlink{class_verdi_1_1_tex_slice_strategy_aeb1f2291076b909e91c749924aa9f5f7}{end\-Frame} ()
+\item 
+void \hyperlink{class_verdi_1_1_tex_slice_strategy_aec405f9be90e4ee81a0cf0bd0e3d3935}{shutdown} ()
+\item 
+void \hyperlink{class_verdi_1_1_tex_slice_strategy_afcb1d4e8ca0aae9b0923fcc9772c1834}{context\-Changed} (const \hyperlink{class_verdi_1_1_render_context}{\-Render\-Context} $\ast$new\-Context)
+\item 
+void \hyperlink{class_verdi_1_1_tex_slice_strategy_abaf58e07219e1aab4d0016044da15f4d}{suspend} ()
+\item 
+void \hyperlink{class_verdi_1_1_tex_slice_strategy_a85eb6812293f248f92ec63f56dfaa5bb}{awake} ()
+\item 
+void \hyperlink{class_verdi_1_1_tex_slice_strategy_aa6d363ca6d668ea2c0d881dd181ab2ba}{resize} (uint32\-\_\-t width, uint32\-\_\-t height)
+\item 
+bool \hyperlink{class_verdi_1_1_tex_slice_strategy_ac5de87a3c2bab3838e0fa4ed546e611f}{is\-Initialised} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_aaee8978a91e5ee226ea7d034fe66ac6f}{void {\bfseries \-\_\-get\-Effect\-Descriptor\-From\-Parameters} (bool on\-The\-Fly\-Gradients, bool use\-Lighting, \hyperlink{struct_verdi_1_1_uber_shader_1_1_effect_descriptor}{\-Uber\-Shader\-::\-Effect\-Descriptor} \&effect\-Out) const }\label{class_verdi_1_1_tex_slice_strategy_aaee8978a91e5ee226ea7d034fe66ac6f}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_a90e76c6ba380078acdca4643ce3bd411}{void {\bfseries \-\_\-submit\-Block\-Slice} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&offset, const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&scale, int plane\-Index)}\label{class_verdi_1_1_tex_slice_strategy_a90e76c6ba380078acdca4643ce3bd411}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_a85908bd6e43390b2c7f2229fc1c0e68f}{void {\bfseries \-\_\-setup\-Shaders} ()}\label{class_verdi_1_1_tex_slice_strategy_a85908bd6e43390b2c7f2229fc1c0e68f}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_adee2ac00b032b4ffbe341b3843dde607}{void {\bfseries \-\_\-setup\-Render\-Textures} (\-G\-Luint w, \-G\-Luint h)}\label{class_verdi_1_1_tex_slice_strategy_adee2ac00b032b4ffbe341b3843dde607}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_a5c443dca994201178cc749e0d8ee546c}{void {\bfseries \-\_\-submit\-Polygon\-Slice} (int plane\-Index)}\label{class_verdi_1_1_tex_slice_strategy_a5c443dca994201178cc749e0d8ee546c}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_a5902c968c8149ea3f641838130994949}{int {\bfseries \-\_\-compute\-Front\-Index} ()}\label{class_verdi_1_1_tex_slice_strategy_a5902c968c8149ea3f641838130994949}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_a1ce15e4fa941f69d93624b80888d3258}{void {\bfseries \-\_\-begin\-Frame\-Impl} (float dt, float time)}\label{class_verdi_1_1_tex_slice_strategy_a1ce15e4fa941f69d93624b80888d3258}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_adb113b54741909ae942c3d39f97c61ff}{void {\bfseries \-\_\-render\-Impl} ()}\label{class_verdi_1_1_tex_slice_strategy_adb113b54741909ae942c3d39f97c61ff}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_af71a7fecb80b4ee82c485dc01bfdf6b2}{void {\bfseries \-\_\-end\-Frame\-Impl} ()}\label{class_verdi_1_1_tex_slice_strategy_af71a7fecb80b4ee82c485dc01bfdf6b2}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_af0a05b4e9063a43093b27987c9ead74c}{void {\bfseries \-\_\-initialise\-Impl} (uint32\-\_\-t w, uint32\-\_\-t h)}\label{class_verdi_1_1_tex_slice_strategy_af0a05b4e9063a43093b27987c9ead74c}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_a300bce13ac11abb9c74354fba0e117f3}{void {\bfseries \-\_\-shutdown\-Impl} ()}\label{class_verdi_1_1_tex_slice_strategy_a300bce13ac11abb9c74354fba0e117f3}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_a5bd86f046d011f3a15223f811c0d5e5a}{void {\bfseries \-\_\-resize\-Impl} (uint32\-\_\-t width, uint32\-\_\-t height)}\label{class_verdi_1_1_tex_slice_strategy_a5bd86f046d011f3a15223f811c0d5e5a}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_ac1d85481ef6b70e7057ceb92e6146f75}{\-G\-Luint {\bfseries m\-Render\-Texture\-Width}}\label{class_verdi_1_1_tex_slice_strategy_ac1d85481ef6b70e7057ceb92e6146f75}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_add1e6cbae5c3db86f4e85fa470c66643}{\-G\-Luint {\bfseries m\-Render\-Texture\-Height}}\label{class_verdi_1_1_tex_slice_strategy_add1e6cbae5c3db86f4e85fa470c66643}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_a8ae5061a07bd61c7ee5566439db126fa}{\-G\-Luint {\bfseries m\-Frame\-Buffer\-Object} \mbox{[}2\mbox{]}}\label{class_verdi_1_1_tex_slice_strategy_a8ae5061a07bd61c7ee5566439db126fa}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_abe91460d8b10930c3f7adde27a4ac9dc}{\-G\-Luint {\bfseries m\-Frame\-Render\-Buffer\-Object} \mbox{[}2\mbox{]}}\label{class_verdi_1_1_tex_slice_strategy_abe91460d8b10930c3f7adde27a4ac9dc}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_a8f1b115785b1ef04137f5a0faeadb9e8}{\-G\-Luint {\bfseries m\-Final\-Render\-Texture} \mbox{[}2\mbox{]}}\label{class_verdi_1_1_tex_slice_strategy_a8f1b115785b1ef04137f5a0faeadb9e8}
+
+\item 
+\hypertarget{class_verdi_1_1_tex_slice_strategy_aafb9103d05fa2a33fd0d197693f8ff85}{\-Tex\-Slice\-Strategy\-Impl $\ast$ {\bfseries mp\-Impl}}\label{class_verdi_1_1_tex_slice_strategy_aafb9103d05fa2a33fd0d197693f8ff85}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hyperlink{class_verdi_1_1_tex_slice_strategy}{\-Tex\-Slice\-Strategy} implementation.
+
+\-Class that wraps the implementation strategy. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_verdi_1_1_tex_slice_strategy_a966a67551420f96176c0734f79122c17}{\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}!\-Tex\-Slice\-Strategy@{\-Tex\-Slice\-Strategy}}
+\index{\-Tex\-Slice\-Strategy@{\-Tex\-Slice\-Strategy}!Verdi::TexSliceStrategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+\subsubsection[{\-Tex\-Slice\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-::\-Tex\-Slice\-Strategy} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{shader\-Path = {\ttfamily \char`\"{}shaders/{\bf \-Ray\-Cast\-Strategy}/\-Tex\-Slice.cgfx\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_tex_slice_strategy_a966a67551420f96176c0734f79122c17}
+\-Default constructor. \hypertarget{class_verdi_1_1_tex_slice_strategy_a02727746e1ced6475b61033f6eb472da}{\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}!$\sim$\-Tex\-Slice\-Strategy@{$\sim$\-Tex\-Slice\-Strategy}}
+\index{$\sim$\-Tex\-Slice\-Strategy@{$\sim$\-Tex\-Slice\-Strategy}!Verdi::TexSliceStrategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+\subsubsection[{$\sim$\-Tex\-Slice\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-::$\sim$\-Tex\-Slice\-Strategy} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_tex_slice_strategy_a02727746e1ced6475b61033f6eb472da}
+\-Default destructor. \hypertarget{class_verdi_1_1_tex_slice_strategy_a7b925a79f5fab91a850a2d4ac89205ac}{\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}!\-Tex\-Slice\-Strategy@{\-Tex\-Slice\-Strategy}}
+\index{\-Tex\-Slice\-Strategy@{\-Tex\-Slice\-Strategy}!Verdi::TexSliceStrategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+\subsubsection[{\-Tex\-Slice\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-::\-Tex\-Slice\-Strategy} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{shader\-Path = {\ttfamily \char`\"{}shaders/{\bf \-Tex\-Slice\-Strategy}/\-Tex\-Slice.cgfx\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_tex_slice_strategy_a7b925a79f5fab91a850a2d4ac89205ac}
+\-Default constructor. \hypertarget{class_verdi_1_1_tex_slice_strategy_a02727746e1ced6475b61033f6eb472da}{\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}!$\sim$\-Tex\-Slice\-Strategy@{$\sim$\-Tex\-Slice\-Strategy}}
+\index{$\sim$\-Tex\-Slice\-Strategy@{$\sim$\-Tex\-Slice\-Strategy}!Verdi::TexSliceStrategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+\subsubsection[{$\sim$\-Tex\-Slice\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-::$\sim$\-Tex\-Slice\-Strategy} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_tex_slice_strategy_a02727746e1ced6475b61033f6eb472da}
+\-Default destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_tex_slice_strategy_a85eb6812293f248f92ec63f56dfaa5bb}{\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}!awake@{awake}}
+\index{awake@{awake}!Verdi::TexSliceStrategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+\subsubsection[{awake}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-::awake} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_tex_slice_strategy_a85eb6812293f248f92ec63f56dfaa5bb}
+\-Notify when a render strategy has changed (to this). \begin{DoxyRemark}{\-Remarks}
+\-When a render strategy is switched to this strategy it is notified through this method. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_a34797cbcea846c22a23937226281922b}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_tex_slice_strategy_ad7ac71fe824de3ab082c66201b79a3bc}{\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}!begin\-Frame@{begin\-Frame}}
+\index{begin\-Frame@{begin\-Frame}!Verdi::TexSliceStrategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+\subsubsection[{begin\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-::begin\-Frame} (
+\begin{DoxyParamCaption}
+\item[{float}]{dt, }
+\item[{float}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_tex_slice_strategy_ad7ac71fe824de3ab082c66201b79a3bc}
+\-Start a frame. \begin{DoxyRemark}{\-Remarks}
+\-This is called prior to rendering operations for a render strategy to set up any per-\/frame parameters. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_a7b968d3bcbc2b791e5593f639b0af527}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_tex_slice_strategy_afcb1d4e8ca0aae9b0923fcc9772c1834}{\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}!context\-Changed@{context\-Changed}}
+\index{context\-Changed@{context\-Changed}!Verdi::TexSliceStrategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+\subsubsection[{context\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-::context\-Changed} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Render\-Context} $\ast$}]{new\-Context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_tex_slice_strategy_afcb1d4e8ca0aae9b0923fcc9772c1834}
+\-Notify of a context change. \begin{DoxyRemark}{\-Remarks}
+\-When the user decides to switch to another context a render strategy may need to recreate some objects or perform some computation. \-This method provides an opportunity for implementations to do this. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_abdd27f6e043ad468307bcc6b5e85356f}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_tex_slice_strategy_aeb1f2291076b909e91c749924aa9f5f7}{\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}!end\-Frame@{end\-Frame}}
+\index{end\-Frame@{end\-Frame}!Verdi::TexSliceStrategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+\subsubsection[{end\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-::end\-Frame} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_tex_slice_strategy_aeb1f2291076b909e91c749924aa9f5f7}
+\-End a frame. \begin{DoxyRemark}{\-Remarks}
+\-This is called at the end of a frame to notify a render strategy to end-\/rendering and display its results to the screen. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_a944fdbb328fd38f40f227ce1ecc9fd7f}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_tex_slice_strategy_abdbda056eafb1a428119ec5404a11204}{\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}!initialise@{initialise}}
+\index{initialise@{initialise}!Verdi::TexSliceStrategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+\subsubsection[{initialise}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-::initialise} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{width, }
+\item[{uint32\-\_\-t}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_tex_slice_strategy_abdbda056eafb1a428119ec5404a11204}
+\-Initialise the render strategy. \begin{DoxyRemark}{\-Remarks}
+\-This is called when the user initiates \hyperlink{class_verdi_1_1_render_system_a63ada7c106625cbf3601ee23300fb8af}{\-Render\-System\-::initialise}. \-All one-\/time initialisation must be performed within this method. \-The initial width and height are provided, but implementations should also account for modification through the resize method. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_a300417f6a6cc08f1bb6e609475dbf638}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_tex_slice_strategy_ac5de87a3c2bab3838e0fa4ed546e611f}{\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}!is\-Initialised@{is\-Initialised}}
+\index{is\-Initialised@{is\-Initialised}!Verdi::TexSliceStrategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+\subsubsection[{is\-Initialised}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-::is\-Initialised} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_tex_slice_strategy_ac5de87a3c2bab3838e0fa4ed546e611f}
+\-Must return true after initialisation. 
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_afe668a16ada4c12b7c58b0952cb3dffa}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_tex_slice_strategy_a6be673870c04b15179592e16d2ebbf60}{\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}!render@{render}}
+\index{render@{render}!Verdi::TexSliceStrategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-::render} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_tex_slice_strategy_a6be673870c04b15179592e16d2ebbf60}
+\-Perform the actual rendering. \begin{DoxyRemark}{\-Remarks}
+\-This begin frame,render,and end frame methods have been written to be flexible. \-In future, this method may take in a block size, to render blocks of data at a time. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_a722068356fab14b78f8104614b6bb39a}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_tex_slice_strategy_aa6d363ca6d668ea2c0d881dd181ab2ba}{\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}!resize@{resize}}
+\index{resize@{resize}!Verdi::TexSliceStrategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-::resize} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{width, }
+\item[{uint32\-\_\-t}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_tex_slice_strategy_aa6d363ca6d668ea2c0d881dd181ab2ba}
+\-Notify the render strategy of a resize. 
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_aa6290274c5e5e914c2a50347b125dff5}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_tex_slice_strategy_aec405f9be90e4ee81a0cf0bd0e3d3935}{\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!Verdi::TexSliceStrategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+\subsubsection[{shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-::shutdown} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_tex_slice_strategy_aec405f9be90e4ee81a0cf0bd0e3d3935}
+\-Shutdown the strategy. \begin{DoxyRemark}{\-Remarks}
+\-This gives the strategy an opportunity to clean-\/up any data allocated during execution. \-It is called when the user initiates \hyperlink{class_verdi_1_1_render_system_acc054feb7d679cee2a52e52c1ac319a0}{\-Render\-System\-::shutdown}. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_ab4b85d09886b1adc6a32f638522684cc}{\-Verdi\-::\-Render\-Strategy}.
+
+\hypertarget{class_verdi_1_1_tex_slice_strategy_abaf58e07219e1aab4d0016044da15f4d}{\index{\-Verdi\-::\-Tex\-Slice\-Strategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}!suspend@{suspend}}
+\index{suspend@{suspend}!Verdi::TexSliceStrategy@{\-Verdi\-::\-Tex\-Slice\-Strategy}}
+\subsubsection[{suspend}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Tex\-Slice\-Strategy\-::suspend} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_tex_slice_strategy_abaf58e07219e1aab4d0016044da15f4d}
+\-Notify when a render strategy has changed (from this). \begin{DoxyRemark}{\-Remarks}
+\-When the user decides to switch render strategy, the previous render strategy is notified through this method. 
+\end{DoxyRemark}
+
+
+\-Implements \hyperlink{class_verdi_1_1_render_strategy_a0e46a0f8434b471bf8b0c1c9b243e6d5}{\-Verdi\-::\-Render\-Strategy}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/include/\-Verdi\-Tex\-Slice\-Strategy.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/\-Verdi\-Tex\-Slice\-Strategy.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/src/\-Verdi\-Tex\-Slice\-Strategy.\-cpp\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/\-Verdi\-Tex\-Slice\-Strategy.\-cpp\end{DoxyCompactItemize}

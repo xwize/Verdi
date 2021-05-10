@@ -1,0 +1,52 @@
+\hypertarget{class_verdi_1_1_raw_reader}{\section{\-Verdi\-:\-:\-Raw\-Reader \-Class \-Reference}
+\label{class_verdi_1_1_raw_reader}\index{\-Verdi\-::\-Raw\-Reader@{\-Verdi\-::\-Raw\-Reader}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Raw\-Reader.\-h$>$}
+
+\-Inheritance diagram for \-Verdi\-:\-:\-Raw\-Reader\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_verdi_1_1_raw_reader}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$ \hyperlink{class_verdi_1_1_raw_reader_a05fbc00edb6b03a78e6a87ec1561f448}{read\-From\-File} (const \-String \&filename, const \-String\-Map $\ast$args)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Concrete implementation of a \hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} reader for loading raw voxel files. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_raw_reader_a05fbc00edb6b03a78e6a87ec1561f448}{\index{\-Verdi\-::\-Raw\-Reader@{\-Verdi\-::\-Raw\-Reader}!read\-From\-File@{read\-From\-File}}
+\index{read\-From\-File@{read\-From\-File}!Verdi::RawReader@{\-Verdi\-::\-Raw\-Reader}}
+\subsubsection[{read\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Data\-Set} $\ast$ {\bf \-Verdi\-::\-Raw\-Reader\-::read\-From\-File} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{filename, }
+\item[{const \-String\-Map $\ast$}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_raw_reader_a05fbc00edb6b03a78e6a87ec1561f448}
+\-Read a data set from a file. 
+\begin{DoxyParams}{\-Parameters}
+{\em filename} & \-The filename of the file to load. \\
+\hline
+{\em args} & \-Optional arguments encoded as a string map. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns a pointer to the loaded data set. 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_verdi_1_1_data_set_reader_a46bc06b41075b8d1d38276e816227994}{\-Verdi\-::\-Data\-Set\-Reader}.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Raw\-Reader.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/src/\-Verdi\-Raw\-Reader.\-cpp\end{DoxyCompactItemize}

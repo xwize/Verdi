@@ -1,0 +1,105 @@
+\hypertarget{class_verdi_1_1_vec4}{\section{\-Verdi\-:\-:\-Vec4 \-Class \-Reference}
+\label{class_verdi_1_1_vec4}\index{\-Verdi\-::\-Vec4@{\-Verdi\-::\-Vec4}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Vec4.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_vec4_a9b2dba3be94a527a541a6d500f517904}{\-Vec4} ()
+\item 
+\hyperlink{class_verdi_1_1_vec4_a71a5d1c5b17c1bb3e41f2922a72a45b8}{\-Vec4} (float ix, float iy, float iz, float iw)
+\item 
+\hyperlink{class_verdi_1_1_vec4_a831de38462851572df13ed7dcf205dc4}{$\sim$\-Vec4} ()
+\item 
+\hyperlink{class_verdi_1_1_vec4}{\-Vec4} \hyperlink{class_verdi_1_1_vec4_aa6329a846be84ac9bc31e0fb7fc8e60f}{operator-\/} (const \hyperlink{class_verdi_1_1_vec4}{\-Vec4} \&v) const 
+\item 
+\hyperlink{class_verdi_1_1_vec4}{\-Vec4} \hyperlink{class_verdi_1_1_vec4_a42818106cc67a22e4ac83bb2d2bd7935}{operator$\ast$=} (float s)
+\item 
+float \hyperlink{class_verdi_1_1_vec4_aae334b28cde0620fec2b6915e730145b}{length\-Squared} () const 
+\item 
+\hypertarget{class_verdi_1_1_vec4_aa6c94fa3d13e1a970dee9787d1bf6a75}{float {\bfseries length} () const }\label{class_verdi_1_1_vec4_aa6c94fa3d13e1a970dee9787d1bf6a75}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_vec4_a66ae2455b33c38190168250380a66f98}{\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\hypertarget{union_verdi_1_1_vec4_1_1@8_a210feda1fc09ca6c23016a5330ad94a7}{\>struct \{\\
+\>\>float {\bfseries x}\\
+\>\>float {\bfseries y}\\
+\>\>float {\bfseries z}\\
+\>\>float {\bfseries w}\\
+\>\} }\label{union_verdi_1_1_vec4_1_1@8_a210feda1fc09ca6c23016a5330ad94a7}
+\\
+\>float {\bfseries values} \mbox{[}4\mbox{]}\\
+\}; }\label{class_verdi_1_1_vec4_a66ae2455b33c38190168250380a66f98}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class definition for a 4d vector. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_verdi_1_1_vec4_a9b2dba3be94a527a541a6d500f517904}{\index{\-Verdi\-::\-Vec4@{\-Verdi\-::\-Vec4}!\-Vec4@{\-Vec4}}
+\index{\-Vec4@{\-Vec4}!Verdi::Vec4@{\-Verdi\-::\-Vec4}}
+\subsubsection[{\-Vec4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Vec4\-::\-Vec4} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec4_a9b2dba3be94a527a541a6d500f517904}
+\-Default constructor. \hypertarget{class_verdi_1_1_vec4_a71a5d1c5b17c1bb3e41f2922a72a45b8}{\index{\-Verdi\-::\-Vec4@{\-Verdi\-::\-Vec4}!\-Vec4@{\-Vec4}}
+\index{\-Vec4@{\-Vec4}!Verdi::Vec4@{\-Verdi\-::\-Vec4}}
+\subsubsection[{\-Vec4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Vec4\-::\-Vec4} (
+\begin{DoxyParamCaption}
+\item[{float}]{ix, }
+\item[{float}]{iy, }
+\item[{float}]{iz, }
+\item[{float}]{iw}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec4_a71a5d1c5b17c1bb3e41f2922a72a45b8}
+\-Parameterised constructor. \hypertarget{class_verdi_1_1_vec4_a831de38462851572df13ed7dcf205dc4}{\index{\-Verdi\-::\-Vec4@{\-Verdi\-::\-Vec4}!$\sim$\-Vec4@{$\sim$\-Vec4}}
+\index{$\sim$\-Vec4@{$\sim$\-Vec4}!Verdi::Vec4@{\-Verdi\-::\-Vec4}}
+\subsubsection[{$\sim$\-Vec4}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Vec4\-::$\sim$\-Vec4} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec4_a831de38462851572df13ed7dcf205dc4}
+\-Default destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_vec4_aae334b28cde0620fec2b6915e730145b}{\index{\-Verdi\-::\-Vec4@{\-Verdi\-::\-Vec4}!length\-Squared@{length\-Squared}}
+\index{length\-Squared@{length\-Squared}!Verdi::Vec4@{\-Verdi\-::\-Vec4}}
+\subsubsection[{length\-Squared}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Verdi\-::\-Vec4\-::length\-Squared} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec4_aae334b28cde0620fec2b6915e730145b}
+\-Get the length of the vector squared. \begin{DoxyRemark}{\-Remarks}
+\-Should be used in cases when the exact value is not required. 
+\end{DoxyRemark}
+\hypertarget{class_verdi_1_1_vec4_a42818106cc67a22e4ac83bb2d2bd7935}{\index{\-Verdi\-::\-Vec4@{\-Verdi\-::\-Vec4}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Verdi::Vec4@{\-Verdi\-::\-Vec4}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec4} \-Verdi\-::\-Vec4\-::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{float}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec4_a42818106cc67a22e4ac83bb2d2bd7935}
+\-Times equals operator. \hypertarget{class_verdi_1_1_vec4_aa6329a846be84ac9bc31e0fb7fc8e60f}{\index{\-Verdi\-::\-Vec4@{\-Verdi\-::\-Vec4}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Verdi::Vec4@{\-Verdi\-::\-Vec4}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec4} \-Verdi\-::\-Vec4\-::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec4} \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_vec4_aa6329a846be84ac9bc31e0fb7fc8e60f}
+\-Subtraction operator. 
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Vec4.\-h\end{DoxyCompactItemize}

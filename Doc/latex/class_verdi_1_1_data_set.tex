@@ -1,0 +1,361 @@
+\hypertarget{class_verdi_1_1_data_set}{\section{\-Verdi\-:\-:\-Data\-Set \-Class \-Reference}
+\label{class_verdi_1_1_data_set}\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Data\-Set.\-h$>$}
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_verdi_1_1_data_set_1_1_window}{\-Window}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_verdi_1_1_data_set_abd6d238fa4dff1b0ea6abd391d14ed64}{\-Channel\-Format} \{ {\bfseries \-D\-S\-C\-F\-\_\-\-U\-B\-Y\-T\-E8}, 
+{\bfseries \-D\-S\-C\-F\-\_\-\-U\-B\-Y\-T\-E16}, 
+{\bfseries \-D\-S\-C\-F\-\_\-\-U\-B\-Y\-T\-E32}, 
+{\bfseries \-D\-S\-C\-F\-\_\-\-F\-L\-O\-A\-T32}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_data_set_ac1b89c64959ece72d5d973bd801abb33}{\-Data\-Set} (uint32\-\_\-t w, uint32\-\_\-t h, uint32\-\_\-t d, uint32\-\_\-t num\-Channels, \hyperlink{class_verdi_1_1_data_set_abd6d238fa4dff1b0ea6abd391d14ed64}{\-Channel\-Format} format=\-D\-S\-C\-F\-\_\-\-U\-B\-Y\-T\-E16)
+\item 
+\hyperlink{class_verdi_1_1_data_set_af840d791fe8ebb0d2347bba048f7482f}{\-Data\-Set} (uint32\-\_\-t w, uint32\-\_\-t h, uint32\-\_\-t d, uint32\-\_\-t num\-Channels, \hyperlink{class_verdi_1_1_data_set_abd6d238fa4dff1b0ea6abd391d14ed64}{\-Channel\-Format} format, void $\ast$data)
+\item 
+\hyperlink{class_verdi_1_1_data_set_a4641e0884e04506c10c09cbf100c6be3}{$\sim$\-Data\-Set} ()
+\item 
+void \hyperlink{class_verdi_1_1_data_set_a23e64c8d69ffc71fece6418588f65dde}{set\-Voxel} (int x, int y, int z, int channel\-Index, float val)
+\item 
+float \hyperlink{class_verdi_1_1_data_set_affc026d4fe5d9fc9131ff3f6a85dfa62}{get\-Voxel} (int x, int y, int z, int channel\-Index=0) const 
+\item 
+void \hyperlink{class_verdi_1_1_data_set_a04c0d346a813ee2d03f07520857cedc1}{set\-Scale\-Multiplier} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&v)
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_data_set_ac3f633322a8d9d5cab9de79437bc5706}{get\-Scale\-Multiplier} () const 
+\item 
+void \hyperlink{class_verdi_1_1_data_set_a7485497199731cf7826220c87ca6eed5}{set\-Normalisation\-Factor} (float n)
+\item 
+void \hyperlink{class_verdi_1_1_data_set_a412db1524e144836d59a60a200c7692b}{set\-Normalisation\-Factor} (\hyperlink{class_verdi_1_1_data_set_abd6d238fa4dff1b0ea6abd391d14ed64}{\-Channel\-Format} format)
+\item 
+float \hyperlink{class_verdi_1_1_data_set_a6c29d92388f307ce51652e2c2ec6795a}{get\-Normalisation\-Factor} () const 
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_data_set_a5125c1de8c64c50b8e046ef31d637008}{get\-Dimension\-Ratio} () const 
+\item 
+\hyperlink{class_verdi_1_1_vec3}{\-Vec3} \hyperlink{class_verdi_1_1_data_set_aff74d0fdf0e520b7405eb44d4b9ad447}{get\-Corrected\-Dimension\-Ratio} () const 
+\item 
+void $\ast$ \hyperlink{class_verdi_1_1_data_set_a8bbef508432add282b45a2e6fca37166}{get\-Data} () const 
+\item 
+uint32\-\_\-t \hyperlink{class_verdi_1_1_data_set_a99551cb4eb7fc7fe4a11d48c67851b24}{get\-Width} () const 
+\item 
+uint32\-\_\-t \hyperlink{class_verdi_1_1_data_set_abe999031576897e8171397836194ef95}{get\-Height} () const 
+\item 
+uint32\-\_\-t \hyperlink{class_verdi_1_1_data_set_a3f71f2d58fb65df768f936cf0f1fcf65}{get\-Depth} () const 
+\item 
+uint32\-\_\-t \hyperlink{class_verdi_1_1_data_set_a65b7f67ddbb9b5974bb1e119236a4e8c}{get\-Num\-Channels} () const 
+\item 
+\hyperlink{class_verdi_1_1_data_set_abd6d238fa4dff1b0ea6abd391d14ed64}{\-Channel\-Format} \hyperlink{class_verdi_1_1_data_set_ac93bcca23f3d6feeabea75ac3d73f866}{get\-Channel\-Format} () const 
+\item 
+uint32\-\_\-t \hyperlink{class_verdi_1_1_data_set_a2f43e4e7e6ee57fc4d91a9e2f40e5f5f}{get\-Size\-In\-Bytes} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_verdi_1_1_data_set_a156690144b3970c1f13c34b6ceb37b62}{copy\-Channel} (const \hyperlink{struct_verdi_1_1_data_set_1_1_window}{\-Window} \&window, const \hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$src\-Data, int src\-Channel\-Index, \hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$dst\-Data, int dst\-Channel\-Index)
+\item 
+static void \hyperlink{class_verdi_1_1_data_set_a40d0ce7eb25518cc444e4908ab1b58f7}{compute\-Gradient\-Magnitudes} (const \hyperlink{struct_verdi_1_1_data_set_1_1_window}{\-Window} \&window, const \hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$src\-Data, int src\-Channel\-Index, \hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$dst\-Data, int dst\-Channel\-Index)
+\item 
+static void \hyperlink{class_verdi_1_1_data_set_af084277979dbf65f50e1957a11ad2f08}{compute\-Min\-Max\-Values} (const \hyperlink{struct_verdi_1_1_data_set_1_1_window}{\-Window} \&window, const \hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$src\-Data, int src\-Channel\-Index, const \hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$grad\-Data, int grad\-Channel\-Index, const \hyperlink{class_verdi_1_1_transfer_function}{\-Transfer\-Function} $\ast$func, float $\ast$min\-Out, float $\ast$max\-Out)
+\item 
+static void \hyperlink{class_verdi_1_1_data_set_a875f015107f5a2d2ede9758f8e10add6}{compute\-Min\-Max\-Values} (const \hyperlink{struct_verdi_1_1_data_set_1_1_window}{\-Window} \&window, const \hyperlink{class_verdi_1_1_data_set}{\-Data\-Set} $\ast$src\-Data, int src\-Channel\-Index, float $\ast$min\-Out, float $\ast$max\-Out)
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_verdi_1_1_data_set_a65d8e95a80ebdfd18ac16fd15101da3c}{\-M\-A\-X\-\_\-\-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S} = 3
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_data_set_a185d1154bb00451cec495ce51e0847a5}{uint32\-\_\-t {\bfseries m\-Width}}\label{class_verdi_1_1_data_set_a185d1154bb00451cec495ce51e0847a5}
+
+\item 
+\hypertarget{class_verdi_1_1_data_set_a9416e6700c7fdce44f19e11a0b6f32a9}{uint32\-\_\-t {\bfseries m\-Height}}\label{class_verdi_1_1_data_set_a9416e6700c7fdce44f19e11a0b6f32a9}
+
+\item 
+\hypertarget{class_verdi_1_1_data_set_a7a712b9460a42e83529e22932522f6d3}{uint32\-\_\-t {\bfseries m\-Depth}}\label{class_verdi_1_1_data_set_a7a712b9460a42e83529e22932522f6d3}
+
+\item 
+\hypertarget{class_verdi_1_1_data_set_a46e7653e589f478a0842ef2927f0a635}{uint32\-\_\-t {\bfseries m\-Num\-Channels}}\label{class_verdi_1_1_data_set_a46e7653e589f478a0842ef2927f0a635}
+
+\item 
+\hypertarget{class_verdi_1_1_data_set_a9c6e332c1ff42d31e2c26ff85602b7d0}{\hyperlink{class_verdi_1_1_data_set_abd6d238fa4dff1b0ea6abd391d14ed64}{\-Channel\-Format} {\bfseries m\-Channel\-Format}}\label{class_verdi_1_1_data_set_a9c6e332c1ff42d31e2c26ff85602b7d0}
+
+\item 
+\hypertarget{class_verdi_1_1_data_set_ae2cdd3bba85899dd8a1350187673b0f5}{\hyperlink{class_verdi_1_1_vec3}{\-Verdi\-::\-Vec3} {\bfseries m\-Scale\-Multiplier}}\label{class_verdi_1_1_data_set_ae2cdd3bba85899dd8a1350187673b0f5}
+
+\item 
+\hypertarget{class_verdi_1_1_data_set_a3444b683c47fa590dd38a3a5269fc0c6}{float {\bfseries m\-Normalisation\-Factor}}\label{class_verdi_1_1_data_set_a3444b683c47fa590dd38a3a5269fc0c6}
+
+\item 
+\hypertarget{class_verdi_1_1_data_set_a1bd2001c834f90b99890d62925524a39}{void $\ast$ {\bfseries mp\-Data}}\label{class_verdi_1_1_data_set_a1bd2001c834f90b99890d62925524a39}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class for storing a data set in system memory. \begin{DoxyRemark}{\-Remarks}
+\-Before uploading any data to the \-G\-P\-U, the system must first create or load the data from a file. \-This class provides a mechanism for storing and performing computation on this data. \-The data uses an interleaved storage format consisting of channels. \-No semantic information for these channels is provided -\/ for operations that require this information, the user must provide the method with the source data and channel. 
+\end{DoxyRemark}
+
+
+\subsection{\-Member \-Enumeration \-Documentation}
+\hypertarget{class_verdi_1_1_data_set_abd6d238fa4dff1b0ea6abd391d14ed64}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!\-Channel\-Format@{\-Channel\-Format}}
+\index{\-Channel\-Format@{\-Channel\-Format}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{\-Channel\-Format}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Verdi\-::\-Data\-Set\-::\-Channel\-Format}}}\label{class_verdi_1_1_data_set_abd6d238fa4dff1b0ea6abd391d14ed64}
+\-Enum of available component formats. \begin{DoxyRemark}{\-Remarks}
+\-All channels use the same component format. 
+\end{DoxyRemark}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_verdi_1_1_data_set_ac1b89c64959ece72d5d973bd801abb33}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!\-Data\-Set@{\-Data\-Set}}
+\index{\-Data\-Set@{\-Data\-Set}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{\-Data\-Set}]{\setlength{\rightskip}{0pt plus 5cm}\-Verdi\-::\-Data\-Set\-::\-Data\-Set (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{w, }
+\item[{uint32\-\_\-t}]{h, }
+\item[{uint32\-\_\-t}]{d, }
+\item[{uint32\-\_\-t}]{num\-Channels, }
+\item[{{\bf \-Channel\-Format}}]{format = {\ttfamily \-D\-S\-C\-F\-\_\-\-U\-B\-Y\-T\-E16}}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_data_set_ac1b89c64959ece72d5d973bd801abb33}
+\-Constructor for empty data set with a single value component. \hypertarget{class_verdi_1_1_data_set_af840d791fe8ebb0d2347bba048f7482f}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!\-Data\-Set@{\-Data\-Set}}
+\index{\-Data\-Set@{\-Data\-Set}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{\-Data\-Set}]{\setlength{\rightskip}{0pt plus 5cm}\-Verdi\-::\-Data\-Set\-::\-Data\-Set (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{w, }
+\item[{uint32\-\_\-t}]{h, }
+\item[{uint32\-\_\-t}]{d, }
+\item[{uint32\-\_\-t}]{num\-Channels, }
+\item[{{\bf \-Channel\-Format}}]{format, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_data_set_af840d791fe8ebb0d2347bba048f7482f}
+\-Constructor for existing data. \begin{DoxyRemark}{\-Remarks}
+\-Data pointer is not deep copied. \-Lifetime control relinquished from user. 
+\end{DoxyRemark}
+\hypertarget{class_verdi_1_1_data_set_a4641e0884e04506c10c09cbf100c6be3}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!$\sim$\-Data\-Set@{$\sim$\-Data\-Set}}
+\index{$\sim$\-Data\-Set@{$\sim$\-Data\-Set}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{$\sim$\-Data\-Set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Data\-Set\-::$\sim$\-Data\-Set} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_data_set_a4641e0884e04506c10c09cbf100c6be3}
+\-Default destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_data_set_a40d0ce7eb25518cc444e4908ab1b58f7}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!compute\-Gradient\-Magnitudes@{compute\-Gradient\-Magnitudes}}
+\index{compute\-Gradient\-Magnitudes@{compute\-Gradient\-Magnitudes}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{compute\-Gradient\-Magnitudes}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Data\-Set\-::compute\-Gradient\-Magnitudes} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Window} \&}]{window, }
+\item[{const {\bf \-Data\-Set} $\ast$}]{src\-Data, }
+\item[{int}]{src\-Channel\-Index, }
+\item[{{\bf \-Data\-Set} $\ast$}]{dst\-Data, }
+\item[{int}]{dst\-Channel\-Index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_data_set_a40d0ce7eb25518cc444e4908ab1b58f7}
+\-Compute gradient data. \hypertarget{class_verdi_1_1_data_set_af084277979dbf65f50e1957a11ad2f08}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!compute\-Min\-Max\-Values@{compute\-Min\-Max\-Values}}
+\index{compute\-Min\-Max\-Values@{compute\-Min\-Max\-Values}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{compute\-Min\-Max\-Values}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Data\-Set\-::compute\-Min\-Max\-Values} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Window} \&}]{window, }
+\item[{const {\bf \-Data\-Set} $\ast$}]{src\-Data, }
+\item[{int}]{src\-Channel\-Index, }
+\item[{const {\bf \-Data\-Set} $\ast$}]{grad\-Data, }
+\item[{int}]{grad\-Channel\-Index, }
+\item[{const {\bf \-Transfer\-Function} $\ast$}]{func, }
+\item[{float $\ast$}]{min\-Out, }
+\item[{float $\ast$}]{max\-Out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_data_set_af084277979dbf65f50e1957a11ad2f08}
+\-Compute min and max values for a window assuming a transfer function that requires gradient information has been specified. \hypertarget{class_verdi_1_1_data_set_a875f015107f5a2d2ede9758f8e10add6}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!compute\-Min\-Max\-Values@{compute\-Min\-Max\-Values}}
+\index{compute\-Min\-Max\-Values@{compute\-Min\-Max\-Values}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{compute\-Min\-Max\-Values}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Data\-Set\-::compute\-Min\-Max\-Values} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Window} \&}]{window, }
+\item[{const {\bf \-Data\-Set} $\ast$}]{src\-Data, }
+\item[{int}]{src\-Channel\-Index, }
+\item[{float $\ast$}]{min\-Out, }
+\item[{float $\ast$}]{max\-Out}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_data_set_a875f015107f5a2d2ede9758f8e10add6}
+\-Compute min and max values for a window based solely on the values within the data set. \hypertarget{class_verdi_1_1_data_set_a156690144b3970c1f13c34b6ceb37b62}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!copy\-Channel@{copy\-Channel}}
+\index{copy\-Channel@{copy\-Channel}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{copy\-Channel}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Data\-Set\-::copy\-Channel} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Window} \&}]{window, }
+\item[{const {\bf \-Data\-Set} $\ast$}]{src\-Data, }
+\item[{int}]{src\-Channel\-Index, }
+\item[{{\bf \-Data\-Set} $\ast$}]{dst\-Data, }
+\item[{int}]{dst\-Channel\-Index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_data_set_a156690144b3970c1f13c34b6ceb37b62}
+\-Copy from a source channel to a destination channel. \hypertarget{class_verdi_1_1_data_set_ac93bcca23f3d6feeabea75ac3d73f866}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!get\-Channel\-Format@{get\-Channel\-Format}}
+\index{get\-Channel\-Format@{get\-Channel\-Format}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{get\-Channel\-Format}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Channel\-Format} {\bf \-Verdi\-::\-Data\-Set\-::get\-Channel\-Format} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_data_set_ac93bcca23f3d6feeabea75ac3d73f866}
+\-Get the format of the components. \hypertarget{class_verdi_1_1_data_set_aff74d0fdf0e520b7405eb44d4b9ad447}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!get\-Corrected\-Dimension\-Ratio@{get\-Corrected\-Dimension\-Ratio}}
+\index{get\-Corrected\-Dimension\-Ratio@{get\-Corrected\-Dimension\-Ratio}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{get\-Corrected\-Dimension\-Ratio}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} {\bf \-Verdi\-::\-Data\-Set\-::get\-Corrected\-Dimension\-Ratio} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_data_set_aff74d0fdf0e520b7405eb44d4b9ad447}
+\-Get corrected dimension ratio. \begin{DoxyRemark}{\-Remarks}
+\-This value can be used to scale a unit cube to take the shape of the voxel grid, where the largest axis of the voxel grid has a length of 1 on the cube. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{\-Returns}
+\-The adjusted dimension ratio using the scaling multiplier. 
+\end{DoxyReturn}
+\hypertarget{class_verdi_1_1_data_set_a8bbef508432add282b45a2e6fca37166}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!get\-Data@{get\-Data}}
+\index{get\-Data@{get\-Data}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{get\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf \-Verdi\-::\-Data\-Set\-::get\-Data} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_data_set_a8bbef508432add282b45a2e6fca37166}
+\-Get the data pointer. \begin{DoxyRemark}{\-Remarks}
+\-Data can be modified and read using this method. 
+\end{DoxyRemark}
+\hypertarget{class_verdi_1_1_data_set_a3f71f2d58fb65df768f936cf0f1fcf65}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!get\-Depth@{get\-Depth}}
+\index{get\-Depth@{get\-Depth}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{get\-Depth}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-Verdi\-::\-Data\-Set\-::get\-Depth} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_data_set_a3f71f2d58fb65df768f936cf0f1fcf65}
+\-Get the depth. \hypertarget{class_verdi_1_1_data_set_a5125c1de8c64c50b8e046ef31d637008}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!get\-Dimension\-Ratio@{get\-Dimension\-Ratio}}
+\index{get\-Dimension\-Ratio@{get\-Dimension\-Ratio}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{get\-Dimension\-Ratio}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} {\bf \-Verdi\-::\-Data\-Set\-::get\-Dimension\-Ratio} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_data_set_a5125c1de8c64c50b8e046ef31d637008}
+\-Get the dimension ratio. \begin{DoxyRemark}{\-Remarks}
+\-This is a vector representing the dimensions of the voxel grid (independently of scaling factor) where the dimensions are scaled so that the largest axis is given a value of 1. 
+\end{DoxyRemark}
+\hypertarget{class_verdi_1_1_data_set_abe999031576897e8171397836194ef95}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!get\-Height@{get\-Height}}
+\index{get\-Height@{get\-Height}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{get\-Height}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-Verdi\-::\-Data\-Set\-::get\-Height} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_data_set_abe999031576897e8171397836194ef95}
+\-Get the height. \hypertarget{class_verdi_1_1_data_set_a6c29d92388f307ce51652e2c2ec6795a}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!get\-Normalisation\-Factor@{get\-Normalisation\-Factor}}
+\index{get\-Normalisation\-Factor@{get\-Normalisation\-Factor}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{get\-Normalisation\-Factor}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Verdi\-::\-Data\-Set\-::get\-Normalisation\-Factor} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_data_set_a6c29d92388f307ce51652e2c2ec6795a}
+\-Get the value normalisation factor. \hypertarget{class_verdi_1_1_data_set_a65b7f67ddbb9b5974bb1e119236a4e8c}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!get\-Num\-Channels@{get\-Num\-Channels}}
+\index{get\-Num\-Channels@{get\-Num\-Channels}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{get\-Num\-Channels}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-Verdi\-::\-Data\-Set\-::get\-Num\-Channels} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_data_set_a65b7f67ddbb9b5974bb1e119236a4e8c}
+\-Get number of components. \hypertarget{class_verdi_1_1_data_set_ac3f633322a8d9d5cab9de79437bc5706}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!get\-Scale\-Multiplier@{get\-Scale\-Multiplier}}
+\index{get\-Scale\-Multiplier@{get\-Scale\-Multiplier}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{get\-Scale\-Multiplier}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec3} {\bf \-Verdi\-::\-Data\-Set\-::get\-Scale\-Multiplier} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_data_set_ac3f633322a8d9d5cab9de79437bc5706}
+\-Get scaling multiplier. \begin{DoxyRemark}{\-Remarks}
+\-The scaling multiplier is a vector that describes how the voxel grid has been scaled in each dimension. \-This information is typically provided from the data set file. 
+\end{DoxyRemark}
+\hypertarget{class_verdi_1_1_data_set_a2f43e4e7e6ee57fc4d91a9e2f40e5f5f}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!get\-Size\-In\-Bytes@{get\-Size\-In\-Bytes}}
+\index{get\-Size\-In\-Bytes@{get\-Size\-In\-Bytes}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{get\-Size\-In\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-Verdi\-::\-Data\-Set\-::get\-Size\-In\-Bytes} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_data_set_a2f43e4e7e6ee57fc4d91a9e2f40e5f5f}
+\-Computes the size in bytes of the data. \hypertarget{class_verdi_1_1_data_set_affc026d4fe5d9fc9131ff3f6a85dfa62}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!get\-Voxel@{get\-Voxel}}
+\index{get\-Voxel@{get\-Voxel}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{get\-Voxel}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Verdi\-::\-Data\-Set\-::get\-Voxel} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z, }
+\item[{int}]{channel\-Index = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_data_set_affc026d4fe5d9fc9131ff3f6a85dfa62}
+\-Sample the data set at the given location. \begin{DoxyRemark}{\-Remarks}
+\-The same can be said for this method as the set\-Voxel method. 
+\end{DoxyRemark}
+\hypertarget{class_verdi_1_1_data_set_a99551cb4eb7fc7fe4a11d48c67851b24}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!get\-Width@{get\-Width}}
+\index{get\-Width@{get\-Width}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{get\-Width}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-Verdi\-::\-Data\-Set\-::get\-Width} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_data_set_a99551cb4eb7fc7fe4a11d48c67851b24}
+\-Get the width. \hypertarget{class_verdi_1_1_data_set_a7485497199731cf7826220c87ca6eed5}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!set\-Normalisation\-Factor@{set\-Normalisation\-Factor}}
+\index{set\-Normalisation\-Factor@{set\-Normalisation\-Factor}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{set\-Normalisation\-Factor}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Data\-Set\-::set\-Normalisation\-Factor} (
+\begin{DoxyParamCaption}
+\item[{float}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_data_set_a7485497199731cf7826220c87ca6eed5}
+\-Set the value normalisation factor. \begin{DoxyRemark}{\-Remarks}
+\-This value is used to divide a voxel value down to the 0 -\/ 1 range. 
+\end{DoxyRemark}
+\hypertarget{class_verdi_1_1_data_set_a412db1524e144836d59a60a200c7692b}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!set\-Normalisation\-Factor@{set\-Normalisation\-Factor}}
+\index{set\-Normalisation\-Factor@{set\-Normalisation\-Factor}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{set\-Normalisation\-Factor}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Data\-Set\-::set\-Normalisation\-Factor} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Channel\-Format}}]{format}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_data_set_a412db1524e144836d59a60a200c7692b}
+\-Set the value normalisation factor from the channel format. \hypertarget{class_verdi_1_1_data_set_a04c0d346a813ee2d03f07520857cedc1}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!set\-Scale\-Multiplier@{set\-Scale\-Multiplier}}
+\index{set\-Scale\-Multiplier@{set\-Scale\-Multiplier}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{set\-Scale\-Multiplier}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Data\-Set\-::set\-Scale\-Multiplier} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vec3} \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_data_set_a04c0d346a813ee2d03f07520857cedc1}
+\-Set the scaling multiplier. \hypertarget{class_verdi_1_1_data_set_a23e64c8d69ffc71fece6418588f65dde}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!set\-Voxel@{set\-Voxel}}
+\index{set\-Voxel@{set\-Voxel}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{set\-Voxel}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Data\-Set\-::set\-Voxel} (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{z, }
+\item[{int}]{channel\-Index, }
+\item[{float}]{val}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_data_set_a23e64c8d69ffc71fece6418588f65dde}
+\-Write a voxel to the given location. \begin{DoxyRemark}{\-Remarks}
+\-This method is provided for convenience. \-The float value is converted to the internal format and written at the specified location. \-It is not recommended for use where performance is critical due to the overhead in converting between formats. \-Using the data pointer and manually filling the values would reduce this overhead. 
+\end{DoxyRemark}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_verdi_1_1_data_set_a65d8e95a80ebdfd18ac16fd15101da3c}{\index{\-Verdi\-::\-Data\-Set@{\-Verdi\-::\-Data\-Set}!\-M\-A\-X\-\_\-\-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S@{\-M\-A\-X\-\_\-\-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S}}
+\index{\-M\-A\-X\-\_\-\-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S@{\-M\-A\-X\-\_\-\-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S}!Verdi::DataSet@{\-Verdi\-::\-Data\-Set}}
+\subsubsection[{\-M\-A\-X\-\_\-\-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S}]{\setlength{\rightskip}{0pt plus 5cm}const int {\bf \-Verdi\-::\-Data\-Set\-::\-M\-A\-X\-\_\-\-N\-U\-M\-\_\-\-C\-H\-A\-N\-N\-E\-L\-S} = 3\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_verdi_1_1_data_set_a65d8e95a80ebdfd18ac16fd15101da3c}
+\-The maximum number of channels available for a data set. \-This value should be enough for most purposes. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Data\-Set.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/src/\-Verdi\-Data\-Set.\-cpp\end{DoxyCompactItemize}

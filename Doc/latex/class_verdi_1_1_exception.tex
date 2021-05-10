@@ -1,0 +1,85 @@
+\hypertarget{class_verdi_1_1_exception}{\section{\-Verdi\-:\-:\-Exception \-Class \-Reference}
+\label{class_verdi_1_1_exception}\index{\-Verdi\-::\-Exception@{\-Verdi\-::\-Exception}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Exception.\-h$>$}
+
+\-Inheritance diagram for \-Verdi\-:\-:\-Exception\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.565371cm]{class_verdi_1_1_exception}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_exception_a27a0eeeb40399a82a6202acfe3b25cd5}{{\bfseries \-Exception} (const \-String \&description, int code=0, int line=-\/1, const \-String \&source\-File=\char`\"{}\char`\"{})}\label{class_verdi_1_1_exception_a27a0eeeb40399a82a6202acfe3b25cd5}
+
+\item 
+\hypertarget{class_verdi_1_1_exception_abec9c930d86023dca934b75c567a0466}{{\bfseries \-Exception} (const \hyperlink{class_verdi_1_1_exception}{\-Exception} \&e)}\label{class_verdi_1_1_exception_abec9c930d86023dca934b75c567a0466}
+
+\item 
+virtual const \-String \& \hyperlink{class_verdi_1_1_exception_a07a4c7be6b09f4e56a0040dc9e8389da}{get\-Description} () const 
+\item 
+virtual const \-String \& \hyperlink{class_verdi_1_1_exception_a974968edf92602903549184264053818}{get\-Source\-File} () const 
+\item 
+virtual int \hyperlink{class_verdi_1_1_exception_a5df63a8ec9931fc3cc3d651ef06ae1df}{get\-Line} () const 
+\item 
+virtual int \hyperlink{class_verdi_1_1_exception_a62da10bb91c665cedfba39a3bced967c}{get\-Code} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_exception_a97b9919fe0a61ab7ff0770ca5dd81662}{int {\bfseries m\-Code}}\label{class_verdi_1_1_exception_a97b9919fe0a61ab7ff0770ca5dd81662}
+
+\item 
+\hypertarget{class_verdi_1_1_exception_ae9b47c5d53ee036e5647131446bd4f3c}{int {\bfseries m\-Line}}\label{class_verdi_1_1_exception_ae9b47c5d53ee036e5647131446bd4f3c}
+
+\item 
+\hypertarget{class_verdi_1_1_exception_a68890cb1a63e85d03f6ef17176b0b7fa}{\-String {\bfseries m\-Description}}\label{class_verdi_1_1_exception_a68890cb1a63e85d03f6ef17176b0b7fa}
+
+\item 
+\hypertarget{class_verdi_1_1_exception_a1e7e56c755606ffbc8efb6e82b91001a}{\-String {\bfseries m\-Source\-File}}\label{class_verdi_1_1_exception_a1e7e56c755606ffbc8efb6e82b91001a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-The base class for all exceptions used throughout the framework. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_exception_a62da10bb91c665cedfba39a3bced967c}{\index{\-Verdi\-::\-Exception@{\-Verdi\-::\-Exception}!get\-Code@{get\-Code}}
+\index{get\-Code@{get\-Code}!Verdi::Exception@{\-Verdi\-::\-Exception}}
+\subsubsection[{get\-Code}]{\setlength{\rightskip}{0pt plus 5cm}virtual int {\bf \-Verdi\-::\-Exception\-::get\-Code} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_verdi_1_1_exception_a62da10bb91c665cedfba39a3bced967c}
+\-Get the thrower-\/assigned code value. \hypertarget{class_verdi_1_1_exception_a07a4c7be6b09f4e56a0040dc9e8389da}{\index{\-Verdi\-::\-Exception@{\-Verdi\-::\-Exception}!get\-Description@{get\-Description}}
+\index{get\-Description@{get\-Description}!Verdi::Exception@{\-Verdi\-::\-Exception}}
+\subsubsection[{get\-Description}]{\setlength{\rightskip}{0pt plus 5cm}virtual const \-String\& {\bf \-Verdi\-::\-Exception\-::get\-Description} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_verdi_1_1_exception_a07a4c7be6b09f4e56a0040dc9e8389da}
+\-Get the description of the exception. \hypertarget{class_verdi_1_1_exception_a5df63a8ec9931fc3cc3d651ef06ae1df}{\index{\-Verdi\-::\-Exception@{\-Verdi\-::\-Exception}!get\-Line@{get\-Line}}
+\index{get\-Line@{get\-Line}!Verdi::Exception@{\-Verdi\-::\-Exception}}
+\subsubsection[{get\-Line}]{\setlength{\rightskip}{0pt plus 5cm}virtual int {\bf \-Verdi\-::\-Exception\-::get\-Line} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_verdi_1_1_exception_a5df63a8ec9931fc3cc3d651ef06ae1df}
+\-Get the source file line where the exception was thrown. \hypertarget{class_verdi_1_1_exception_a974968edf92602903549184264053818}{\index{\-Verdi\-::\-Exception@{\-Verdi\-::\-Exception}!get\-Source\-File@{get\-Source\-File}}
+\index{get\-Source\-File@{get\-Source\-File}!Verdi::Exception@{\-Verdi\-::\-Exception}}
+\subsubsection[{get\-Source\-File}]{\setlength{\rightskip}{0pt plus 5cm}virtual const \-String\& {\bf \-Verdi\-::\-Exception\-::get\-Source\-File} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_verdi_1_1_exception_a974968edf92602903549184264053818}
+\-Get the source file name where the exception was thrown. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Exception.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/src/\-Verdi\-Exception.\-cpp\end{DoxyCompactItemize}

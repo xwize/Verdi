@@ -1,0 +1,102 @@
+\hypertarget{class_verdi_1_1_workspace_variable}{\section{\-Verdi\-:\-:\-Workspace\-Variable \-Class \-Reference}
+\label{class_verdi_1_1_workspace_variable}\index{\-Verdi\-::\-Workspace\-Variable@{\-Verdi\-::\-Workspace\-Variable}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Workspace\-Variable.\-h$>$}
+
+\-Inheritance diagram for \-Verdi\-:\-:\-Workspace\-Variable\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.829015cm]{class_verdi_1_1_workspace_variable}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_workspace_variable_a2a4848591f2a59ef28bb3db753545616}{\-Workspace\-Variable} ()
+\item 
+virtual \hyperlink{class_verdi_1_1_workspace_variable_adf651101d3f9abdeadddfaf2b976aa00}{$\sim$\-Workspace\-Variable} ()
+\item 
+virtual \-String \hyperlink{class_verdi_1_1_workspace_variable_adab1b1ec2abaabe1a4a4f89cc2d0abfa}{get\-File\-Name} () const 
+\item 
+virtual \-String \hyperlink{class_verdi_1_1_workspace_variable_a505b499ade8878d66cdccd84d1824380}{get\-Data\-Summary} () const =0
+\item 
+virtual \-String \hyperlink{class_verdi_1_1_workspace_variable_a1c005e202b9f840acf2e56cccde4ac66}{get\-Type} () const =0
+\item 
+virtual bool \hyperlink{class_verdi_1_1_workspace_variable_a09056cd2788871e26e300f26bf33d9ae}{is\-From\-File} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_workspace_variable_a4e62b74c50f5b48a78edf3964d91db01}{\-String {\bfseries m\-File\-Name}}\label{class_verdi_1_1_workspace_variable_a4e62b74c50f5b48a78edf3964d91db01}
+
+\item 
+\hypertarget{class_verdi_1_1_workspace_variable_a473e44e75d702f1d8a3a6c137a4242e9}{bool {\bfseries m\-Is\-From\-File}}\label{class_verdi_1_1_workspace_variable_a473e44e75d702f1d8a3a6c137a4242e9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Represents a variable in the workspace. \-Each variable encapsulates an aspect of functionality provided by the framework. \-These variables can be modified through the workspace console system. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_verdi_1_1_workspace_variable_a2a4848591f2a59ef28bb3db753545616}{\index{\-Verdi\-::\-Workspace\-Variable@{\-Verdi\-::\-Workspace\-Variable}!\-Workspace\-Variable@{\-Workspace\-Variable}}
+\index{\-Workspace\-Variable@{\-Workspace\-Variable}!Verdi::WorkspaceVariable@{\-Verdi\-::\-Workspace\-Variable}}
+\subsubsection[{\-Workspace\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Workspace\-Variable\-::\-Workspace\-Variable} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_workspace_variable_a2a4848591f2a59ef28bb3db753545616}
+\-Parameterised constructor. \hypertarget{class_verdi_1_1_workspace_variable_adf651101d3f9abdeadddfaf2b976aa00}{\index{\-Verdi\-::\-Workspace\-Variable@{\-Verdi\-::\-Workspace\-Variable}!$\sim$\-Workspace\-Variable@{$\sim$\-Workspace\-Variable}}
+\index{$\sim$\-Workspace\-Variable@{$\sim$\-Workspace\-Variable}!Verdi::WorkspaceVariable@{\-Verdi\-::\-Workspace\-Variable}}
+\subsubsection[{$\sim$\-Workspace\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Workspace\-Variable\-::$\sim$\-Workspace\-Variable} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_verdi_1_1_workspace_variable_adf651101d3f9abdeadddfaf2b976aa00}
+\-Virtual destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_workspace_variable_a505b499ade8878d66cdccd84d1824380}{\index{\-Verdi\-::\-Workspace\-Variable@{\-Verdi\-::\-Workspace\-Variable}!get\-Data\-Summary@{get\-Data\-Summary}}
+\index{get\-Data\-Summary@{get\-Data\-Summary}!Verdi::WorkspaceVariable@{\-Verdi\-::\-Workspace\-Variable}}
+\subsubsection[{get\-Data\-Summary}]{\setlength{\rightskip}{0pt plus 5cm}virtual \-String {\bf \-Verdi\-::\-Workspace\-Variable\-::get\-Data\-Summary} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_verdi_1_1_workspace_variable_a505b499ade8878d66cdccd84d1824380}
+\-Get a string summary of the data. 
+
+\-Implemented in \hyperlink{class_min_max_octree_variable_ac6eed0d269c5cfa5bceb019eea032739}{\-Min\-Max\-Octree\-Variable}, \hyperlink{class_transfer_function_variable_a8f07b116ceacddf85cb439e8efe29709}{\-Transfer\-Function\-Variable}, \hyperlink{class_verdi_1_1_render_strategy_variable_a77130948ca7d7fd32cf7ebf3094f13b5}{\-Verdi\-::\-Render\-Strategy\-Variable}, \hyperlink{class_render_strategy_variable_a77130948ca7d7fd32cf7ebf3094f13b5}{\-Render\-Strategy\-Variable}, \hyperlink{class_data_set_variable_a301a71bf58f60f5926f8d1358e35f907}{\-Data\-Set\-Variable}, \hyperlink{class_verdi_1_1_data_set_variable_a301a71bf58f60f5926f8d1358e35f907}{\-Verdi\-::\-Data\-Set\-Variable}, and \hyperlink{class_data_set_variable_a301a71bf58f60f5926f8d1358e35f907}{\-Data\-Set\-Variable}.
+
+\hypertarget{class_verdi_1_1_workspace_variable_adab1b1ec2abaabe1a4a4f89cc2d0abfa}{\index{\-Verdi\-::\-Workspace\-Variable@{\-Verdi\-::\-Workspace\-Variable}!get\-File\-Name@{get\-File\-Name}}
+\index{get\-File\-Name@{get\-File\-Name}!Verdi::WorkspaceVariable@{\-Verdi\-::\-Workspace\-Variable}}
+\subsubsection[{get\-File\-Name}]{\setlength{\rightskip}{0pt plus 5cm}virtual \-String {\bf \-Verdi\-::\-Workspace\-Variable\-::get\-File\-Name} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_verdi_1_1_workspace_variable_adab1b1ec2abaabe1a4a4f89cc2d0abfa}
+\-Get the file name of this variable. \hypertarget{class_verdi_1_1_workspace_variable_a1c005e202b9f840acf2e56cccde4ac66}{\index{\-Verdi\-::\-Workspace\-Variable@{\-Verdi\-::\-Workspace\-Variable}!get\-Type@{get\-Type}}
+\index{get\-Type@{get\-Type}!Verdi::WorkspaceVariable@{\-Verdi\-::\-Workspace\-Variable}}
+\subsubsection[{get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}virtual \-String {\bf \-Verdi\-::\-Workspace\-Variable\-::get\-Type} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_verdi_1_1_workspace_variable_a1c005e202b9f840acf2e56cccde4ac66}
+\-Get the type of this variable. 
+
+\-Implemented in \hyperlink{class_min_max_octree_variable_a3fbecef98496a9ed970e17dc999dbef9}{\-Min\-Max\-Octree\-Variable}, \hyperlink{class_transfer_function_variable_a4ff3a101f859a0c3ffdd9947947a5eb7}{\-Transfer\-Function\-Variable}, \hyperlink{class_verdi_1_1_render_strategy_variable_a2a53cc9db3aca4c416f0c4ed83fc2dc1}{\-Verdi\-::\-Render\-Strategy\-Variable}, \hyperlink{class_render_strategy_variable_a8dd612d977dc62f3c67c413dd2005770}{\-Render\-Strategy\-Variable}, \hyperlink{class_data_set_variable_aadb87b0335536945f3498f5f13e3a071}{\-Data\-Set\-Variable}, \hyperlink{class_verdi_1_1_data_set_variable_a5aa9a5a9b13815a7d4a88ca2c172d0f8}{\-Verdi\-::\-Data\-Set\-Variable}, and \hyperlink{class_data_set_variable_aadb87b0335536945f3498f5f13e3a071}{\-Data\-Set\-Variable}.
+
+\hypertarget{class_verdi_1_1_workspace_variable_a09056cd2788871e26e300f26bf33d9ae}{\index{\-Verdi\-::\-Workspace\-Variable@{\-Verdi\-::\-Workspace\-Variable}!is\-From\-File@{is\-From\-File}}
+\index{is\-From\-File@{is\-From\-File}!Verdi::WorkspaceVariable@{\-Verdi\-::\-Workspace\-Variable}}
+\subsubsection[{is\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-Verdi\-::\-Workspace\-Variable\-::is\-From\-File} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_verdi_1_1_workspace_variable_a09056cd2788871e26e300f26bf33d9ae}
+\-Is this variable from a file. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Workspace/include/\-Verdi\-Workspace\-Variable.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Workspace/src/\-Verdi\-Workspace\-Variable.\-cpp\end{DoxyCompactItemize}

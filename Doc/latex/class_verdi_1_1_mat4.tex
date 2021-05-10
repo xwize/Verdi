@@ -1,0 +1,90 @@
+\hypertarget{class_verdi_1_1_mat4}{\section{\-Verdi\-:\-:\-Mat4 \-Class \-Reference}
+\label{class_verdi_1_1_mat4}\index{\-Verdi\-::\-Mat4@{\-Verdi\-::\-Mat4}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Mat4.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_mat4_ae207420a1bcde2eef9ba9ffa6d4e2ff7}{\hyperlink{class_verdi_1_1_mat4}{\-Mat4} \& {\bfseries operator=} (const \hyperlink{class_verdi_1_1_mat4}{\-Mat4} \&m)}\label{class_verdi_1_1_mat4_ae207420a1bcde2eef9ba9ffa6d4e2ff7}
+
+\item 
+\hypertarget{class_verdi_1_1_mat4_ae74344fbef610331b4d1ca578b83e4f7}{\hyperlink{class_verdi_1_1_vec4}{\-Vec4} {\bfseries operator$\ast$} (const \hyperlink{class_verdi_1_1_vec3}{\-Vec3} \&v) const }\label{class_verdi_1_1_mat4_ae74344fbef610331b4d1ca578b83e4f7}
+
+\item 
+\hypertarget{class_verdi_1_1_mat4_a36fbaa0326282dcad36f276e15c7917e}{\hyperlink{class_verdi_1_1_mat4}{\-Mat4} {\bfseries operator$\ast$} (const \hyperlink{class_verdi_1_1_mat4}{\-Mat4} \&m) const }\label{class_verdi_1_1_mat4_a36fbaa0326282dcad36f276e15c7917e}
+
+\item 
+\hyperlink{class_verdi_1_1_mat4}{\-Mat4} \hyperlink{class_verdi_1_1_mat4_a5934dbad99b3ad358a1b272f5daa6722}{get\-Transpose} ()
+\item 
+\hypertarget{class_verdi_1_1_mat4_a5a77f04c0419a2e9708f2798e03c192f}{\hyperlink{class_verdi_1_1_mat4}{\-Mat4} {\bfseries get\-Orthonormal\-Inverse} () const }\label{class_verdi_1_1_mat4_a5a77f04c0419a2e9708f2798e03c192f}
+
+\item 
+\hypertarget{class_verdi_1_1_mat4_abb933f0693eea204a1f69c09d716e3e2}{void {\bfseries set\-Identity} ()}\label{class_verdi_1_1_mat4_abb933f0693eea204a1f69c09d716e3e2}
+
+\item 
+\hypertarget{class_verdi_1_1_mat4_ac48b85fd5b3f657756c2d7cb3141b6e8}{void {\bfseries set\-Rotation\-X} (\-Radian radians)}\label{class_verdi_1_1_mat4_ac48b85fd5b3f657756c2d7cb3141b6e8}
+
+\item 
+\hypertarget{class_verdi_1_1_mat4_a31f42833f6d473c69568c8758e65dc0c}{void {\bfseries set\-Rotation\-Y} (\-Radian radians)}\label{class_verdi_1_1_mat4_a31f42833f6d473c69568c8758e65dc0c}
+
+\item 
+\hypertarget{class_verdi_1_1_mat4_a856a23225d0267c09ef3c0dbd95b3136}{void {\bfseries set\-Rotation\-Z} (\-Radian radians)}\label{class_verdi_1_1_mat4_a856a23225d0267c09ef3c0dbd95b3136}
+
+\item 
+\hypertarget{class_verdi_1_1_mat4_ab6559ff8cb8aeb287718885e86fd784b}{void {\bfseries set\-Scale} (float x, float y, float z)}\label{class_verdi_1_1_mat4_ab6559ff8cb8aeb287718885e86fd784b}
+
+\item 
+\hypertarget{class_verdi_1_1_mat4_a20fb43b9e83997142af3725cb370bb32}{void {\bfseries set\-Translation} (float x, float y, float z)}\label{class_verdi_1_1_mat4_a20fb43b9e83997142af3725cb370bb32}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_mat4_a41a20ee9b52d75f9b9fec7be6b4cc9dd}{\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>float {\bfseries values} \mbox{[}16\mbox{]}\\
+\hypertarget{union_verdi_1_1_mat4_1_1@0_aeafffa9c9e467d016ccbaeb8c961af2c}{\>struct \{\\
+\>\>float {\bfseries \_11}\\
+\>\>float {\bfseries \_12}\\
+\>\>float {\bfseries \_13}\\
+\>\>float {\bfseries \_14}\\
+\>\>float {\bfseries \_21}\\
+\>\>float {\bfseries \_22}\\
+\>\>float {\bfseries \_23}\\
+\>\>float {\bfseries \_24}\\
+\>\>float {\bfseries \_31}\\
+\>\>float {\bfseries \_32}\\
+\>\>float {\bfseries \_33}\\
+\>\>float {\bfseries \_34}\\
+\>\>float {\bfseries \_41}\\
+\>\>float {\bfseries \_42}\\
+\>\>float {\bfseries \_43}\\
+\>\>float {\bfseries \_44}\\
+\>\} }\label{union_verdi_1_1_mat4_1_1@0_aeafffa9c9e467d016ccbaeb8c961af2c}
+\\
+\}; }\label{class_verdi_1_1_mat4_a41a20ee9b52d75f9b9fec7be6b4cc9dd}
+\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A class for storing a 4x4 homogeneous matrix. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_mat4_a5934dbad99b3ad358a1b272f5daa6722}{\index{\-Verdi\-::\-Mat4@{\-Verdi\-::\-Mat4}!get\-Transpose@{get\-Transpose}}
+\index{get\-Transpose@{get\-Transpose}!Verdi::Mat4@{\-Verdi\-::\-Mat4}}
+\subsubsection[{get\-Transpose}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Mat4} {\bf \-Verdi\-::\-Mat4\-::get\-Transpose} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_mat4_a5934dbad99b3ad358a1b272f5daa6722}
+\-A transpose simply just flips the rows and columns. \-We let \mbox{[}i\mbox{]}\mbox{[}j\mbox{]} become \mbox{[}j\mbox{]}\mbox{[}i\mbox{]}...
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Mat4.\-h\end{DoxyCompactItemize}

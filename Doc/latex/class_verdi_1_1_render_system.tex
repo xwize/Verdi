@@ -1,0 +1,327 @@
+\hypertarget{class_verdi_1_1_render_system}{\section{\-Verdi\-:\-:\-Render\-System \-Class \-Reference}
+\label{class_verdi_1_1_render_system}\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Render\-System.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_render_system_afbc4f4b8a7147facbb71911cc6b26b3d}{\-Render\-System} ()
+\item 
+\hyperlink{class_verdi_1_1_render_system_ad148709131e756573fa247fdf1a60328}{$\sim$\-Render\-System} ()
+\item 
+\hyperlink{class_verdi_1_1_render_context}{\-Render\-Context} \& \hyperlink{class_verdi_1_1_render_system_ac69fdc36752b1c7b94e5645ccbe2f964}{get\-Current\-Context} () const 
+\item 
+\-String \hyperlink{class_verdi_1_1_render_system_a7ba69e226efa23cf8833c5e1b5ee20e9}{get\-Current\-Strategy\-Name} () const 
+\item 
+\hyperlink{class_verdi_1_1_render_strategy}{\-Render\-Strategy} \& \hyperlink{class_verdi_1_1_render_system_ac0edfb2b6f71d565780435a867b2b1bc}{get\-Current\-Strategy} () const 
+\item 
+size\-\_\-t \hyperlink{class_verdi_1_1_render_system_af6539e58a69184b960f62d7589d9d3ce}{get\-Num\-Contexts} () const 
+\item 
+size\-\_\-t \hyperlink{class_verdi_1_1_render_system_a8b7f79f2531a7e3424d82f3ec9258dd0}{get\-Num\-Strategies} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_system_a63ada7c106625cbf3601ee23300fb8af}{initialise} (int width, int height)
+\item 
+void \hyperlink{class_verdi_1_1_render_system_a6f613ab81516be249958e099a6073c2e}{begin\-Frame} (float dt, float time)
+\item 
+void \hyperlink{class_verdi_1_1_render_system_aa1e87321746fdb9fd5ffd6f77b41998f}{render} ()
+\item 
+float \hyperlink{class_verdi_1_1_render_system_affca7eaa88a20c0bafdb1de505ea8601}{end\-Frame} ()
+\item 
+void \hyperlink{class_verdi_1_1_render_system_a59a2d356c64437467ad34fab5e606a57}{resize} (uint32\-\_\-t width, uint32\-\_\-t height)
+\item 
+void \hyperlink{class_verdi_1_1_render_system_acc054feb7d679cee2a52e52c1ac319a0}{shutdown} ()
+\item 
+int \hyperlink{class_verdi_1_1_render_system_acfc5c47cb5cbe81778276477eb25b924}{get\-Width} () const 
+\item 
+int \hyperlink{class_verdi_1_1_render_system_a856a75c8395ced7cc00cadb3949b721d}{get\-Height} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_system_a3546da465b997baa890ff000a212bcee}{register\-Strategy} (const \-String \&name, \hyperlink{class_verdi_1_1_render_strategy}{\-Render\-Strategy} $\ast$strategy)
+\item 
+void \hyperlink{class_verdi_1_1_render_system_aba2d0949a50e4a1868f03b8e00cfc8bb}{unregister\-Strategy} (const \-String \&name)
+\item 
+void \hyperlink{class_verdi_1_1_render_system_ad2ebe6e3f08550ca31e3c31280302fe8}{unregister\-All\-Strategies} ()
+\item 
+\-String\-Vector \hyperlink{class_verdi_1_1_render_system_ad1d75942e1038288efb9852837466ca9}{get\-Registered\-Strategy\-Names} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_system_ab48f8df6c4eecf80a02f9b6ce1c0f944}{use\-Strategy} (const \-String \&name)
+\item 
+void \hyperlink{class_verdi_1_1_render_system_a3108a4a7efd0ccd9992799a534eb9496}{register\-Context} (const \-String \&name, \hyperlink{class_verdi_1_1_render_context}{\-Render\-Context} $\ast$context)
+\item 
+void \hyperlink{class_verdi_1_1_render_system_a790e5c5a740bb0c41003c416290f2bbd}{unregister\-Context} (const \-String \&name)
+\item 
+void \hyperlink{class_verdi_1_1_render_system_af222d1037b9ba315d54fb9c9d4a5ae30}{unregister\-All\-Contexts} ()
+\item 
+\-String\-Vector \hyperlink{class_verdi_1_1_render_system_a7f54ce4fb36bc9bd97eeb546675e2e3d}{get\-Registered\-Context\-Names} () const 
+\item 
+void \hyperlink{class_verdi_1_1_render_system_aa56a1cb1e965f2aaa741939843b1a753}{use\-Context} (const \-String \&name)
+\item 
+void \hyperlink{class_verdi_1_1_render_system_a177c4d01c674d52649e5b82476b6415f}{fire\-Context\-Changed} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_render_system_af9d330b02db5b75e5695fb9f655c9272}{typedef std\-::map$<$ \-String, \*
+\hyperlink{class_verdi_1_1_render_strategy}{\-Render\-Strategy} $\ast$ $>$ {\bfseries \-Render\-Strategy\-Name\-Map}}\label{class_verdi_1_1_render_system_af9d330b02db5b75e5695fb9f655c9272}
+
+\item 
+\hypertarget{class_verdi_1_1_render_system_a0a05c8c3c33289855d7b4b95fcbffc90}{typedef std\-::map$<$ \-String, \*
+\hyperlink{class_verdi_1_1_render_context}{\-Render\-Context} $\ast$ $>$ {\bfseries \-Render\-Context\-Name\-Map}}\label{class_verdi_1_1_render_system_a0a05c8c3c33289855d7b4b95fcbffc90}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_render_system_aa8001d72babfdd50341ecfc963ed6a62}{int {\bfseries m\-Width}}\label{class_verdi_1_1_render_system_aa8001d72babfdd50341ecfc963ed6a62}
+
+\item 
+\hypertarget{class_verdi_1_1_render_system_a548163503553fe65e65ff40f069c2788}{int {\bfseries m\-Height}}\label{class_verdi_1_1_render_system_a548163503553fe65e65ff40f069c2788}
+
+\item 
+\hypertarget{class_verdi_1_1_render_system_aa07ed3ce0d33c3e506d5e073e3ff088c}{\-Render\-Strategy\-Name\-Map {\bfseries m\-Render\-Strategies}}\label{class_verdi_1_1_render_system_aa07ed3ce0d33c3e506d5e073e3ff088c}
+
+\item 
+\hypertarget{class_verdi_1_1_render_system_ab826c454317b170998982020757ac945}{\hyperlink{class_verdi_1_1_render_strategy}{\-Render\-Strategy} $\ast$ {\bfseries mp\-Current\-Strategy}}\label{class_verdi_1_1_render_system_ab826c454317b170998982020757ac945}
+
+\item 
+\hypertarget{class_verdi_1_1_render_system_a8fb6c0ebd2b9703549928c0654df7ac8}{\-Render\-Context\-Name\-Map {\bfseries m\-Render\-Contexts}}\label{class_verdi_1_1_render_system_a8fb6c0ebd2b9703549928c0654df7ac8}
+
+\item 
+\hypertarget{class_verdi_1_1_render_system_ab34b7f048930f5db95dbabc17a752bea}{\hyperlink{class_verdi_1_1_render_context}{\-Render\-Context} $\ast$ {\bfseries mp\-Current\-Context}}\label{class_verdi_1_1_render_system_ab34b7f048930f5db95dbabc17a752bea}
+
+\item 
+\hypertarget{class_verdi_1_1_render_system_a3500e7c7ba24c29d1dff500d2a1c442b}{\hyperlink{class_verdi_1_1_timer}{\-Timer} {\bfseries m\-Frame\-Timer}}\label{class_verdi_1_1_render_system_a3500e7c7ba24c29d1dff500d2a1c442b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class responsible for controlling rendering. \begin{DoxyRemark}{\-Remarks}
+\-The \hyperlink{class_verdi_1_1_render_system}{\-Render\-System} allows for the registration of instances of \hyperlink{class_verdi_1_1_render_strategy}{\-Render\-Strategy} (which represent the possible rendering algorithms that can be used by the system) along with \hyperlink{class_verdi_1_1_render_context}{\-Render\-Context} (the render state the algorithms require to operate). \-Methods for switching between contexts and strategies are provided. 
+\end{DoxyRemark}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_verdi_1_1_render_system_afbc4f4b8a7147facbb71911cc6b26b3d}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!\-Render\-System@{\-Render\-System}}
+\index{\-Render\-System@{\-Render\-System}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{\-Render\-System}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Render\-System\-::\-Render\-System} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_afbc4f4b8a7147facbb71911cc6b26b3d}
+\-Default constructor. \hypertarget{class_verdi_1_1_render_system_ad148709131e756573fa247fdf1a60328}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!$\sim$\-Render\-System@{$\sim$\-Render\-System}}
+\index{$\sim$\-Render\-System@{$\sim$\-Render\-System}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{$\sim$\-Render\-System}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Render\-System\-::$\sim$\-Render\-System} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_ad148709131e756573fa247fdf1a60328}
+\-Default destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_render_system_a6f613ab81516be249958e099a6073c2e}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!begin\-Frame@{begin\-Frame}}
+\index{begin\-Frame@{begin\-Frame}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{begin\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-System\-::begin\-Frame} (
+\begin{DoxyParamCaption}
+\item[{float}]{dt, }
+\item[{float}]{time}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_a6f613ab81516be249958e099a6073c2e}
+\-Signify the start of a frame. \-This gives the render strategy a chance to setup the scene and prepare for rendering. \hypertarget{class_verdi_1_1_render_system_affca7eaa88a20c0bafdb1de505ea8601}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!end\-Frame@{end\-Frame}}
+\index{end\-Frame@{end\-Frame}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{end\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Verdi\-::\-Render\-System\-::end\-Frame} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_affca7eaa88a20c0bafdb1de505ea8601}
+\-Notifies the render strategy to display the results to the screen. \begin{DoxyReturn}{\-Returns}
+\-Time between begin and end frame in seconds 
+\end{DoxyReturn}
+\hypertarget{class_verdi_1_1_render_system_a177c4d01c674d52649e5b82476b6415f}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!fire\-Context\-Changed@{fire\-Context\-Changed}}
+\index{fire\-Context\-Changed@{fire\-Context\-Changed}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{fire\-Context\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-System\-::fire\-Context\-Changed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_a177c4d01c674d52649e5b82476b6415f}
+\-Fires a context changed event. \begin{DoxyRemark}{\-Remarks}
+\-This allows a user to manually notify a render strategy of any changes made to the current render context, even though the pointer might not have changed. 
+\end{DoxyRemark}
+\hypertarget{class_verdi_1_1_render_system_ac69fdc36752b1c7b94e5645ccbe2f964}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!get\-Current\-Context@{get\-Current\-Context}}
+\index{get\-Current\-Context@{get\-Current\-Context}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{get\-Current\-Context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Render\-Context}\& {\bf \-Verdi\-::\-Render\-System\-::get\-Current\-Context} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_render_system_ac69fdc36752b1c7b94e5645ccbe2f964}
+\-Returns the current \hyperlink{class_verdi_1_1_render_context}{\-Render\-Context} in use. \hypertarget{class_verdi_1_1_render_system_ac0edfb2b6f71d565780435a867b2b1bc}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!get\-Current\-Strategy@{get\-Current\-Strategy}}
+\index{get\-Current\-Strategy@{get\-Current\-Strategy}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{get\-Current\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Render\-Strategy}\& {\bf \-Verdi\-::\-Render\-System\-::get\-Current\-Strategy} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_render_system_ac0edfb2b6f71d565780435a867b2b1bc}
+\-Returns a reference to the current strategy in use. \hypertarget{class_verdi_1_1_render_system_a7ba69e226efa23cf8833c5e1b5ee20e9}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!get\-Current\-Strategy\-Name@{get\-Current\-Strategy\-Name}}
+\index{get\-Current\-Strategy\-Name@{get\-Current\-Strategy\-Name}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{get\-Current\-Strategy\-Name}]{\setlength{\rightskip}{0pt plus 5cm}\-String {\bf \-Verdi\-::\-Render\-System\-::get\-Current\-Strategy\-Name} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_render_system_a7ba69e226efa23cf8833c5e1b5ee20e9}
+\-Returns the current strategy name. \hypertarget{class_verdi_1_1_render_system_a856a75c8395ced7cc00cadb3949b721d}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!get\-Height@{get\-Height}}
+\index{get\-Height@{get\-Height}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{get\-Height}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Verdi\-::\-Render\-System\-::get\-Height} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_system_a856a75c8395ced7cc00cadb3949b721d}
+\-Returns the height. \hypertarget{class_verdi_1_1_render_system_af6539e58a69184b960f62d7589d9d3ce}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!get\-Num\-Contexts@{get\-Num\-Contexts}}
+\index{get\-Num\-Contexts@{get\-Num\-Contexts}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{get\-Num\-Contexts}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf \-Verdi\-::\-Render\-System\-::get\-Num\-Contexts} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_system_af6539e58a69184b960f62d7589d9d3ce}
+\-Returns the number of contexts registered. \hypertarget{class_verdi_1_1_render_system_a8b7f79f2531a7e3424d82f3ec9258dd0}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!get\-Num\-Strategies@{get\-Num\-Strategies}}
+\index{get\-Num\-Strategies@{get\-Num\-Strategies}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{get\-Num\-Strategies}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t {\bf \-Verdi\-::\-Render\-System\-::get\-Num\-Strategies} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_system_a8b7f79f2531a7e3424d82f3ec9258dd0}
+\-Returns the number of strategies. \hypertarget{class_verdi_1_1_render_system_a7f54ce4fb36bc9bd97eeb546675e2e3d}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!get\-Registered\-Context\-Names@{get\-Registered\-Context\-Names}}
+\index{get\-Registered\-Context\-Names@{get\-Registered\-Context\-Names}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{get\-Registered\-Context\-Names}]{\setlength{\rightskip}{0pt plus 5cm}\-String\-Vector {\bf \-Verdi\-::\-Render\-System\-::get\-Registered\-Context\-Names} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_render_system_a7f54ce4fb36bc9bd97eeb546675e2e3d}
+\-Returns a \-String\-List of all registered contexts. \hypertarget{class_verdi_1_1_render_system_ad1d75942e1038288efb9852837466ca9}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!get\-Registered\-Strategy\-Names@{get\-Registered\-Strategy\-Names}}
+\index{get\-Registered\-Strategy\-Names@{get\-Registered\-Strategy\-Names}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{get\-Registered\-Strategy\-Names}]{\setlength{\rightskip}{0pt plus 5cm}\-String\-Vector {\bf \-Verdi\-::\-Render\-System\-::get\-Registered\-Strategy\-Names} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_render_system_ad1d75942e1038288efb9852837466ca9}
+\-Returns a \-String\-List of all registered strategies. \hypertarget{class_verdi_1_1_render_system_acfc5c47cb5cbe81778276477eb25b924}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!get\-Width@{get\-Width}}
+\index{get\-Width@{get\-Width}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{get\-Width}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Verdi\-::\-Render\-System\-::get\-Width} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_render_system_acfc5c47cb5cbe81778276477eb25b924}
+\-Returns the width. \hypertarget{class_verdi_1_1_render_system_a63ada7c106625cbf3601ee23300fb8af}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!initialise@{initialise}}
+\index{initialise@{initialise}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{initialise}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-System\-::initialise} (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_a63ada7c106625cbf3601ee23300fb8af}
+\-Initialise the render system. \begin{DoxyRemark}{\-Remarks}
+\-When initialise is called, all currently registered instances of \hyperlink{class_verdi_1_1_render_strategy}{\-Render\-Strategy} get their initialise method called. \-Proper usage must ensure that all required strategies are registered before hand. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{\-Parameters}
+{\em width} & \-The width reported to strategies. \\
+\hline
+{\em height} & \-The height reported to strategies. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_verdi_1_1_render_system_a3108a4a7efd0ccd9992799a534eb9496}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!register\-Context@{register\-Context}}
+\index{register\-Context@{register\-Context}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{register\-Context}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-System\-::register\-Context} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{name, }
+\item[{{\bf \-Render\-Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_a3108a4a7efd0ccd9992799a534eb9496}
+\-Register a \hyperlink{class_verdi_1_1_render_context}{\-Render\-Context} instance with the system. \hypertarget{class_verdi_1_1_render_system_a3546da465b997baa890ff000a212bcee}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!register\-Strategy@{register\-Strategy}}
+\index{register\-Strategy@{register\-Strategy}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{register\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-System\-::register\-Strategy} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{name, }
+\item[{{\bf \-Render\-Strategy} $\ast$}]{strategy}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_a3546da465b997baa890ff000a212bcee}
+\-Register a render strategy with the \hyperlink{class_verdi_1_1_render_system}{\-Render\-System}. \begin{DoxyRemark}{\-Remarks}
+\-When registering a strategy, a name must be provided to uniquely identify the strategy instance. 
+\end{DoxyRemark}
+\hypertarget{class_verdi_1_1_render_system_aa1e87321746fdb9fd5ffd6f77b41998f}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!render@{render}}
+\index{render@{render}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-System\-::render} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_aa1e87321746fdb9fd5ffd6f77b41998f}
+\-Render using selected \hyperlink{class_verdi_1_1_render_strategy}{\-Render\-Strategy}. \-Internal times are used. \hypertarget{class_verdi_1_1_render_system_a59a2d356c64437467ad34fab5e606a57}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!resize@{resize}}
+\index{resize@{resize}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-System\-::resize} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{width, }
+\item[{uint32\-\_\-t}]{height}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_a59a2d356c64437467ad34fab5e606a57}
+\-Request a resize of the viewport. \hypertarget{class_verdi_1_1_render_system_acc054feb7d679cee2a52e52c1ac319a0}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{shutdown}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-System\-::shutdown} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_acc054feb7d679cee2a52e52c1ac319a0}
+\-Shutdown the renderer and all strategies. \hypertarget{class_verdi_1_1_render_system_af222d1037b9ba315d54fb9c9d4a5ae30}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!unregister\-All\-Contexts@{unregister\-All\-Contexts}}
+\index{unregister\-All\-Contexts@{unregister\-All\-Contexts}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{unregister\-All\-Contexts}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-System\-::unregister\-All\-Contexts} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_af222d1037b9ba315d54fb9c9d4a5ae30}
+\-Unregister all registered contexts. \hypertarget{class_verdi_1_1_render_system_ad2ebe6e3f08550ca31e3c31280302fe8}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!unregister\-All\-Strategies@{unregister\-All\-Strategies}}
+\index{unregister\-All\-Strategies@{unregister\-All\-Strategies}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{unregister\-All\-Strategies}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-System\-::unregister\-All\-Strategies} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_ad2ebe6e3f08550ca31e3c31280302fe8}
+\-Unregister all registered strategies. \hypertarget{class_verdi_1_1_render_system_a790e5c5a740bb0c41003c416290f2bbd}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!unregister\-Context@{unregister\-Context}}
+\index{unregister\-Context@{unregister\-Context}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{unregister\-Context}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-System\-::unregister\-Context} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_a790e5c5a740bb0c41003c416290f2bbd}
+\-Unregister the context specified by name. \hypertarget{class_verdi_1_1_render_system_aba2d0949a50e4a1868f03b8e00cfc8bb}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!unregister\-Strategy@{unregister\-Strategy}}
+\index{unregister\-Strategy@{unregister\-Strategy}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{unregister\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-System\-::unregister\-Strategy} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_aba2d0949a50e4a1868f03b8e00cfc8bb}
+\-Unregister a strategy. \hypertarget{class_verdi_1_1_render_system_aa56a1cb1e965f2aaa741939843b1a753}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!use\-Context@{use\-Context}}
+\index{use\-Context@{use\-Context}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{use\-Context}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-System\-::use\-Context} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_aa56a1cb1e965f2aaa741939843b1a753}
+\-Use the context specified by name. \begin{DoxyRemark}{\-Remarks}
+\-The current \hyperlink{class_verdi_1_1_render_strategy}{\-Render\-Strategy} is notified of this change using the \hyperlink{class_verdi_1_1_render_strategy_abdd27f6e043ad468307bcc6b5e85356f}{\-Render\-Strategy\-::context\-Changed} method. 
+\end{DoxyRemark}
+\hypertarget{class_verdi_1_1_render_system_ab48f8df6c4eecf80a02f9b6ce1c0f944}{\index{\-Verdi\-::\-Render\-System@{\-Verdi\-::\-Render\-System}!use\-Strategy@{use\-Strategy}}
+\index{use\-Strategy@{use\-Strategy}!Verdi::RenderSystem@{\-Verdi\-::\-Render\-System}}
+\subsubsection[{use\-Strategy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Render\-System\-::use\-Strategy} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_render_system_ab48f8df6c4eecf80a02f9b6ce1c0f944}
+\-Use the strategy specified by name. \begin{DoxyRemark}{\-Remarks}
+\-When switching strategies, the previous strategy is notified by calling \hyperlink{class_verdi_1_1_render_strategy_a0e46a0f8434b471bf8b0c1c9b243e6d5}{\-Render\-Strategy\-::suspend} and the new strategy is notified with a call to \hyperlink{class_verdi_1_1_render_strategy_a34797cbcea846c22a23937226281922b}{\-Render\-Strategy\-::awake}. 
+\end{DoxyRemark}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Render\-System.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/src/\-Verdi\-Render\-System.\-cpp\end{DoxyCompactItemize}

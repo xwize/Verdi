@@ -1,0 +1,114 @@
+\section{\-Verdi\-:\-:\-Ray\-Cast\-Strategy\-Impl \-Class \-Reference}
+\label{class_verdi_1_1_ray_cast_strategy_impl}\index{\-Verdi\-::\-Ray\-Cast\-Strategy\-Impl@{\-Verdi\-::\-Ray\-Cast\-Strategy\-Impl}}
+
+
+{\ttfamily \#include $<$\-Verdi\-Ray\-Cast\-Strategy\-Impl.\-h$>$}
+
+\-Inheritance diagram for \-Verdi\-:\-:\-Ray\-Cast\-Strategy\-Impl\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_verdi_1_1_ray_cast_strategy_impl}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Ray\-Cast\-Strategy\-Impl} (const \-String \&shader\-Path)
+\item 
+{\bf $\sim$\-Ray\-Cast\-Strategy\-Impl} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries \-\_\-get\-Effect\-Descriptor\-From\-Parameters} (bool on\-The\-Fly\-Gradients, bool use\-Ert, bool use\-Lighting, bool use\-L\-M\-I\-P, {\bf \-Cg\-Uber\-Shader\-::\-Effect\-Descriptor} \&effect\-Out) const \label{class_verdi_1_1_ray_cast_strategy_impl_a6a7c3a47146b3d81cb79622d24123d1b}
+
+\item 
+bool {\bfseries \-\_\-recurse\-Min\-Max\-Octree} ({\bf \-Min\-Max\-Octree\-::\-Node} $\ast$parent, bool only\-Half)\label{class_verdi_1_1_ray_cast_strategy_impl_a9f75605424816370eec05f19c9e8071a}
+
+\item 
+void {\bfseries \-\_\-draw\-Min\-Max\-Octree\-Node} ({\bf \-Min\-Max\-Octree\-::\-Node} $\ast$node)\label{class_verdi_1_1_ray_cast_strategy_impl_afe04d79ae276e0192b3872a3840b9420}
+
+\item 
+void {\bfseries \-\_\-setup\-Shaders} ()\label{class_verdi_1_1_ray_cast_strategy_impl_a6a69ada05ab32059dd4f6890d7dab600}
+
+\item 
+void {\bfseries \-\_\-setup\-Jitter\-Texture} ()\label{class_verdi_1_1_ray_cast_strategy_impl_a469ed9bf8ccca2f1ca50666cf24c343d}
+
+\item 
+void {\bfseries \-\_\-setup\-Render\-Textures} (\-G\-Luint w, \-G\-Luint h)\label{class_verdi_1_1_ray_cast_strategy_impl_afecc67a9ace8a06e9efc91f9d2546790}
+
+\item 
+void {\bfseries \-\_\-submit\-Cube} ({\bf \-Vec3} offset={\bf \-Vec3}(0.\-0f, 0.\-0f, 0.\-0f), Vec3 size=\-Vec3(1.\-0f, 1.\-0f, 1.\-0f))\label{class_verdi_1_1_ray_cast_strategy_impl_aca0df8dea86d89b75906e1582a0969d4}
+
+\item 
+void {\bfseries \-\_\-submit\-Proxy\-Geometry} (bool only\-Half=false)\label{class_verdi_1_1_ray_cast_strategy_impl_acd68ca193803e8f51f3773cd6d9fb1ce}
+
+\item 
+void {\bfseries \-\_\-submit\-Near\-Plane} ()\label{class_verdi_1_1_ray_cast_strategy_impl_a561b78954aa69557288318e0d347cbce}
+
+\item 
+void {\bfseries \-\_\-render\-Frame\-Impl} (float dt, float time)\label{class_verdi_1_1_ray_cast_strategy_impl_ae54ab8e5f5a3bf47ecd27092aafb8cd6}
+
+\item 
+void {\bfseries \-\_\-initialise\-Impl} (uint32\-\_\-t w, uint32\-\_\-t h)\label{class_verdi_1_1_ray_cast_strategy_impl_a455553824267592f5bfed1d694eaca17}
+
+\item 
+void {\bfseries \-\_\-shutdown\-Impl} ()\label{class_verdi_1_1_ray_cast_strategy_impl_a0ef422ae17cebf6903448967418d87cd}
+
+\item 
+void {\bfseries \-\_\-resize\-Impl} (uint32\-\_\-t width, uint32\-\_\-t height)\label{class_verdi_1_1_ray_cast_strategy_impl_a728ea2736b992039034c7d8202da3782}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\-G\-Luint {\bfseries m\-Render\-Texture\-Width}\label{class_verdi_1_1_ray_cast_strategy_impl_a8db26780f39b04e67a7a572e70b2de98}
+
+\item 
+\-G\-Luint {\bfseries m\-Render\-Texture\-Height}\label{class_verdi_1_1_ray_cast_strategy_impl_aae2eb55d5c807c0433ed19af7224043d}
+
+\item 
+\-G\-Luint {\bfseries m\-Frame\-Buffer\-Object}\label{class_verdi_1_1_ray_cast_strategy_impl_a88997d3c7979180257e61ff06c1163ef}
+
+\item 
+\-G\-Luint {\bfseries m\-Final\-Render\-Texture}\label{class_verdi_1_1_ray_cast_strategy_impl_a1958b77d3a30eea49bbfca8b345f94eb}
+
+\item 
+\-G\-Luint {\bfseries m\-Face\-Render\-Buffer\-Object} [2]\label{class_verdi_1_1_ray_cast_strategy_impl_aebdce76b7f43987fdec9f96c5515e61c}
+
+\item 
+\-G\-Luint {\bfseries m\-Face\-Render\-Texture} [2]\label{class_verdi_1_1_ray_cast_strategy_impl_a81d1944bd96bdc59ea6e4fb8d10bbaf5}
+
+\item 
+\-G\-Luint {\bfseries m\-Stochastic\-Jitter\-Texture}\label{class_verdi_1_1_ray_cast_strategy_impl_ac60a7bdc0b2edde46e73608f2f09e085}
+
+\item 
+\-G\-Luint {\bfseries m\-Tree\-Display\-List}\label{class_verdi_1_1_ray_cast_strategy_impl_a6b977c9c55efc9e72650eb728b4286d5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\doxyref{\-Ray\-Cast\-Strategy}{p.}{class_verdi_1_1_ray_cast_strategy} implementation. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\index{\-Verdi\-::\-Ray\-Cast\-Strategy\-Impl@{\-Verdi\-::\-Ray\-Cast\-Strategy\-Impl}!\-Ray\-Cast\-Strategy\-Impl@{\-Ray\-Cast\-Strategy\-Impl}}
+\index{\-Ray\-Cast\-Strategy\-Impl@{\-Ray\-Cast\-Strategy\-Impl}!Verdi::RayCastStrategyImpl@{\-Verdi\-::\-Ray\-Cast\-Strategy\-Impl}}
+\subsubsection[{\-Ray\-Cast\-Strategy\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-Impl\-::\-Ray\-Cast\-Strategy\-Impl} (
+\begin{DoxyParamCaption}
+\item[{const \-String \&}]{shader\-Path}
+\end{DoxyParamCaption}
+)}\label{class_verdi_1_1_ray_cast_strategy_impl_a4e3ce58d5eeae2537ace744f1a781eae}
+\-Default constructor. \index{\-Verdi\-::\-Ray\-Cast\-Strategy\-Impl@{\-Verdi\-::\-Ray\-Cast\-Strategy\-Impl}!$\sim$\-Ray\-Cast\-Strategy\-Impl@{$\sim$\-Ray\-Cast\-Strategy\-Impl}}
+\index{$\sim$\-Ray\-Cast\-Strategy\-Impl@{$\sim$\-Ray\-Cast\-Strategy\-Impl}!Verdi::RayCastStrategyImpl@{\-Verdi\-::\-Ray\-Cast\-Strategy\-Impl}}
+\subsubsection[{$\sim$\-Ray\-Cast\-Strategy\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Ray\-Cast\-Strategy\-Impl\-::$\sim$\-Ray\-Cast\-Strategy\-Impl} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_verdi_1_1_ray_cast_strategy_impl_ab6c996f627dca8b9524196036af417ca}
+\-Default destructor. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/include/\-Verdi\-Ray\-Cast\-Strategy\-Impl.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Render\-Strategies/src/\-Verdi\-Ray\-Cast\-Strategy\-Impl.\-cpp\end{DoxyCompactItemize}

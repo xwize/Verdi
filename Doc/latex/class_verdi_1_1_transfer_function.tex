@@ -1,0 +1,214 @@
+\hypertarget{class_verdi_1_1_transfer_function}{\section{\-Verdi\-:\-:\-Transfer\-Function \-Class \-Reference}
+\label{class_verdi_1_1_transfer_function}\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Transfer\-Function.\-h$>$}
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_verdi_1_1_transfer_function_1_1_window}{\-Window}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_verdi_1_1_transfer_function_a1b35c3ddc3f16d44146168cdad8cdd6a}{\-Axis} \{ {\bfseries \-T\-F\-A\-\_\-\-X\-\_\-\-A\-X\-I\-S} =  1, 
+{\bfseries \-T\-F\-A\-\_\-\-Y\-\_\-\-A\-X\-I\-S} =  2
+ \}
+\item 
+enum \hyperlink{class_verdi_1_1_transfer_function_ab597e576b24962e48164808518c06714}{\-Write\-Mode} \{ {\bfseries \-T\-F\-W\-M\-\_\-\-S\-E\-T}, 
+{\bfseries \-T\-F\-W\-M\-\_\-\-A\-D\-D}, 
+{\bfseries \-T\-F\-W\-M\-\_\-\-S\-U\-B}
+ \}
+\item 
+typedef uint16\-\_\-t \hyperlink{class_verdi_1_1_transfer_function_aebdbb5a13f273ee6d47d1a4dde6d6aa6}{\-Channel\-Type}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_verdi_1_1_transfer_function_a17bbf3cfaa9dcadfab523f14dcd58e7a}{\-Transfer\-Function} (\hyperlink{class_verdi_1_1_vec4}{\-Vec4} initial\-Value=\hyperlink{class_verdi_1_1_vec4}{\-Vec4}(0.\-0f, 0.\-0f, 0.\-0f, 1.\-0f), uint32\-\_\-t width=256, uint32\-\_\-t height=32)
+\item 
+\hyperlink{class_verdi_1_1_transfer_function_a7efc65a27624c5b9d00b85db3c57578d}{$\sim$\-Transfer\-Function} ()
+\item 
+void \hyperlink{class_verdi_1_1_transfer_function_ab6aeb29ae01bc6688f2aba5fd447673e}{clear} (\hyperlink{class_verdi_1_1_vec4}{\-Vec4} value)
+\item 
+bool \hyperlink{class_verdi_1_1_transfer_function_a8a606afbc03a6144a0a15f439f6bc65b}{clip} (const \hyperlink{struct_verdi_1_1_transfer_function_1_1_window}{\-Window} \&win\-In, \hyperlink{struct_verdi_1_1_transfer_function_1_1_window}{\-Window} \&win\-Out) const 
+\item 
+\hyperlink{class_verdi_1_1_vec4}{\-Vec4} \hyperlink{class_verdi_1_1_transfer_function_aaae7e0e9f733ab8ed3114447b565fc7f}{sample} (float x, float y) const 
+\item 
+void \hyperlink{class_verdi_1_1_transfer_function_a54be61acfa1029df1479d526759177e1}{set\-Pixel} (int i, int j, const \hyperlink{class_verdi_1_1_vec4}{\-Vec4} \&v)
+\item 
+\hyperlink{class_verdi_1_1_vec4}{\-Vec4} \hyperlink{class_verdi_1_1_transfer_function_a97f8e158c077564cb1924d1e604f3532}{get\-Pixel} (int i, int j) const 
+\item 
+void \hyperlink{class_verdi_1_1_transfer_function_a11db544256ac1c5bac79e0b8204cae4e}{fill\-From\-Spline} (const \hyperlink{class_verdi_1_1_spline}{\-Spline} \&spline, \hyperlink{class_verdi_1_1_transfer_function_a1b35c3ddc3f16d44146168cdad8cdd6a}{\-Axis} selected\-Axis=\-T\-F\-A\-\_\-\-X\-\_\-\-A\-X\-I\-S)
+\item 
+void \hyperlink{class_verdi_1_1_transfer_function_aff50d962da1aa841b12a93fb48dd0459}{gaussian\-Splat} (const \hyperlink{struct_verdi_1_1_transfer_function_1_1_window}{\-Window} \&win, int channel\-Mask, float intensity, float peak=0.\-707f, Write\-Mode wm=\-T\-F\-W\-M\-\_\-\-S\-E\-T)
+\item 
+uint32\-\_\-t \hyperlink{class_verdi_1_1_transfer_function_a798fa2967a73da00c42d02e05be92865}{get\-Width} () const 
+\item 
+uint32\-\_\-t \hyperlink{class_verdi_1_1_transfer_function_a9733e302b419c60ef8d3f30b071e4a61}{get\-Height} () const 
+\item 
+\hyperlink{class_verdi_1_1_transfer_function_aebdbb5a13f273ee6d47d1a4dde6d6aa6}{\-Channel\-Type} $\ast$ \hyperlink{class_verdi_1_1_transfer_function_adfec747a20426aecccf56cc7aebd0a8c}{get\-Data} () const 
+\item 
+uint32\-\_\-t \hyperlink{class_verdi_1_1_transfer_function_aafe449537f5300b8a5ab242dc16f5b7f}{get\-Size\-In\-Bytes} () const 
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_transfer_function_a185000f93745b90102c7d713b1cf04ad}{static const int {\bfseries \-C\-H\-A\-N\-N\-E\-L\-\_\-\-M\-A\-X\-\_\-\-V\-A\-L\-U\-E} = (0x01 $<$$<$ 0x08$\ast$sizeof(\-Channel\-Type)) -\/ 1}\label{class_verdi_1_1_transfer_function_a185000f93745b90102c7d713b1cf04ad}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_verdi_1_1_transfer_function_a19568a9346979ef8cfe62ba677a74e99}{\hyperlink{class_verdi_1_1_transfer_function_aebdbb5a13f273ee6d47d1a4dde6d6aa6}{\-Channel\-Type} $\ast$ {\bfseries mp\-Data}}\label{class_verdi_1_1_transfer_function_a19568a9346979ef8cfe62ba677a74e99}
+
+\item 
+\hypertarget{class_verdi_1_1_transfer_function_a23bb2249d2eb80974a8502bdec47fb8c}{uint32\-\_\-t {\bfseries m\-Width}}\label{class_verdi_1_1_transfer_function_a23bb2249d2eb80974a8502bdec47fb8c}
+
+\item 
+\hypertarget{class_verdi_1_1_transfer_function_a3ddb4deef4a2f7ca257229681f3f1f99}{uint32\-\_\-t {\bfseries m\-Height}}\label{class_verdi_1_1_transfer_function_a3ddb4deef4a2f7ca257229681f3f1f99}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class for storing 2d transfer functions in system memory. \-Initially this class supported only 1d transfer functions, however the problem with 1d transfer functions is that they make it difficult to isolate areas of the data set. \-This class now supports 2d transfer functions, where opacity and the volume gradient magnitude are represented on the x and y axes respectively. 
+
+\subsection{\-Member \-Typedef \-Documentation}
+\hypertarget{class_verdi_1_1_transfer_function_aebdbb5a13f273ee6d47d1a4dde6d6aa6}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!\-Channel\-Type@{\-Channel\-Type}}
+\index{\-Channel\-Type@{\-Channel\-Type}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{\-Channel\-Type}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint16\-\_\-t {\bf \-Verdi\-::\-Transfer\-Function\-::\-Channel\-Type}}}\label{class_verdi_1_1_transfer_function_aebdbb5a13f273ee6d47d1a4dde6d6aa6}
+\-Typedef for the channel elements. 
+
+\subsection{\-Member \-Enumeration \-Documentation}
+\hypertarget{class_verdi_1_1_transfer_function_a1b35c3ddc3f16d44146168cdad8cdd6a}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!\-Axis@{\-Axis}}
+\index{\-Axis@{\-Axis}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{\-Axis}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Verdi\-::\-Transfer\-Function\-::\-Axis}}}\label{class_verdi_1_1_transfer_function_a1b35c3ddc3f16d44146168cdad8cdd6a}
+\-Enumeration of the axes used in the transfer function. \hypertarget{class_verdi_1_1_transfer_function_ab597e576b24962e48164808518c06714}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!\-Write\-Mode@{\-Write\-Mode}}
+\index{\-Write\-Mode@{\-Write\-Mode}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{\-Write\-Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Verdi\-::\-Transfer\-Function\-::\-Write\-Mode}}}\label{class_verdi_1_1_transfer_function_ab597e576b24962e48164808518c06714}
+\-Enumeration of write modes used for rendering to the transfer function. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_verdi_1_1_transfer_function_a17bbf3cfaa9dcadfab523f14dcd58e7a}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!\-Transfer\-Function@{\-Transfer\-Function}}
+\index{\-Transfer\-Function@{\-Transfer\-Function}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{\-Transfer\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Transfer\-Function\-::\-Transfer\-Function} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Vec4}}]{initial\-Value = {\ttfamily {\bf \-Vec4}(0.0f,0.0f,0.0f,1.0f)}, }
+\item[{uint32\-\_\-t}]{width = {\ttfamily 256}, }
+\item[{uint32\-\_\-t}]{height = {\ttfamily 32}}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_transfer_function_a17bbf3cfaa9dcadfab523f14dcd58e7a}
+\-Parameterised constructor. \hypertarget{class_verdi_1_1_transfer_function_a7efc65a27624c5b9d00b85db3c57578d}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!$\sim$\-Transfer\-Function@{$\sim$\-Transfer\-Function}}
+\index{$\sim$\-Transfer\-Function@{$\sim$\-Transfer\-Function}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{$\sim$\-Transfer\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Verdi\-::\-Transfer\-Function\-::$\sim$\-Transfer\-Function} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_transfer_function_a7efc65a27624c5b9d00b85db3c57578d}
+\-Default destructor. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_transfer_function_ab6aeb29ae01bc6688f2aba5fd447673e}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!clear@{clear}}
+\index{clear@{clear}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Transfer\-Function\-::clear} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Vec4}}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_transfer_function_ab6aeb29ae01bc6688f2aba5fd447673e}
+\-Clear the values to the specified vector. \hypertarget{class_verdi_1_1_transfer_function_a8a606afbc03a6144a0a15f439f6bc65b}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!clip@{clip}}
+\index{clip@{clip}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{clip}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Verdi\-::\-Transfer\-Function\-::clip} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Window} \&}]{win\-In, }
+\item[{{\bf \-Window} \&}]{win\-Out}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_transfer_function_a8a606afbc03a6144a0a15f439f6bc65b}
+\-Clip an arbitrary window against the bounds of this transfer function. \begin{DoxyReturn}{\-Returns}
+true if the clipped window is within the bounds 
+\end{DoxyReturn}
+\hypertarget{class_verdi_1_1_transfer_function_a11db544256ac1c5bac79e0b8204cae4e}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!fill\-From\-Spline@{fill\-From\-Spline}}
+\index{fill\-From\-Spline@{fill\-From\-Spline}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{fill\-From\-Spline}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Transfer\-Function\-::fill\-From\-Spline} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Spline} \&}]{spline, }
+\item[{{\bf \-Axis}}]{selected\-Axis = {\ttfamily \-T\-F\-A\-\_\-\-X\-\_\-\-A\-X\-I\-S}}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_transfer_function_a11db544256ac1c5bac79e0b8204cae4e}
+\-Samples a spline for colour values. \-An axis is chosen, and the 1d spline is sampled along that axis and duplicated along the texture. \hypertarget{class_verdi_1_1_transfer_function_aff50d962da1aa841b12a93fb48dd0459}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!gaussian\-Splat@{gaussian\-Splat}}
+\index{gaussian\-Splat@{gaussian\-Splat}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{gaussian\-Splat}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Transfer\-Function\-::gaussian\-Splat} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Window} \&}]{win, }
+\item[{int}]{channel\-Mask, }
+\item[{float}]{intensity, }
+\item[{float}]{peak = {\ttfamily 0.707f}, }
+\item[{{\bf \-Write\-Mode}}]{wm = {\ttfamily \-T\-F\-W\-M\-\_\-\-S\-E\-T}}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_transfer_function_aff50d962da1aa841b12a93fb48dd0459}
+\-Writes a \-Gaussian splat to the chosen channels. \-Each channel is encoded by a set bit. 
+\begin{DoxyParams}{\-Parameters}
+{\em intensity} & \-Chosen intensity value. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_verdi_1_1_transfer_function_adfec747a20426aecccf56cc7aebd0a8c}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!get\-Data@{get\-Data}}
+\index{get\-Data@{get\-Data}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{get\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Channel\-Type}$\ast$ {\bf \-Verdi\-::\-Transfer\-Function\-::get\-Data} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_transfer_function_adfec747a20426aecccf56cc7aebd0a8c}
+\-Get the data. \hypertarget{class_verdi_1_1_transfer_function_a9733e302b419c60ef8d3f30b071e4a61}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!get\-Height@{get\-Height}}
+\index{get\-Height@{get\-Height}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{get\-Height}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-Verdi\-::\-Transfer\-Function\-::get\-Height} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_transfer_function_a9733e302b419c60ef8d3f30b071e4a61}
+\-Get the current resolution height. \hypertarget{class_verdi_1_1_transfer_function_a97f8e158c077564cb1924d1e604f3532}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!get\-Pixel@{get\-Pixel}}
+\index{get\-Pixel@{get\-Pixel}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{get\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec4} {\bf \-Verdi\-::\-Transfer\-Function\-::get\-Pixel} (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_transfer_function_a97f8e158c077564cb1924d1e604f3532}
+\-Get a pixel at the specified location. \hypertarget{class_verdi_1_1_transfer_function_aafe449537f5300b8a5ab242dc16f5b7f}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!get\-Size\-In\-Bytes@{get\-Size\-In\-Bytes}}
+\index{get\-Size\-In\-Bytes@{get\-Size\-In\-Bytes}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{get\-Size\-In\-Bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-Verdi\-::\-Transfer\-Function\-::get\-Size\-In\-Bytes} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_transfer_function_aafe449537f5300b8a5ab242dc16f5b7f}
+\-Get the size in bytes. \hypertarget{class_verdi_1_1_transfer_function_a798fa2967a73da00c42d02e05be92865}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!get\-Width@{get\-Width}}
+\index{get\-Width@{get\-Width}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{get\-Width}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-Verdi\-::\-Transfer\-Function\-::get\-Width} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_verdi_1_1_transfer_function_a798fa2967a73da00c42d02e05be92865}
+\-Get the current resolution width. \hypertarget{class_verdi_1_1_transfer_function_aaae7e0e9f733ab8ed3114447b565fc7f}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!sample@{sample}}
+\index{sample@{sample}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{sample}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vec4} {\bf \-Verdi\-::\-Transfer\-Function\-::sample} (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+) const}}\label{class_verdi_1_1_transfer_function_aaae7e0e9f733ab8ed3114447b565fc7f}
+\-Sample the transfer function with bilinear interpolation at the specified coordinates. \hypertarget{class_verdi_1_1_transfer_function_a54be61acfa1029df1479d526759177e1}{\index{\-Verdi\-::\-Transfer\-Function@{\-Verdi\-::\-Transfer\-Function}!set\-Pixel@{set\-Pixel}}
+\index{set\-Pixel@{set\-Pixel}!Verdi::TransferFunction@{\-Verdi\-::\-Transfer\-Function}}
+\subsubsection[{set\-Pixel}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Verdi\-::\-Transfer\-Function\-::set\-Pixel} (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{const {\bf \-Vec4} \&}]{v}
+\end{DoxyParamCaption}
+)}}\label{class_verdi_1_1_transfer_function_a54be61acfa1029df1479d526759177e1}
+\-Set a pixel at the specified location. 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Transfer\-Function.\-h\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/src/\-Verdi\-Transfer\-Function.\-cpp\end{DoxyCompactItemize}

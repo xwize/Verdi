@@ -1,0 +1,138 @@
+#ifndef __shading_cg__
+#define __shading_cg__
+
+/**
+ * This file contains commmon shading code that is used between render strategies.
+ * Phong shading and various calculations for on-the-fly gradients are provided.
+ */
+
+struct ShadingInfo
+{
+	float3 position;
+	float3 normal;
+	float3 lightPosition;
+	float3 rayFromEye;
+	float4 ambient;
+	float4 diffuse;
+	float4 specular;
+	float specularExp;
+	float lightRange;
+	sampler3D volume;
+	sampler2D transferFunction;
+};
+
+float visibility(float3 startPos, float3 endPos, sampler3D sampl, sampler2D trans, ShadingInfo info)
+{
+	float3 nep = endPos;
+	nep = clamp(nep,0.0,1.0);
+	
+	int k = 150;
+	float3 d = (nep - startPos)/(k-1);
+	float3 p = startPos;
+	float g = 0.0;
+	for(int i = 0; i < k; ++i)
+	{
+		float a = tex3D(sampl,p).r;
+		float r = tex2D(trans,float2(a,0.5)).a;
+		g += (1-g)*r * info.diffuse.a;
+		p += d;
+		
+		/*if(g > 0.95)
+			break;
+			
+		if(p.x < 0.0 || p.y < 0.0 || p.z < 0.0)
+			break;
+			
+		if(p.x > 1.0 || p.y > 1.0 || p.z  > 1.0)
+			break; 
+		*/ // Technicaly correct but slow
+	}
+	
+	return 1.0 - max(min(g,1.0),0.0);
+}
+
+// Perform Blinn-Phong shading using the shading information
+// provided.
+float4 phongShade(ShadingInfo info) 
+{
+	float3 toLight = info.lightPosition - info.position;
+	float3 toLightN = normalize(toLight);
+	float3 toEye = -info.rayFromEye;
+
+	// Reflection vector
+	float3 halfVector = normalize(toLightN + toEye);
+
+	// Diffuse multiplier
+	float d = saturate(dot(info.normal, toLightN));
+
+	// Specular reflection
+	float s = pow( saturate(dot(toEye,halfVector)), info.specularExp );
+
+	// Attenuation
+	// Use 1.5 instead of 1.0 to add some saturation
+	float fd = (1.0 + length(toLight)/info.lightRange);
+	float f = 1.0 / (fd*fd);
+	
+	// Hemi ambient
+	float h = 0.5 + 0.5*dot(float3(0.0,1.0,0.0),info.normal);
+	
+	// Directional shadow
+	float b = visibility(info.position,info.lightPosition,info.volume,info.transferFunction, info);
+	
+	// Phong summation
+	return float4(info.ambient.rgb*h + (info.diffuse.rgb * d + info.specular.rgb * s) * f * b, info.diffuse.a);
+}
+
+// Compute on-the-fly gradients from a data set
+float3 onTheFlyGradient(sampler3D tex, float3 pos, float3 d)
+{
+	float3 left;
+	float3 right;
+
+	// Left term of gradient computation
+	left.x = tex3D(tex, pos - float3(d.x,0,0)).r;
+	left.y = tex3D(tex, pos - float3(0,d.y,0)).r;
+	left.z = tex3D(tex, pos - float3(0,0,d.z)).r;
+		
+	// Right term of gradient computation
+	right.x = tex3D(tex, pos + float3(d.x,0,0)).r;
+	right.y = tex3D(tex, pos + float3(0,d.y,0)).r;
+	right.z = tex3D(tex, pos + float3(0,0,d.z)).r;
+		
+	// Gradient computation
+	return float3(left - right)/(2*d);
+}
+
+// Compute on-the-fly gradients from a data set
+float3 onTheFlyGradientPost(sampler3D tex, sampler2D tf, float3 pos, float3 d)
+{
+	float3 left;
+	float3 right;
+
+	// Left term of gradient computation
+	left.x = tex3D(tex, pos - float3(d.x,0,0)).r;
+	left.y = tex3D(tex, pos - float3(0,d.y,0)).r;
+	left.z = tex3D(tex, pos - float3(0,0,d.z)).r;
+		
+	// Right term of gradient computation
+	right.x = tex3D(tex, pos + float3(d.x,0,0)).r;
+	right.y = tex3D(tex, pos + float3(0,d.y,0)).r;
+	right.z = tex3D(tex, pos + float3(0,0,d.z)).r;
+		
+	float3 gl;
+	float3 gr;
+
+	left.x = tex2D(tf,float2(left.x,0.5f)).a;
+	left.y = tex2D(tf,float2(left.y,0.5f)).a;
+	left.z = tex2D(tf,float2(left.z,0.5f)).a;
+
+	right.x = tex2D(tf,float2(right.x,0.5f)).a;
+	right.y = tex2D(tf,float2(right.y,0.5f)).a;
+	right.z = tex2D(tf,float2(right.z,0.5f)).a;
+
+	// Gradient computation
+	return float3(left - right) / (2*d);
+}
+
+
+#endif // __shading_cg__

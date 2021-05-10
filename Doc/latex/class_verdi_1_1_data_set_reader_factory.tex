@@ -1,0 +1,46 @@
+\hypertarget{class_verdi_1_1_data_set_reader_factory}{\section{\-Verdi\-:\-:\-Data\-Set\-Reader\-Factory \-Class \-Reference}
+\label{class_verdi_1_1_data_set_reader_factory}\index{\-Verdi\-::\-Data\-Set\-Reader\-Factory@{\-Verdi\-::\-Data\-Set\-Reader\-Factory}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Data\-Set\-Reader\-Factory.\-h$>$}
+
+\subsection*{\-Public \-Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_verdi_1_1_data_set_reader_factory_a2c02a5a07ac022affe10410957967910}{\-Data\-Set\-Reader\-Format} \{ {\bfseries \-D\-S\-R\-F\-\_\-\-R\-A\-W}, 
+{\bfseries \-D\-S\-R\-F\-\_\-\-P\-V\-M}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \-Data\-Set\-Reader\-Ptr \hyperlink{class_verdi_1_1_data_set_reader_factory_aad311b871f57cc3ce836c5d08947e845}{get\-Data\-Set\-Reader} (\hyperlink{class_verdi_1_1_data_set_reader_factory_a2c02a5a07ac022affe10410957967910}{\-Data\-Set\-Reader\-Format} format) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class responsible for returning file readers based on the specified file format. 
+
+\subsection{\-Member \-Enumeration \-Documentation}
+\hypertarget{class_verdi_1_1_data_set_reader_factory_a2c02a5a07ac022affe10410957967910}{\index{\-Verdi\-::\-Data\-Set\-Reader\-Factory@{\-Verdi\-::\-Data\-Set\-Reader\-Factory}!\-Data\-Set\-Reader\-Format@{\-Data\-Set\-Reader\-Format}}
+\index{\-Data\-Set\-Reader\-Format@{\-Data\-Set\-Reader\-Format}!Verdi::DataSetReaderFactory@{\-Verdi\-::\-Data\-Set\-Reader\-Factory}}
+\subsubsection[{\-Data\-Set\-Reader\-Format}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-Verdi\-::\-Data\-Set\-Reader\-Factory\-::\-Data\-Set\-Reader\-Format}}}\label{class_verdi_1_1_data_set_reader_factory_a2c02a5a07ac022affe10410957967910}
+\-Enum of supported file formats. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_data_set_reader_factory_aad311b871f57cc3ce836c5d08947e845}{\index{\-Verdi\-::\-Data\-Set\-Reader\-Factory@{\-Verdi\-::\-Data\-Set\-Reader\-Factory}!get\-Data\-Set\-Reader@{get\-Data\-Set\-Reader}}
+\index{get\-Data\-Set\-Reader@{get\-Data\-Set\-Reader}!Verdi::DataSetReaderFactory@{\-Verdi\-::\-Data\-Set\-Reader\-Factory}}
+\subsubsection[{get\-Data\-Set\-Reader}]{\setlength{\rightskip}{0pt plus 5cm}virtual \-Data\-Set\-Reader\-Ptr {\bf \-Verdi\-::\-Data\-Set\-Reader\-Factory\-::get\-Data\-Set\-Reader} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Data\-Set\-Reader\-Format}}]{format}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_verdi_1_1_data_set_reader_factory_aad311b871f57cc3ce836c5d08947e845}
+\-Returns a \hyperlink{class_verdi_1_1_data_set_reader}{\-Data\-Set\-Reader} for a supplied format. \begin{DoxyRemark}{\-Remarks}
+\-An auto pointer is returned -\/ lifetime control is passed to the caller. 
+\end{DoxyRemark}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Data\-Set\-Reader\-Factory.\-h\end{DoxyCompactItemize}

@@ -1,0 +1,184 @@
+\hypertarget{class_verdi_1_1_render_strategy}{\section{\-Verdi\-:\-:\-Render\-Strategy \-Class \-Reference}
+\label{class_verdi_1_1_render_strategy}\index{\-Verdi\-::\-Render\-Strategy@{\-Verdi\-::\-Render\-Strategy}}
+}
+
+
+{\ttfamily \#include $<$\-Verdi\-Render\-Strategy.\-h$>$}
+
+\-Inheritance diagram for \-Verdi\-:\-:\-Render\-Strategy\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.270270cm]{class_verdi_1_1_render_strategy}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_verdi_1_1_render_strategy_a300417f6a6cc08f1bb6e609475dbf638}{initialise} (uint32\-\_\-t width, uint32\-\_\-t height)=0
+\item 
+virtual void \hyperlink{class_verdi_1_1_render_strategy_a7b968d3bcbc2b791e5593f639b0af527}{begin\-Frame} (float dt, float time)=0
+\item 
+virtual void \hyperlink{class_verdi_1_1_render_strategy_a722068356fab14b78f8104614b6bb39a}{render} ()=0
+\item 
+virtual void \hyperlink{class_verdi_1_1_render_strategy_a944fdbb328fd38f40f227ce1ecc9fd7f}{end\-Frame} ()=0
+\item 
+virtual void \hyperlink{class_verdi_1_1_render_strategy_ab4b85d09886b1adc6a32f638522684cc}{shutdown} ()=0
+\item 
+virtual void \hyperlink{class_verdi_1_1_render_strategy_abdd27f6e043ad468307bcc6b5e85356f}{context\-Changed} (const \hyperlink{class_verdi_1_1_render_context}{\-Render\-Context} $\ast$new\-Context)=0
+\item 
+virtual void \hyperlink{class_verdi_1_1_render_strategy_a0e46a0f8434b471bf8b0c1c9b243e6d5}{suspend} ()=0
+\item 
+virtual void \hyperlink{class_verdi_1_1_render_strategy_a34797cbcea846c22a23937226281922b}{awake} ()=0
+\item 
+virtual void \hyperlink{class_verdi_1_1_render_strategy_aa6290274c5e5e914c2a50347b125dff5}{resize} (uint32\-\_\-t width, uint32\-\_\-t height)=0
+\item 
+virtual bool \hyperlink{class_verdi_1_1_render_strategy_afe668a16ada4c12b7c58b0952cb3dffa}{is\-Initialised} () const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This is an interface that all rendering algorithms must implement to be used within the framework. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_verdi_1_1_render_strategy_a34797cbcea846c22a23937226281922b}{\index{\-Verdi\-::\-Render\-Strategy@{\-Verdi\-::\-Render\-Strategy}!awake@{awake}}
+\index{awake@{awake}!Verdi::RenderStrategy@{\-Verdi\-::\-Render\-Strategy}}
+\subsubsection[{awake}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Verdi\-::\-Render\-Strategy\-::awake} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_verdi_1_1_render_strategy_a34797cbcea846c22a23937226281922b}
+\-Notify when a render strategy has changed (to this). \begin{DoxyRemark}{\-Remarks}
+\-When a render strategy is switched to this strategy it is notified through this method. 
+\end{DoxyRemark}
+
+
+\-Implemented in \hyperlink{class_verdi_1_1_default_render_strategy_a3c6dbaa2ba1f5324cc87f1bc160a0487}{\-Verdi\-::\-Default\-Render\-Strategy}, \hyperlink{class_verdi_1_1_ray_cast_strategy_a1fc2d8d4067b242934ac6cb4c9800a22}{\-Verdi\-::\-Ray\-Cast\-Strategy}, and \hyperlink{class_verdi_1_1_tex_slice_strategy_a85eb6812293f248f92ec63f56dfaa5bb}{\-Verdi\-::\-Tex\-Slice\-Strategy}.
+
+\hypertarget{class_verdi_1_1_render_strategy_a7b968d3bcbc2b791e5593f639b0af527}{\index{\-Verdi\-::\-Render\-Strategy@{\-Verdi\-::\-Render\-Strategy}!begin\-Frame@{begin\-Frame}}
+\index{begin\-Frame@{begin\-Frame}!Verdi::RenderStrategy@{\-Verdi\-::\-Render\-Strategy}}
+\subsubsection[{begin\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Verdi\-::\-Render\-Strategy\-::begin\-Frame} (
+\begin{DoxyParamCaption}
+\item[{float}]{dt, }
+\item[{float}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_verdi_1_1_render_strategy_a7b968d3bcbc2b791e5593f639b0af527}
+\-Start a frame. \begin{DoxyRemark}{\-Remarks}
+\-This is called prior to rendering operations for a render strategy to set up any per-\/frame parameters. 
+\end{DoxyRemark}
+
+
+\-Implemented in \hyperlink{class_verdi_1_1_default_render_strategy_a186d48f6bc0fe41e735dd902a0729b9d}{\-Verdi\-::\-Default\-Render\-Strategy}, \hyperlink{class_verdi_1_1_ray_cast_strategy_a1ee8ca66c4ebc651c5b23985bea94cf3}{\-Verdi\-::\-Ray\-Cast\-Strategy}, and \hyperlink{class_verdi_1_1_tex_slice_strategy_ad7ac71fe824de3ab082c66201b79a3bc}{\-Verdi\-::\-Tex\-Slice\-Strategy}.
+
+\hypertarget{class_verdi_1_1_render_strategy_abdd27f6e043ad468307bcc6b5e85356f}{\index{\-Verdi\-::\-Render\-Strategy@{\-Verdi\-::\-Render\-Strategy}!context\-Changed@{context\-Changed}}
+\index{context\-Changed@{context\-Changed}!Verdi::RenderStrategy@{\-Verdi\-::\-Render\-Strategy}}
+\subsubsection[{context\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Verdi\-::\-Render\-Strategy\-::context\-Changed} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Render\-Context} $\ast$}]{new\-Context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_verdi_1_1_render_strategy_abdd27f6e043ad468307bcc6b5e85356f}
+\-Notify of a context change. \begin{DoxyRemark}{\-Remarks}
+\-When the user decides to switch to another context a render strategy may need to recreate some objects or perform some computation. \-This method provides an opportunity for implementations to do this. 
+\end{DoxyRemark}
+
+
+\-Implemented in \hyperlink{class_verdi_1_1_default_render_strategy_ab5ad573e442e040cc60444ba4f8408d2}{\-Verdi\-::\-Default\-Render\-Strategy}, \hyperlink{class_verdi_1_1_ray_cast_strategy_a0eb9af58fef4e974e378062c03eb787b}{\-Verdi\-::\-Ray\-Cast\-Strategy}, and \hyperlink{class_verdi_1_1_tex_slice_strategy_afcb1d4e8ca0aae9b0923fcc9772c1834}{\-Verdi\-::\-Tex\-Slice\-Strategy}.
+
+\hypertarget{class_verdi_1_1_render_strategy_a944fdbb328fd38f40f227ce1ecc9fd7f}{\index{\-Verdi\-::\-Render\-Strategy@{\-Verdi\-::\-Render\-Strategy}!end\-Frame@{end\-Frame}}
+\index{end\-Frame@{end\-Frame}!Verdi::RenderStrategy@{\-Verdi\-::\-Render\-Strategy}}
+\subsubsection[{end\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Verdi\-::\-Render\-Strategy\-::end\-Frame} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_verdi_1_1_render_strategy_a944fdbb328fd38f40f227ce1ecc9fd7f}
+\-End a frame. \begin{DoxyRemark}{\-Remarks}
+\-This is called at the end of a frame to notify a render strategy to end-\/rendering and display its results to the screen. 
+\end{DoxyRemark}
+
+
+\-Implemented in \hyperlink{class_verdi_1_1_default_render_strategy_a4ed9758ee5fe08a584c38b025c1f2a1b}{\-Verdi\-::\-Default\-Render\-Strategy}, \hyperlink{class_verdi_1_1_ray_cast_strategy_ac0d9b6cd0962f3d0076c15ab0b0f5a49}{\-Verdi\-::\-Ray\-Cast\-Strategy}, and \hyperlink{class_verdi_1_1_tex_slice_strategy_aeb1f2291076b909e91c749924aa9f5f7}{\-Verdi\-::\-Tex\-Slice\-Strategy}.
+
+\hypertarget{class_verdi_1_1_render_strategy_a300417f6a6cc08f1bb6e609475dbf638}{\index{\-Verdi\-::\-Render\-Strategy@{\-Verdi\-::\-Render\-Strategy}!initialise@{initialise}}
+\index{initialise@{initialise}!Verdi::RenderStrategy@{\-Verdi\-::\-Render\-Strategy}}
+\subsubsection[{initialise}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Verdi\-::\-Render\-Strategy\-::initialise} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{width, }
+\item[{uint32\-\_\-t}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_verdi_1_1_render_strategy_a300417f6a6cc08f1bb6e609475dbf638}
+\-Initialise the render strategy. \begin{DoxyRemark}{\-Remarks}
+\-This is called when the user initiates \hyperlink{class_verdi_1_1_render_system_a63ada7c106625cbf3601ee23300fb8af}{\-Render\-System\-::initialise}. \-All one-\/time initialisation must be performed within this method. \-The initial width and height are provided, but implementations should also account for modification through the resize method. 
+\end{DoxyRemark}
+
+
+\-Implemented in \hyperlink{class_verdi_1_1_default_render_strategy_a284ad8cfafde9fc659366dccd0f22da0}{\-Verdi\-::\-Default\-Render\-Strategy}, \hyperlink{class_verdi_1_1_ray_cast_strategy_a5750edcfc0d873970b13c6fba3978a9d}{\-Verdi\-::\-Ray\-Cast\-Strategy}, and \hyperlink{class_verdi_1_1_tex_slice_strategy_abdbda056eafb1a428119ec5404a11204}{\-Verdi\-::\-Tex\-Slice\-Strategy}.
+
+\hypertarget{class_verdi_1_1_render_strategy_afe668a16ada4c12b7c58b0952cb3dffa}{\index{\-Verdi\-::\-Render\-Strategy@{\-Verdi\-::\-Render\-Strategy}!is\-Initialised@{is\-Initialised}}
+\index{is\-Initialised@{is\-Initialised}!Verdi::RenderStrategy@{\-Verdi\-::\-Render\-Strategy}}
+\subsubsection[{is\-Initialised}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-Verdi\-::\-Render\-Strategy\-::is\-Initialised} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_verdi_1_1_render_strategy_afe668a16ada4c12b7c58b0952cb3dffa}
+\-Must return true after initialisation. 
+
+\-Implemented in \hyperlink{class_verdi_1_1_default_render_strategy_a641e113e9224222f56d14c7a30edbf5a}{\-Verdi\-::\-Default\-Render\-Strategy}, \hyperlink{class_verdi_1_1_ray_cast_strategy_a384a2f7012b89193c7be6f126f62a4f7}{\-Verdi\-::\-Ray\-Cast\-Strategy}, and \hyperlink{class_verdi_1_1_tex_slice_strategy_ac5de87a3c2bab3838e0fa4ed546e611f}{\-Verdi\-::\-Tex\-Slice\-Strategy}.
+
+\hypertarget{class_verdi_1_1_render_strategy_a722068356fab14b78f8104614b6bb39a}{\index{\-Verdi\-::\-Render\-Strategy@{\-Verdi\-::\-Render\-Strategy}!render@{render}}
+\index{render@{render}!Verdi::RenderStrategy@{\-Verdi\-::\-Render\-Strategy}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Verdi\-::\-Render\-Strategy\-::render} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_verdi_1_1_render_strategy_a722068356fab14b78f8104614b6bb39a}
+\-Perform the actual rendering. \begin{DoxyRemark}{\-Remarks}
+\-This begin frame,render,and end frame methods have been written to be flexible. \-In future, this method may take in a block size, to render blocks of data at a time. 
+\end{DoxyRemark}
+
+
+\-Implemented in \hyperlink{class_verdi_1_1_default_render_strategy_aae18a8b90a6784bf6c6819fb7c35bbfb}{\-Verdi\-::\-Default\-Render\-Strategy}, \hyperlink{class_verdi_1_1_ray_cast_strategy_a30c9308caa1f99b7db6993fdb49e12cc}{\-Verdi\-::\-Ray\-Cast\-Strategy}, and \hyperlink{class_verdi_1_1_tex_slice_strategy_a6be673870c04b15179592e16d2ebbf60}{\-Verdi\-::\-Tex\-Slice\-Strategy}.
+
+\hypertarget{class_verdi_1_1_render_strategy_aa6290274c5e5e914c2a50347b125dff5}{\index{\-Verdi\-::\-Render\-Strategy@{\-Verdi\-::\-Render\-Strategy}!resize@{resize}}
+\index{resize@{resize}!Verdi::RenderStrategy@{\-Verdi\-::\-Render\-Strategy}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Verdi\-::\-Render\-Strategy\-::resize} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{width, }
+\item[{uint32\-\_\-t}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_verdi_1_1_render_strategy_aa6290274c5e5e914c2a50347b125dff5}
+\-Notify the render strategy of a resize. 
+
+\-Implemented in \hyperlink{class_verdi_1_1_default_render_strategy_a13ba3b975ba0eda5ff406a1d204944c6}{\-Verdi\-::\-Default\-Render\-Strategy}, \hyperlink{class_verdi_1_1_ray_cast_strategy_a54f194bbd0187871d92fbacbe5fce8f2}{\-Verdi\-::\-Ray\-Cast\-Strategy}, and \hyperlink{class_verdi_1_1_tex_slice_strategy_aa6d363ca6d668ea2c0d881dd181ab2ba}{\-Verdi\-::\-Tex\-Slice\-Strategy}.
+
+\hypertarget{class_verdi_1_1_render_strategy_ab4b85d09886b1adc6a32f638522684cc}{\index{\-Verdi\-::\-Render\-Strategy@{\-Verdi\-::\-Render\-Strategy}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!Verdi::RenderStrategy@{\-Verdi\-::\-Render\-Strategy}}
+\subsubsection[{shutdown}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Verdi\-::\-Render\-Strategy\-::shutdown} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_verdi_1_1_render_strategy_ab4b85d09886b1adc6a32f638522684cc}
+\-Shutdown the strategy. \begin{DoxyRemark}{\-Remarks}
+\-This gives the strategy an opportunity to clean-\/up any data allocated during execution. \-It is called when the user initiates \hyperlink{class_verdi_1_1_render_system_acc054feb7d679cee2a52e52c1ac319a0}{\-Render\-System\-::shutdown}. 
+\end{DoxyRemark}
+
+
+\-Implemented in \hyperlink{class_verdi_1_1_default_render_strategy_a2a55485421215ee88a5a6cc2bb66c169}{\-Verdi\-::\-Default\-Render\-Strategy}, \hyperlink{class_verdi_1_1_ray_cast_strategy_aeb9c50d501ec369553637622aed55cbd}{\-Verdi\-::\-Ray\-Cast\-Strategy}, and \hyperlink{class_verdi_1_1_tex_slice_strategy_aec405f9be90e4ee81a0cf0bd0e3d3935}{\-Verdi\-::\-Tex\-Slice\-Strategy}.
+
+\hypertarget{class_verdi_1_1_render_strategy_a0e46a0f8434b471bf8b0c1c9b243e6d5}{\index{\-Verdi\-::\-Render\-Strategy@{\-Verdi\-::\-Render\-Strategy}!suspend@{suspend}}
+\index{suspend@{suspend}!Verdi::RenderStrategy@{\-Verdi\-::\-Render\-Strategy}}
+\subsubsection[{suspend}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-Verdi\-::\-Render\-Strategy\-::suspend} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_verdi_1_1_render_strategy_a0e46a0f8434b471bf8b0c1c9b243e6d5}
+\-Notify when a render strategy has changed (from this). \begin{DoxyRemark}{\-Remarks}
+\-When the user decides to switch render strategy, the previous render strategy is notified through this method. 
+\end{DoxyRemark}
+
+
+\-Implemented in \hyperlink{class_verdi_1_1_default_render_strategy_a3d4ad97fb6c44e760d7f9fb3e79d5813}{\-Verdi\-::\-Default\-Render\-Strategy}, \hyperlink{class_verdi_1_1_ray_cast_strategy_a23af8b285ef2de2957f397b9674c7a01}{\-Verdi\-::\-Ray\-Cast\-Strategy}, and \hyperlink{class_verdi_1_1_tex_slice_strategy_abaf58e07219e1aab4d0016044da15f4d}{\-Verdi\-::\-Tex\-Slice\-Strategy}.
+
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-Code Projects/\-Verdi/\-Verdi\-Main/include/\-Verdi\-Render\-Strategy.\-h\end{DoxyCompactItemize}
